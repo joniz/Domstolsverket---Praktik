@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="DomstolsappFORM.HomePage"
+	Title="Main page" Icon="32-home.png">
+
+	<ContentPage.Content>
+		
+			
+			<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height ="300"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto"/>
+			</Grid.RowDefinitions>
+
+
+
+			<Image Source="dom"
+				Grid.Row = "0"
+
+
+				/>
+
+
+			
+				<Label Text="Vad behöver du hjälp med?"
+				HorizontalTextAlignment="Center"
+				VerticalOptions="CenterAndExpand"
+				FontSize="Large"
+				FontAttributes="Bold"
+				Opacity="0.7"
+				Grid.Row = "1"
+				/>
+
+			
+				<Button Text="Bild" Clicked="ButtonClicked"
+				FontAttributes="Bold"
+				Image="videoPic"
+				Grid.Row = "2"
+
+				/>
+
+			
+				<Button Text="Ljud" Clicked="ButtonClicked"
+				FontAttributes="Bold"
+				Image="audioPic"
+				Grid.Row="3"
+
+				/>
+			</Grid>
+		
+		
+	</ContentPage.Content>
+	
+		
+	</ContentPage>
