@@ -121,6 +121,8 @@
     <BundleResource Include="Resources\audioPic.png" />
     <BundleResource Include="Resources\audioPic2.png" />
     <BundleResource Include="Resources\audioPic3.png" />
+    <BundleResource Include="Resources\dom.png" />
+    <BundleResource Include="Resources\videoPic2.png" />
   </ItemGroup>
   <Import Project="..\DomstolsappFORM\DomstolsappFORM.projitems" Label="Shared" Condition="Exists('..\DomstolsappFORM\DomstolsappFORM.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
