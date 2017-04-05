@@ -13,7 +13,7 @@
 					<ListView.ItemTemplate>
 						<DataTemplate>
 							<ViewCell>
-								<StackLayout Orientation="Horizontal" Padding="5">
+								<StackLayout Orientation="Horizontal" Padding="15">
 									<Image Source="{Binding imagename, StringFormat='{0}.png'}"/>
 										<StackLayout Orientation ="Vertical">
 											<Label Text="{Binding name}" Font="Large"/>

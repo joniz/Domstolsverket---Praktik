@@ -13,11 +13,9 @@ namespace DomstolsappFORM
 
 		public static ObservableCollection<Item> items = new ObservableCollection<Item>() 
 		{
-			new Item{name = "Video", imagename = "videoPic"},
+			new Item{name = "Video", imagename = "videoPic2"},
 			new Item{name = "Audio", imagename = "audioPic2"},
 			new Item{name = "Misc"}
-		
-		
 		
 		};
 
