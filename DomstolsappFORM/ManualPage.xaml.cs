@@ -12,23 +12,21 @@ namespace DomstolsappFORM
 			if (e.SelectedItem != null) 
 			{
 				var selected = e.SelectedItem as Item;
-				DisplayAlert("Title", selected.name, "Quit");
-			
+				Navigation.PushAsync(new InformationPage(selected));
 			
 			}
 		}
 
-		void Handle_Clicked(object sender, System.EventArgs e)
-		{
-			Navigation.PushAsync(new InformationPage());
-		}
+
+	
+
+
 
 		public ManualPage()
 		{
 			InitializeComponent();
 
 			Title = "Information";
-
 
 			itemlist.ItemsSource = Item.items;
 	

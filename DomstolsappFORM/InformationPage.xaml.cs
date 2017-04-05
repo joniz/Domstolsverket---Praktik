@@ -7,9 +7,10 @@ namespace DomstolsappFORM
 {
 	public partial class InformationPage : ContentPage
 	{
-		public InformationPage()
+		public InformationPage(Item selected)
 		{
 			InitializeComponent();
+			Title = selected.name;
 		}
 	}
 }

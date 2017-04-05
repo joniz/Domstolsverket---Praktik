@@ -6,11 +6,15 @@
 	Title="Main page" Icon="32-home.png">
 
 	<ContentPage.Content>
+		
 			<StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-				<Label Text="Welcome" VerticalOptions = "Center" HorizontalOptions="Center">
-				</Label>
+			
+				<Label Text="Welcome" VerticalOptions = "Center" HorizontalOptions="Center"/>
+			
+			
 			</StackLayout>
-		</ContentPage.Content>
+		
+	</ContentPage.Content>
 	
 		
 	</ContentPage>
