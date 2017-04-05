@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="DomstolsappFORM.ManualPage"
+	Title="Browse" Icon="32-file.png">
+
+
+	
+		<ContentPage.Content>
+			
+				<ListView x:Name="itemlist" RowHeight="60" ItemSelected="OnItemSelected">
+					<ListView.ItemTemplate>
+						<DataTemplate>
+							<ViewCell>
+								<StackLayout Orientation="Horizontal" Padding="5">
+									<Image Source="{Binding imagename, StringFormat='{0}.png'}"/>
+										<StackLayout Orientation ="Vertical">
+											<Label Text="{Binding name}" Font="Large"/>
+										</StackLayout>
+								</StackLayout>
+							</ViewCell>
+						
+						</DataTemplate>
+					</ListView.ItemTemplate>
+				</ListView>
+			
+
+		</ContentPage.Content>
+	
+</ContentPage>

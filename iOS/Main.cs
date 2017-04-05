@@ -1,6 +1,11 @@
-﻿using UIKit;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
-namespace DomstolsappIOS
+using Foundation;
+using UIKit;
+
+namespace DomstolsappFORM.iOS
 {
 	public class Application
 	{
