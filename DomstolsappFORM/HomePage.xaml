@@ -8,9 +8,11 @@
 	<ContentPage.Content>
 		
 			<StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-			
-				<Label Text="Welcome" VerticalOptions = "Center" HorizontalOptions="Center"/>
-			
+
+				<Image Source="dom"/>
+				<Label Text="Vad behöver du hjälp med?"/>
+				<Button Text="Bild" Clicked="ButtonClicked"/>
+				<Button Text="Ljud" Clicked="ButtonClicked"/>
 			
 			</StackLayout>
 		
