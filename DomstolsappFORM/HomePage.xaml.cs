@@ -9,7 +9,7 @@ namespace DomstolsappFORM
 	{
 		void ButtonClicked(object sender, System.EventArgs e)
 		{
-			DisplayAlert("dd", "dd", "dd");
+			Navigation.PushAsync(new TroubleShootingPage());
 		}
 
 		public HomePage()
