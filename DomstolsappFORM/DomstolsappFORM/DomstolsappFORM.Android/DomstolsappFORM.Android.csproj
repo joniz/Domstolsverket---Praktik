@@ -5,12 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{AF3EE61B-D482-47AF-8F89-E142293FA003}</ProjectGuid>
+    <ProjectGuid>{716D78E7-D7F9-491B-9BA7-6178FB70EE26}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>domstolsApp.Droid</RootNamespace>
-    <AssemblyName>domstolsApp.Android</AssemblyName>
+    <RootNamespace>DomstolsappFORM.Droid</RootNamespace>
+    <AssemblyName>DomstolsappFORM.Android</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <AndroidApplication>true</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
@@ -115,7 +115,7 @@
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
-  <Import Project="..\domstolsApp\domstolsApp.projitems" Label="Shared" Condition="Exists('..\domstolsApp\domstolsApp.projitems')" />
+  <Import Project="..\DomstolsappFORM\DomstolsappFORM.projitems" Label="Shared" Condition="Exists('..\DomstolsappFORM\DomstolsappFORM.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace domstolsApp.Droid
+namespace DomstolsappFORM.Droid
 {
 
 

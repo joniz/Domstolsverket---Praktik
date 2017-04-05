@@ -5,7 +5,7 @@ using System.Text;
 
 using Xamarin.Forms;
 
-namespace domstolsApp
+namespace DomstolsappFORM
 {
 	public partial class App : Application
 	{
@@ -13,7 +13,7 @@ namespace domstolsApp
 		{
 			InitializeComponent();
 
-			MainPage = new domstolsApp.MainPage();
+			MainPage = new DomstolsappFORM.MainPage();
 		}
 
 		protected override void OnStart ()

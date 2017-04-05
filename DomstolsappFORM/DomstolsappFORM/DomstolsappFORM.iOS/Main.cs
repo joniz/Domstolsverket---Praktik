@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace domstolsApp.iOS
+namespace DomstolsappFORM.iOS
 {
 	public class Application
 	{

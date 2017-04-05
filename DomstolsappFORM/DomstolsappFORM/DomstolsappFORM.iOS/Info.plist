@@ -23,9 +23,9 @@
     <key>MinimumOSVersion</key>
     <string>8.0</string>
     <key>CFBundleDisplayName</key>
-    <string>domstolsApp</string>
+    <string>DomstolsappFORM</string>
     <key>CFBundleIdentifier</key>
-    <string>com.yourcompany.domstolsApp</string>
+    <string>com.yourcompany.DomstolsappFORM</string>
     <key>CFBundleVersion</key>
     <string>1.0</string>
     <key>CFBundleIconFiles</key>
