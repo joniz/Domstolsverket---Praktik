@@ -15,7 +15,11 @@ namespace Domstol
         }
 		void ButtonClicked(object sender, System.EventArgs e)
 		{
-			Navigation.PushAsync(new TroubleShootingPage());
+				Button category = sender as Button;
+			Navigation.PushAsync(new TroubleShootingPage(category.Text));
+
+			
+
 		}
     }
 }

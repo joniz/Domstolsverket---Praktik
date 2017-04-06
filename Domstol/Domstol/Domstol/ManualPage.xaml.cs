@@ -12,13 +12,16 @@ namespace Domstol
         public ManualPage()
         {
             InitializeComponent();
-            itemlist.ItemsSource = Item.items;
+			itemlist.ItemsSource = ManualListItem.items;
         }
+
+
+
         void OnItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
         {
             if (e.SelectedItem != null)
             {
-                var selected = e.SelectedItem as Item;
+				var selected = e.SelectedItem as ManualListItem;
                 Navigation.PushAsync(new InformationPage(selected));
 
             }

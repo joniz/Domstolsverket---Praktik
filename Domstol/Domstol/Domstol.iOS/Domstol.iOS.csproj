@@ -112,6 +112,9 @@
     <BundleResource Include="Resources\Icon-Small%402x.png" />
     <BundleResource Include="Resources\Icon-Small%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <BundleResource Include="Resources\dom.png" />
+    <BundleResource Include="Resources\videoSmall.png" />
+    <BundleResource Include="Resources\audioSmall.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -150,10 +153,10 @@
     <BundleResource Include="Resources\manual.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\audioPic2.png" />
+    <BundleResource Include="Resources\audioMedium.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\videoPic2.png" />
+    <BundleResource Include="Resources\videoMedium.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

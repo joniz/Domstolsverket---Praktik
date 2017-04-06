@@ -7,7 +7,7 @@ namespace Domstol
 {
 	public partial class InformationPage : ContentPage
 	{
-		public InformationPage(Item selected)
+		public InformationPage(ManualListItem selected)
 		{
 			InitializeComponent();
 			Title = selected.name;
