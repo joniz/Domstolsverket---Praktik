@@ -133,7 +133,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Domstol\Domstol.csproj">
-      <Project>{de143ef1-fb17-47a1-a8b5-250a38ae7393}</Project>
+      <Project>{FA735DEE-40FA-4A53-B2E9-C5BF18C0F070}</Project>
       <Name>Domstol</Name>
     </ProjectReference>
   </ItemGroup>

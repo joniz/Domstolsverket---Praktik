@@ -19,7 +19,7 @@ namespace Domstol
             if (e.SelectedItem != null)
             {
                 var selected = e.SelectedItem as Item;
-                //Navigation.PushAsync(new InformationPage(selected));
+                Navigation.PushAsync(new InformationPage(selected));
 
             }
         }

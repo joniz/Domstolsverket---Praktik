@@ -13,7 +13,7 @@ namespace Domstol
         {
             InitializeComponent();
 
-            MainPage = new RootPage();
+			MainPage = new NavigationPage(new RootPage());
         }
 
         protected override void OnStart()

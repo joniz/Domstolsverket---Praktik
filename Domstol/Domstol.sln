@@ -105,6 +105,7 @@ Global
 		{68974EEB-9C9C-45C7-AD0C-DC26B61448A2}.Release|iPhone.Build.0 = Release|iPhone
 		{68974EEB-9C9C-45C7-AD0C-DC26B61448A2}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{68974EEB-9C9C-45C7-AD0C-DC26B61448A2}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{68974EEB-9C9C-45C7-AD0C-DC26B61448A2}.Debug|Any CPU.Build.0 = Debug|iPhone
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

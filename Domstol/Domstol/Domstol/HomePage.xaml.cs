@@ -13,5 +13,9 @@ namespace Domstol
         {
             InitializeComponent();
         }
+		void ButtonClicked(object sender, System.EventArgs e)
+		{
+			Navigation.PushAsync(new TroubleShootingPage());
+		}
     }
 }
