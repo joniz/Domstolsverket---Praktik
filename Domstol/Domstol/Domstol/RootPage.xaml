@@ -10,8 +10,12 @@
 			<local:HomePage />
 		</x:Arguments>
 	</NavigationPage>
-	
-    <local:ManualPage/>
+
+ 	<NavigationPage Icon="manual">
+		<x:Arguments>
+			<local:ManualPage />
+		</x:Arguments>
+	</NavigationPage>
 
 	
 
