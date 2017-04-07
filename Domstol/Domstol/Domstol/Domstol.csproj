@@ -52,8 +52,11 @@
     <Compile Include="InformationPage.xaml.cs">
       <DependentUpon>InformationPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TroubleShootingPage.xaml.cs">
-      <DependentUpon>TroubleShootingPage.xaml</DependentUpon>
+    <Compile Include="ProblemTypePage.cs">
+      <DependentUpon>ProblemTypePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProblemPage.cs">
+      <DependentUpon>ProblemPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -64,7 +67,10 @@
     <EmbeddedResource Include="InformationPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="TroubleShootingPage.xaml">
+    <EmbeddedResource Include="ProblemTypePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProblemPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

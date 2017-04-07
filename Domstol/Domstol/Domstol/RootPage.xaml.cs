@@ -14,7 +14,9 @@ namespace Domstol
 		InitializeComponent();
 		if (Device.RuntimePlatform == TargetPlatform.iOS.ToString())
 		{
-			navb.BackgroundColor = Color.Beige;
+			homenav.BackgroundColor = Color.Beige;
+			manualnav.BackgroundColor = Color.Beige;
+
 		}
 
 		if (Device.RuntimePlatform == TargetPlatform.Android.ToString())

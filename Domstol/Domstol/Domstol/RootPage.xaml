@@ -5,13 +5,13 @@
              x:Class="Domstol.RootPage"
             >
 	
-	<NavigationPage x:Name="navb" Icon="home">
+	<NavigationPage x:Name="homenav" Icon="home">
 		<x:Arguments>
 			<local:HomePage />
 		</x:Arguments>
 	</NavigationPage>
 
- 	<NavigationPage Icon="manual">
+ 	<NavigationPage x:Name="manualnav" Icon="manual">
 		<x:Arguments>
 			<local:ManualPage />
 		</x:Arguments>
