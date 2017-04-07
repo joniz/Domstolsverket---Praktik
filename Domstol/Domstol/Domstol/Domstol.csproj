@@ -58,6 +58,7 @@
     <Compile Include="ProblemPage.cs">
       <DependentUpon>ProblemPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Problem.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">

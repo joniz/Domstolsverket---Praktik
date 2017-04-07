@@ -14,8 +14,18 @@ namespace Domstol
 			InitializeComponent();
 			Title = typeOfRoom + " -> " + problemCategory;
 
+			List<Problem> temp = Problem.problemList;
+			List<Problem> problems = new List<Problem>();
 
-			List<string> problems = new List<string>() { "Jag ser inget", "Jag hör inget", "Jag vet inte" };
+			foreach (Problem p in temp)
+			{
+				if (p.problemCategory == problemCategory && p.typeOfRoom == typeOfRoom)
+					problems.Add(p);
+			
+			
+			}
+
+
 			problemList.ItemsSource = problems;
 		}
 	}
