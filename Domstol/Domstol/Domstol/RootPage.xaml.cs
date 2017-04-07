@@ -11,7 +11,16 @@ namespace Domstol
     {
         public RootPage()
         {
-            InitializeComponent();
+		InitializeComponent();
+		if (Device.RuntimePlatform == TargetPlatform.iOS.ToString())
+		{
+			navb.BackgroundColor = Color.Beige;
+		}
+
+		if (Device.RuntimePlatform == TargetPlatform.Android.ToString())
+		{
+				//Android related code 
+		}
         }
     }
 }

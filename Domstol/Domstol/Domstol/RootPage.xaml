@@ -5,7 +5,7 @@
              x:Class="Domstol.RootPage"
             >
 	
-	<NavigationPage Icon="home">
+	<NavigationPage x:Name="navb" Icon="home">
 		<x:Arguments>
 			<local:HomePage />
 		</x:Arguments>
