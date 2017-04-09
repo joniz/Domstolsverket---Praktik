@@ -16,7 +16,15 @@ namespace Domstol
 		void ButtonClicked(object sender, System.EventArgs e)
 		{
 			Button typeOfRoom = sender as Button;
-			Navigation.PushAsync(new ProblemTypePage(typeOfRoom.Text));
+			string backgroundPic = "";
+
+			if (typeOfRoom.Text == "Sal")
+				backgroundPic = "Sal.jpg";
+
+			if (typeOfRoom.Text == "Rum")
+				backgroundPic = "Samtalsrum.jpg";
+					
+			Navigation.PushAsync(new ProblemTypePage(typeOfRoom.Text, backgroundPic));
 
 			
 

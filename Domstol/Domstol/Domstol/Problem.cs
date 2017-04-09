@@ -22,12 +22,24 @@ namespace Domstol
 			new Problem(){startQuestionId = 2, typeOfRoom = "Rum", problemCategory = "Bild", 
 				problemDescription = "Det flimmrar"
 			},
+
+
+
 			new Problem(){startQuestionId = 3, typeOfRoom = "Rum", problemCategory = "Ljud", 
 				problemDescription = "Jag hör ingenting"
 			},
-			new Problem(){startQuestionId = 3, typeOfRoom = "Rum", problemCategory = "Ljud", 
+			new Problem(){startQuestionId = 4, typeOfRoom = "Rum", problemCategory = "Ljud", 
 				problemDescription = "Ljudet är för högt"
-			}
+			},
+
+
+
+			new Problem(){startQuestionId = 5, typeOfRoom = "Sal", problemCategory = "Ljud", 
+				problemDescription = "Ljudet är för högt i salen"
+			},
+			new Problem(){startQuestionId = 6, typeOfRoom = "Sal", problemCategory = "Bild", 
+				problemDescription = "Jag ser ingenting i salen"
+			},
 
 
 

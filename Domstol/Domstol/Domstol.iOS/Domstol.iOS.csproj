@@ -115,6 +115,9 @@
     <BundleResource Include="Resources\dom.png" />
     <BundleResource Include="Resources\videoSmall.png" />
     <BundleResource Include="Resources\audioSmall.png" />
+    <BundleResource Include="Resources\Sal.jpg" />
+    <BundleResource Include="Resources\Samtalsrum.jpg" />
+    <BundleResource Include="Resources\Start.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
