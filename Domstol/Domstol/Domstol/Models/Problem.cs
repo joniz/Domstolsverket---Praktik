@@ -2,21 +2,21 @@
 using SQLite;
 namespace Domstol
 {
-	[Table("Problems")]
+	//[Table("Problems")]
 	public class Problem
 	{
-		[PrimaryKey, AutoIncrement]
+		//[PrimaryKey, AutoIncrement]
 		public int ProblemID { get; set; }
 	
 		public int firstQuestionID { get; set; }
 
-		[NotNull]
+		//[NotNull]
 		public string problemCategory { get; set; }
 
-		[NotNull]
+		//[NotNull]
 		public string problemTypeOfRoom { get; set; }
 
-		[NotNull]
+		//[NotNull]
 		public string problemDescription { get; set; }
 	
 	}

@@ -14,7 +14,6 @@ namespace Domstol
 			InitializeComponent();
 			Title = typeOfRoom + " -> " + problemCategory;
 
-			ProblemRepository pr = new ProblemRepository(App.path);
 
 			problemList.ItemsSource = App.probs;
 		}
