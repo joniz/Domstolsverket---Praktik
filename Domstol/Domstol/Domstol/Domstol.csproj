@@ -60,6 +60,8 @@
     </Compile>
     <Compile Include="Models\Problem.cs" />
     <Compile Include="Assets\ProblemRepository.cs" />
+    <Compile Include="Models\Question.cs" />
+    <Compile Include="Assets\QuestionRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">

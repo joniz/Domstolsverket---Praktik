@@ -19,11 +19,31 @@ namespace Domstol
 		}
         public App(string dbPath)
         {
-            InitializeComponent();
+			InitializeComponent();
             MainPage = new RootPage();
 			path = dbPath;
+            addDummyData();
+
 
         }
+
+
+		public void addDummyData() 
+		{
+		
+			QuestionRepository qr = new QuestionRepository(path);
+			ProblemRepository pr = new ProblemRepository(path);
+
+
+			pr.AddNewProblem(new Problem 
+			{ 
+				problemCategory ="Bild",
+				problemDescription = "Jag har ingen fantasi",
+				problemTypeOfRoom = "Rum"
+			});
+		
+		
+		}
 
         protected override void OnStart()
         {

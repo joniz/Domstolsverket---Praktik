@@ -12,6 +12,7 @@
                       
                             <StackLayout Orientation ="Vertical">
                                 <Label Text="{Binding problemDescription}" Font="Large"/>
+								
                             </StackLayout>
                         </StackLayout>
                     </ViewCell>

@@ -1,35 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Domstol;
 using SQLite;
-
 namespace Domstol
 {
-	public class ProblemRepository
+	public class QuestionRepository
 	{
 		public string StatusMessage { get; set; }
 		private SQLiteConnection conn;
 
-		public ProblemRepository(string dbPath)
+		public QuestionRepository(string dbPath)
 		{
-			
+
 			conn = new SQLiteConnection(dbPath);
-			conn.CreateTable<Problem>();
+			conn.CreateTable<Question>();
 
 		}
 
-		public void AddNewProblem(Problem problem)
+		public void AddNewQuestion(Question question)
 		{
 			int result = 0;
 			try
 			{
 				//basic validation to ensure a name was entered
 				//if (string.IsNullOrEmpty(name))
-					//throw new Exception("Valid name required");
+				//throw new Exception("Valid name required");
 
 				// TODO: insert a new person into the Person table
-				result = conn.Insert(problem);
+				result = conn.Insert(question);
 
 
 
@@ -42,16 +40,16 @@ namespace Domstol
 
 		}
 
-		public List<Problem> GetAllProblems()
+		public List<Question> GetAllQuestions()
 		{
 			// TODO: return a list of people saved to the Person table in the database
-			return conn.Table<Problem>().ToList();
+			return conn.Table<Question>().ToList();
 
 		}
-		public void DeleteAllProblems() 
+		public void DeleteAllProblems()
 		{
 
-			conn.DropTable<Problem>();
+			conn.DropTable<Question>();
 		}
 	}
 }
