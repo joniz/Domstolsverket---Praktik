@@ -14,19 +14,15 @@ namespace Domstol
 			InitializeComponent();
 			Title = typeOfRoom + " -> " + problemCategory;
 
-			List<Problem> temp = Problem.problemList;
-			List<Problem> problems = new List<Problem>();
+			ProblemRepository pr = new ProblemRepository(App.path);
+			//pr.AddNewProblem(new Problem
+			//{
+			//	problemCategory = "Bild",
+			//	problemTypeOfRoom = "Rum",
+			//	problemDescription = "Jag ser inget baby"
+			//});
 
-			foreach (Problem p in temp)
-			{
-				if (p.problemCategory == problemCategory && p.typeOfRoom == typeOfRoom)
-					problems.Add(p);
-			
-			
-			}
-
-
-			problemList.ItemsSource = problems;
+			//problemList.ItemsSource = pr.GetAllProblems();
 		}
 	}
 }

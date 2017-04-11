@@ -7,13 +7,22 @@ using Xamarin.Forms;
 
 namespace Domstol
 {
-    public partial class App : Application
-    {
-        public App()
+	public partial class App : Application
+	{
+		public static string path{get;set;}
+
+		public App() 
+		{
+        InitializeComponent();
+		MainPage = new RootPage();
+		
+		}
+        public App(string dbPath)
         {
             InitializeComponent();
+            MainPage = new RootPage();
+			path = dbPath;
 
-			MainPage = new RootPage();
         }
 
         protected override void OnStart()
