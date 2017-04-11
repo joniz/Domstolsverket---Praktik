@@ -16,7 +16,7 @@ namespace Domstol
 
 			ProblemRepository pr = new ProblemRepository(App.path);
 
-			problemList.ItemsSource = pr.GetAllProblems();
+			problemList.ItemsSource = App.probs;
 		}
 	}
 }

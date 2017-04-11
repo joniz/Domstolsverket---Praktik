@@ -15,11 +15,12 @@ namespace Domstol
 			conn = new SQLiteConnection(dbPath);
 			conn.CreateTable<Question>();
 
+
 		}
 
 		public void AddNewQuestion(Question question)
 		{
-			int result = 0;
+			
 			try
 			{
 				//basic validation to ensure a name was entered
@@ -27,7 +28,7 @@ namespace Domstol
 				//throw new Exception("Valid name required");
 
 				// TODO: insert a new person into the Person table
-				result = conn.Insert(question);
+				conn.Insert(question);
 
 
 
@@ -35,6 +36,7 @@ namespace Domstol
 			}
 			catch (Exception ex)
 			{
+				
 				//StatusMessage = string.Format("Failed to add {0}. Error: {1}", name, ex.Message);
 			}
 

@@ -15,6 +15,7 @@ namespace Domstol
 		{
 			
 			conn = new SQLiteConnection(dbPath);
+		
 			conn.CreateTable<Problem>();
 
 		}
@@ -51,7 +52,7 @@ namespace Domstol
 		public void DeleteAllProblems() 
 		{
 
-			conn.DropTable<Problem>();
+			conn.DeleteAll<Problem>();
 		}
 	}
 }
