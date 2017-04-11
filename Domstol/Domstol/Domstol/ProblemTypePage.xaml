@@ -21,7 +21,7 @@
 			</Grid.ColumnDefinitions>
 
 
-			<Image Source="dom"
+			<Image x:Name="BackgroundPic"
 				Grid.Row = "0"
 				Grid.ColumnSpan = "3"
 

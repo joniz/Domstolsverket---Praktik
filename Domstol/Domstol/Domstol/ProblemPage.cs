@@ -14,9 +14,15 @@ namespace Domstol
 			InitializeComponent();
 			Title = typeOfRoom + " -> " + problemCategory;
 
+			ProblemRepository pr = new ProblemRepository(App.path);
+			//pr.AddNewProblem(new Problem
+			//{
+			//	problemCategory = "Bild",
+			//	problemTypeOfRoom = "Rum",
+			//	problemDescription = "Jag ser inget baby"
+			//});
 
-			List<string> problems = new List<string>() { "Jag ser inget", "Jag hör inget", "Jag vet inte" };
-			problemList.ItemsSource = problems;
+			//problemList.ItemsSource = pr.GetAllProblems();
 		}
 	}
 }

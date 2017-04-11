@@ -23,7 +23,7 @@
 			</Grid.ColumnDefinitions>
 
 
-			<Image Source="dom"
+			<Image Source="Start.jpg"
 				Grid.Row = "0"
 				Grid.ColumnSpan = "3"
 

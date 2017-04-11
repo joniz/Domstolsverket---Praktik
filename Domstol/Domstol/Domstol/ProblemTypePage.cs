@@ -11,12 +11,13 @@ namespace Domstol
 		private string typeOfRoom { get; set; }
 	
 
-		public ProblemTypePage(string tOR)
+		public ProblemTypePage(string tOR, string backgroundPic)
 		{
 			InitializeComponent();
 
 			typeOfRoom = tOR;
 			Title = typeOfRoom;
+			BackgroundPic.Source = backgroundPic;
 		}
 
 

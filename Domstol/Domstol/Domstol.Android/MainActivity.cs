@@ -20,7 +20,9 @@ namespace Domstol.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            LoadApplication(new App());
+			string dbPath = FileAccessHelper.GetLocalFilePath("Domstol.db3");
+	  		LoadApplication(new App(dbPath));
+
         }
     }
 }

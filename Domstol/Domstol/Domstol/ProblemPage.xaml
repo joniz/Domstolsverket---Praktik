@@ -4,8 +4,21 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	x:Class="Domstol.ProblemPage">
 	<ContentPage.Content>
-		<ListView x:Name="problemList">
-		</ListView>
+		  <ListView x:Name="problemList" RowHeight="60">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="15">
+                      
+                            <StackLayout Orientation ="Vertical">
+                                <Label Text="{Binding problemDescription}" Font="Large"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
 	</ContentPage.Content>
 </ContentPage>
 
