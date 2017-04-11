@@ -9,22 +9,26 @@ namespace Domstol
 {
     public partial class HomePage : ContentPage
     {
+
+		public NavigationItem nItem { get; set; }
         public HomePage()
         {
             InitializeComponent();
+			nItem = new NavigationItem();
         }
 		void ButtonClicked(object sender, System.EventArgs e)
 		{
 			Button typeOfRoom = sender as Button;
-			string backgroundPic = "";
+			nItem.typeOfRoom = typeOfRoom.Text;
+
 
 			if (typeOfRoom.Text == "Sal")
-				backgroundPic = "Sal.jpg";
+				nItem.imageName = "Sal.jpg";
 
 			if (typeOfRoom.Text == "Rum")
-				backgroundPic = "Samtalsrum.jpg";
+				nItem.imageName = "Samtalsrum.jpg";
 					
-			Navigation.PushAsync(new ProblemTypePage(typeOfRoom.Text, backgroundPic));
+			Navigation.PushAsync(new ProblemTypePage(nItem));
 
 			
 

@@ -6,16 +6,26 @@ using Xamarin.Forms;
 namespace Domstol
 {
 	public partial class ProblemPage : ContentPage
-	{public ProblemPage() { InitializeComponent(); }
+	{
+		
+		public ProblemPage() { InitializeComponent(); }
 
 
-		public ProblemPage(string problemCategory, string typeOfRoom)
+		public ProblemPage(NavigationItem nItem)
 		{
+			
 			InitializeComponent();
-			Title = typeOfRoom + " -> " + problemCategory;
+			Title = nItem.typeOfRoom + " -> " + nItem.category;
 
 
 			problemList.ItemsSource = App.probs;
 		}
+
+		void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
+		{
+			Problem p = e.SelectedItem as Problem;
+			Navigation.PushAsync(new QuestionPage(p));
+		}
+
 	}
 }

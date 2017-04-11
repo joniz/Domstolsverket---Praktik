@@ -8,16 +8,16 @@ namespace Domstol
 	public partial class ProblemTypePage : ContentPage
 	{
 
-		private string typeOfRoom { get; set; }
+		private NavigationItem nItem { get; set; }
 	
 
-		public ProblemTypePage(string tOR, string backgroundPic)
+		public ProblemTypePage(NavigationItem n)
 		{
 			InitializeComponent();
 
-			typeOfRoom = tOR;
-			Title = typeOfRoom;
-			BackgroundPic.Source = backgroundPic;
+			nItem = n;
+			Title = nItem.typeOfRoom;
+			BackgroundPic.Source = nItem.imageName;
 		}
 
 
@@ -30,10 +30,12 @@ namespace Domstol
 			switch (problemCategory.Text) 
 			{
 				case "Bild":
-					Navigation.PushAsync(new ProblemPage(problemCategory.Text, typeOfRoom));
+					nItem.category = "Bild";
+					Navigation.PushAsync(new ProblemPage(nItem));
 					break;
 				case "Ljud":
-					Navigation.PushAsync(new ProblemPage(problemCategory.Text, typeOfRoom));
+					nItem.category = "Ljud";
+					Navigation.PushAsync(new ProblemPage(nItem));
 					break;
 				
 			
