@@ -41,7 +41,6 @@
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ManualListItem.cs" />
     <Compile Include="ManualPage.xaml.cs">
       <DependentUpon>ManualPage.xaml</DependentUpon>
     </Compile>
@@ -59,13 +58,13 @@
       <DependentUpon>ProblemPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Problem.cs" />
-    <Compile Include="Assets\ProblemRepository.cs" />
     <Compile Include="Models\Question.cs" />
-    <Compile Include="Assets\QuestionRepository.cs" />
     <Compile Include="QuestionPage.xaml.cs">
       <DependentUpon>QuestionPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="NavigationItem.cs" />
+    <Compile Include="Models\ManualListItem.cs" />
+    <Compile Include="Models\NavigationItem.cs" />
+    <Compile Include="Assets\DataRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">

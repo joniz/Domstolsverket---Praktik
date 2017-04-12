@@ -18,13 +18,20 @@ namespace Domstol
 			Title = nItem.typeOfRoom + " -> " + nItem.category;
 
 
-			problemList.ItemsSource = App.probs;
+			problemList.ItemsSource = App.dataRepository.problems;
 		}
 
 		void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
 		{
 			Problem p = e.SelectedItem as Problem;
-			Navigation.PushAsync(new QuestionPage(p));
+
+
+			Question q = App.dataRepository.getQuestionByID(p.firstQuestionID);
+
+
+
+			if(q != null)
+				Navigation.PushAsync(new QuestionPage(q));
 		}
 
 	}

@@ -10,6 +10,21 @@
 			<RowDefinition Height="auto"/>	
 			</Grid.RowDefinitions>
 
+			<Label x:Name="questionLabel"></Label>
+			<Button 
+			Grid.Row="0" 
+			Grid.Column="0" 
+			Text="Yes"
+			Clicked="ButtonClicked"/>
+
+
+			
+			<Button 
+			Grid.Row="1"
+			Grid.Column="0" 
+			Text="No"
+			Clicked="ButtonClicked"
+			/>
 			
 		</Grid>
 	

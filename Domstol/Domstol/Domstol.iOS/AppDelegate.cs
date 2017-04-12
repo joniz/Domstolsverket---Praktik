@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 using Foundation;
@@ -23,11 +24,13 @@ namespace Domstol.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-			string dbPath = FileAccessHelper.GetLocalFilePath("Domstol.db3");
+			string dbPath = FileAccessHelper.GetLocalFilePath("Domstol2.db");
 	  		LoadApplication(new App(dbPath));
             
 
             return base.FinishedLaunching(app, options);
         }
+
+
     }
 }

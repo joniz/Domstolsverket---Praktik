@@ -9,9 +9,7 @@ namespace Domstol
 {
 	public partial class App : Application
 	{
-		public static string path{get;set;}
-		public static List<Problem> probs { get; set; }
-		public static List<Question> quests { get; set; }
+		public static DataRepository dataRepository { get; set; }
 
 
 
@@ -25,16 +23,9 @@ namespace Domstol
         {
 			InitializeComponent();
             MainPage = new RootPage();
-			path = "Domstol2.db";
+		 //"Domstol2.db";
 
-
-			probs = new List<Problem>();
-			quests = new List<Question>();
-
-
-			SQLiteConnection db = new SQLiteConnection(path);
-			probs  = db.Query<Problem>("SELECT * FROM Problems");
-			quests = db.Query<Question>("SELECT * FROM Questions");
+			dataRepository = new DataRepository(dbPath);
 
 
 
