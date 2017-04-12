@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Domstol.QuestionPage">
 	<ContentPage.Content>
+		
 		<Grid>
 			<Grid.ColumnDefinitions>
 			</Grid.ColumnDefinitions>
@@ -10,9 +11,23 @@
 			<RowDefinition Height="auto"/>	
 			</Grid.RowDefinitions>
 
-			<Label x:Name="questionLabel"></Label>
+
+			<Frame
+			Grid.Row ="0"
+			Grid.Column = "0">
+
+
+				<Label 
+				LineBreakMode="WordWrap" 
+				x:Name="questionLabel"
+
+				/>
+
+			</Frame>
+
+
 			<Button 
-			Grid.Row="0" 
+			Grid.Row="1" 
 			Grid.Column="0" 
 			Text="Yes"
 			Clicked="ButtonClicked"/>
@@ -20,7 +35,7 @@
 
 			
 			<Button 
-			Grid.Row="1"
+			Grid.Row="2"
 			Grid.Column="0" 
 			Text="No"
 			Clicked="ButtonClicked"
