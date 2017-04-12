@@ -118,6 +118,7 @@
   <ItemGroup>
     <Compile Include="FileAccessHelper.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="PhoneDialer.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -171,7 +172,9 @@
     <AndroidResource Include="Resources\drawable\videoPic2.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Assets\Domstol2.db" />
+    <AndroidAsset Include="Assets\Domstol2.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />

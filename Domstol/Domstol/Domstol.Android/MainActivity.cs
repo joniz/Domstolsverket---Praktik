@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Domstol.Android;
 
 namespace Domstol.Droid
 {
@@ -20,6 +21,7 @@ namespace Domstol.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            global::Xamarin.Forms.DependencyService.Register<PhoneDialer>();
 			string dbPath = FileAccessHelper.GetLocalFilePath("Domstol.db3");
 	  		LoadApplication(new App(dbPath));
 
