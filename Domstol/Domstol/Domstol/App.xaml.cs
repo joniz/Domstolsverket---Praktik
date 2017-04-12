@@ -23,7 +23,6 @@ namespace Domstol
         {
 			InitializeComponent();
             MainPage = new RootPage();
-		 //"Domstol2.db";
 
 			dataRepository = new DataRepository(dbPath);
 
