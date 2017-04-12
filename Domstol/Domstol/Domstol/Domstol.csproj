@@ -65,6 +65,7 @@
     <Compile Include="Models\ManualListItem.cs" />
     <Compile Include="Models\NavigationItem.cs" />
     <Compile Include="Assets\DataRepository.cs" />
+    <Compile Include="IDialer.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">

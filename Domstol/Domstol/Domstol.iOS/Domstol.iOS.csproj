@@ -99,6 +99,7 @@
     <ITunesArtwork Include="iTunesArtwork@2x" />
     <None Include="packages.config" />
     <Compile Include="FileAccessHelper.cs" />
+    <Compile Include="PhoneDialer.iOS.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
@@ -122,6 +123,7 @@
     <BundleResource Include="Resources\Samtalsrum.jpg" />
     <BundleResource Include="Resources\Start.jpg" />
     <BundleResource Include="Resources\Domstol2.db" />
+    <BundleResource Include="Resources\Konferensrum.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

@@ -26,7 +26,7 @@ namespace Domstol
 				nItem.imageName = "Sal.jpg";
 
 			if (typeOfRoom.Text == "Rum")
-				nItem.imageName = "Samtalsrum.jpg";
+				nItem.imageName = "Konferensrum.jpg";
 					
 			Navigation.PushAsync(new ProblemTypePage(nItem));
 

@@ -14,7 +14,9 @@
 
 			<Frame
 			Grid.Row ="0"
-			Grid.Column = "0">
+			Grid.Column = "0"
+			OutlineColor="Black"
+				>
 
 
 				<Label 
@@ -29,17 +31,50 @@
 			<Button 
 			Grid.Row="1" 
 			Grid.Column="0" 
-			Text="Yes"
-			Clicked="ButtonClicked"/>
+			BorderRadius = "10"
+			BackgroundColor="#F5F5F5"
+			Text="Ja"
+			Clicked="ButtonClicked"
+			x:Name="yesButton"
+			/>
+
+			<Button 
+			Grid.Row="1" 
+			Grid.Column="0" 
+			BorderRadius = "10"
+			BackgroundColor="#F5F5F5"
+			Text="Ring support"
+			Clicked="ButtonClicked"
+			x:Name="callButton"
+			IsVisible="false"
+			/>
+
+			
+			<Button 
+			Grid.Row="2" 
+			Grid.Column="0" 
+			BorderRadius = "10"
+			BackgroundColor="#F5F5F5"
+			Text="Tillbaka till meny"
+			Clicked="ButtonClicked"
+			x:Name="menuButton"
+			IsVisible="false"
+			/>
+
 
 
 			
 			<Button 
 			Grid.Row="2"
 			Grid.Column="0" 
-			Text="No"
+			BorderRadius = "10"
+			BackgroundColor="#F5F5F5"
+			Text="Nej"
 			Clicked="ButtonClicked"
+			x:Name="noButton"
 			/>
+
+
 			
 		</Grid>
 	
