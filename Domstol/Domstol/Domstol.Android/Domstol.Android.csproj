@@ -128,7 +128,6 @@
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Assets\Styles.css" />
     <None Include="Resources\drawable\dom.png" />
-    <None Include="PhoneDialer.Droid.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\icon.png" />
