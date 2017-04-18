@@ -18,6 +18,7 @@ namespace Domstol
 			nItem = n;
 			Title = nItem.typeOfRoom.ToString();
 			BackgroundPic.Source = nItem.imageName;
+
 		}
 
 

@@ -26,12 +26,11 @@ namespace Domstol
 		{
 
 			foreach (Question q in questions) 
-			{
 				if (q.questionID == id)
 					return q;
 			
 			
-			}
+			
 			return null;
 			
 		}

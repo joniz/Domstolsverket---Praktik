@@ -23,19 +23,28 @@ namespace Domstol
 
 				problemList.ItemsSource = App.dataRepository.getProblemsByCategoryAndRoom(
 					nItem.category, nItem.typeOfRoom);
+			
 		}
 
 		void problemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
 		{
-			Problem p = e.SelectedItem as Problem;
+			if (((ListView)sender).SelectedItem != null)
+			{
+
+				Problem p = e.SelectedItem as Problem;
 
 
-			Question q = App.dataRepository.getQuestionByID(p.firstQuestionID);
+				Question q = App.dataRepository.getQuestionByID(p.firstQuestionID);
+
+				((ListView)sender).SelectedItem = null;
 
 
 
-			if(q != null)
-				Navigation.PushAsync(new QuestionPage(q));
+				if (q != null)
+					Navigation.PushAsync(new QuestionPage(q));
+
+			}
+
 		}
 
 	}
