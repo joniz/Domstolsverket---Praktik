@@ -18,10 +18,14 @@ namespace Domstol
 			Title = nItem.typeOfRoom + " -> " + nItem.category;
 
 
-			problemList.ItemsSource = App.dataRepository.problems;
+			if (nItem.typeOfRoom == Room.Sal)
+
+
+				problemList.ItemsSource = App.dataRepository.getProblemsByCategoryAndRoom(
+					nItem.category, nItem.typeOfRoom);
 		}
 
-		void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
+		void problemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
 		{
 			Problem p = e.SelectedItem as Problem;
 

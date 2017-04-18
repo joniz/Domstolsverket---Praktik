@@ -18,17 +18,30 @@ namespace Domstol
 		}
 		public QuestionPage(Question question)
 		{
+            InitializeComponent();
+			initializeQuestion(question);
+		
+		
+		}
+		public QuestionPage(Question question, Answer previousAnswer)
+		{
 
 
 			InitializeComponent();
-
-			currentQuestion = question;
-			questionLabel.Text = question.questionText;
-			yesQuestion = App.dataRepository.getQuestionByID(currentQuestion.questionYesID);
-			noQuestion = App.dataRepository.getQuestionByID(currentQuestion.questionNoID);
+			initializeQuestion(question);
 
 
-			if (yesQuestion == null && noQuestion == null) 
+
+			//Check if it's the last question and we came from a 'Yes' alternative
+			if (yesQuestion == null && noQuestion == null && previousAnswer == Answer.Yes) 
+			{
+				yesButton.IsVisible = false;
+				noButton.IsVisible = false;
+				menuButton.IsVisible = true;
+			}
+
+			//Check if it's the last question, and that we came from a 'No' alternative
+			if (yesQuestion == null && noQuestion == null && previousAnswer == Answer.No) 
 			{
 				yesButton.IsVisible = false;
 				noButton.IsVisible = false;
@@ -42,6 +55,7 @@ namespace Domstol
 		void ButtonClicked(object sender, System.EventArgs e)
 		{
 			Button b = sender as Button;
+		
 			string choice = b.Text;
 
 
@@ -49,18 +63,19 @@ namespace Domstol
 			{
 				case "Ja":
 					if (yesQuestion != null)
-						Navigation.PushAsync(new QuestionPage(yesQuestion));
+						Navigation.PushAsync(new QuestionPage(yesQuestion, Answer.Yes));
 					break;
 				case "Nej":
 					if (noQuestion != null)
-						Navigation.PushAsync(new QuestionPage(noQuestion));
+						Navigation.PushAsync(new QuestionPage(noQuestion, Answer.No));
 					break;
 				case "Tillbaka till meny":
 					Navigation.PopToRootAsync();
 					break;
 				case "Ring support":
 					var dialer = DependencyService.Get<IDialer>();
-					if (dialer != null) {
+					if (dialer != null) 
+					{
 						dialer.DialAsync("0364422000");
 					}
 					break;
@@ -69,6 +84,15 @@ namespace Domstol
 		
 			
 
+		}
+
+		public void initializeQuestion(Question question)
+		{
+			currentQuestion = question;
+			questionLabel.Text = question.questionText;
+			yesQuestion = App.dataRepository.getQuestionByID(currentQuestion.questionYesID);
+			noQuestion = App.dataRepository.getQuestionByID(currentQuestion.questionNoID);
+		
 		}
 	}
 }

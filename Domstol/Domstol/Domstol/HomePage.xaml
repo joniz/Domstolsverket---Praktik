@@ -42,7 +42,7 @@
 				/>
 
 			
-				<Button Text="Rum" Clicked="ButtonClicked"
+				<Button Text="Sal" Clicked="ButtonClicked"
 				FontAttributes="Bold"
 				Grid.Row="2"
 				Grid.Column = "1"
@@ -54,7 +54,7 @@
 				/>
 
 			
-				<Button Text="Sal" Clicked="ButtonClicked"
+				<Button Text="Konferensrum" Clicked="ButtonClicked"
 				FontAttributes="Bold"
 				Grid.Row="3"
 				Grid.Column = "1"
@@ -64,7 +64,7 @@
 
 				/>
 			
-				<Button Text="Annat?" Clicked="ButtonClicked"
+				<Button Text="Samtalsrum" Clicked="ButtonClicked"
 				FontAttributes="Bold"
 				Grid.Row="4"
 				Grid.Column = "1"
