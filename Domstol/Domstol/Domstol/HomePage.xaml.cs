@@ -15,6 +15,7 @@ namespace Domstol
         {
             InitializeComponent();
 			nItem = new NavigationItem();
+			NavigationPage.SetBackButtonTitle(this, "Tillbaka");
 
 
 
