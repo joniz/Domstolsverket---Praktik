@@ -27,6 +27,7 @@ namespace Domstol
 			yesQuestion = App.dataRepository.getQuestionByID(currentQuestion.questionYesID);
 			noQuestion = App.dataRepository.getQuestionByID(currentQuestion.questionNoID);
 
+
 			if (yesQuestion == null && noQuestion == null) 
 			{
 				yesButton.IsVisible = false;
