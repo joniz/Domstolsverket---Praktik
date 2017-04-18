@@ -16,32 +16,31 @@ namespace Domstol
 			InitializeComponent();
 
 			nItem = n;
-			Title = nItem.typeOfRoom;
+			Title = nItem.typeOfRoom.ToString();
 			BackgroundPic.Source = nItem.imageName;
 		}
 
 
 		void ButtonClicked(object sender, System.EventArgs e)
 		{
-			Button problemCategory = sender as Button;
+			Button button = sender as Button;
 
 
 
-			switch (problemCategory.Text) 
+			if (button.Text == Category.Bild.ToString())
 			{
-				case "Bild":
-					nItem.category = "Bild";
-					Navigation.PushAsync(new ProblemPage(nItem));
-					break;
-				case "Ljud":
-					nItem.category = "Ljud";
-					Navigation.PushAsync(new ProblemPage(nItem));
-					break;
-				
+				nItem.category = Category.Bild;
+				Navigation.PushAsync(new ProblemPage(nItem));
+			}
+			if (button.Text == Category.Ljud.ToString())
+			{
+				nItem.category = Category.Ljud;
+				Navigation.PushAsync(new ProblemPage(nItem));
+			}
 			
 			
 			
 			}
 		}
 	}
-}
+

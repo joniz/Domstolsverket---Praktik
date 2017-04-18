@@ -9,6 +9,7 @@
 			<RowDefinition Height="auto"/>
 			<RowDefinition Height="auto"/>
 			<RowDefinition Height="auto"/>	
+			<RowDefinition Height="auto"/>
 			</Grid.RowDefinitions>
 
 
@@ -60,9 +61,6 @@
 			x:Name="menuButton"
 			IsVisible="false"
 			/>
-
-
-
 			
 			<Button 
 			Grid.Row="2"

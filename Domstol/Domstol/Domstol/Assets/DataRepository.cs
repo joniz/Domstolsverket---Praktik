@@ -35,5 +35,21 @@ namespace Domstol
 			return null;
 			
 		}
+
+		public List<Problem> getProblemsByCategoryAndRoom(Category c, Room r) 
+		{
+
+			List<Problem> temps = new List<Problem>();
+			foreach (Problem p in problems)
+				if (p.problemCategory == c.ToString() && p.problemTypeOfRoom == r.ToString())
+					temps.Add(p);
+				
+
+
+			return temps;
+		
+		
+		}
+
 	}
 }
