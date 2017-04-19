@@ -10,6 +10,12 @@
 				<Setter Property="BorderRadius" Value="10"/>
 				<Setter Property="BackgroundColor" Value="#F5F5F5"/>
             </Style>
+			
+			<OnPlatform x:Key="tabbedBarColor"
+              x:TypeArguments="Color"
+              iOS="#E0E0E0"
+              Android="Aqua"
+              WinPhone="#80FF80" />
         </ResourceDictionary>
 
 	</Application.Resources>
