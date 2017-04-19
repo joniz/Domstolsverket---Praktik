@@ -11,8 +11,7 @@
                         <StackLayout Orientation="Horizontal" Padding="15">
                       
                             <StackLayout Orientation ="Vertical">
-                                <Label Text="{Binding problemDescription}" Font="Large"/>
-								
+                                <Label Text="{Binding problemDescription}" FontSize="Medium"/>
                             </StackLayout>
                         </StackLayout>
                     </ViewCell>

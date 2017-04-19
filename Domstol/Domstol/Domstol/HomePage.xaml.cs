@@ -10,13 +10,20 @@ namespace Domstol
     public partial class HomePage : ContentPage
     {
 
-		public NavigationItem nItem { get; set; }
+		public MyNavigationItem nItem { get; set; }
         public HomePage()
         {
             InitializeComponent();
-			nItem = new NavigationItem();
-			NavigationPage.SetBackButtonTitle(this, "Tillbaka");
+			nItem = new MyNavigationItem();
+			NavigationPage.SetBackButtonTitle(this, "Tillbaka");	
 
+
+   //         this.NavigationItem.SetRightBarButtonItem(
+
+			//new UIBarButtonItem(UIBarButtonSystemItem.Action, (sender, args) => {
+   //    			// button was clicked
+			//})
+			//, true);
 
 
 
@@ -30,18 +37,18 @@ namespace Domstol
 
 			if (button.Text == Room.Conferenceroom)
 			{
-				nItem.imageName = "Konferensrum.jpg";
+				nItem.imageName = PictureNames.ConferenceRoom;
 				nItem.typeOfRoom = Room.Conferenceroom;
 			}
 
 			if (button.Text == Room.Courtroom)
 			{
-				nItem.imageName = "Sal.jpg";
+				nItem.imageName = PictureNames.CourtRoom;
 				nItem.typeOfRoom = Room.Courtroom;
 			}
 			if (button.Text == Room.Meetingroom) 
 			{
-				nItem.imageName = "Samtalsrum.jpg";
+				nItem.imageName = PictureNames.MeetingRoom;
 				nItem.typeOfRoom = Room.Meetingroom;
 			
 			}

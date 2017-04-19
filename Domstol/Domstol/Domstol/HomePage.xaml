@@ -10,21 +10,21 @@
 		
 			
 			<Grid>
-			<Grid.RowDefinitions>
-				<RowDefinition Height ="300"/>
-				<RowDefinition Height="Auto"/>
-				<RowDefinition Height="Auto" />
-				<RowDefinition Height="Auto"/>
-				<RowDefinition Height="Auto"/>
-			</Grid.RowDefinitions>
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="*"/>
-				<ColumnDefinition Width="*"/>
-				<ColumnDefinition Width="*"/>
-			</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height ="300"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+				</Grid.ColumnDefinitions>
 
 
-			<Image Source="Start.jpg"
+				<Image Source="Start.jpg"
 				Grid.Row = "0"
 				Grid.ColumnSpan = "3"
 
@@ -44,35 +44,24 @@
 
 			
 				<Button Text="Sal" Clicked="ButtonClicked"
-				FontAttributes="Bold"
+				Style="{StaticResource ButtonStyle}"
 				Grid.Row="2"
 				Grid.Column = "1"
-				BorderRadius = "10"
-				BackgroundColor="#F5F5F5"
 
-
-				
 				/>
 
 			
 				<Button Text="Konferensrum" Clicked="ButtonClicked"
-				FontAttributes="Bold"
+				Style="{StaticResource ButtonStyle}"
 				Grid.Row="3"
 				Grid.Column = "1"
-				BorderRadius = "10"
-				BackgroundColor="#F5F5F5"
-
 
 				/>
 			
 				<Button Text="Samtalsrum" Clicked="ButtonClicked"
-				FontAttributes="Bold"
+				Style="{StaticResource ButtonStyle}"
 				Grid.Row="4"
 				Grid.Column = "1"
-				BorderRadius = "10"
-				BackgroundColor="#F5F5F5"
-
-
 				/>
 			</Grid>
 		

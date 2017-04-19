@@ -11,7 +11,7 @@ namespace Domstol
 		public ProblemPage() { InitializeComponent(); }
 
 
-		public ProblemPage(NavigationItem nItem)
+		public ProblemPage(MyNavigationItem nItem)
 		{
 			
 			InitializeComponent();

@@ -63,7 +63,7 @@
       <DependentUpon>QuestionPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\ManualListItem.cs" />
-    <Compile Include="Models\NavigationItem.cs" />
+    <Compile Include="Models\MyNavigationItem.cs" />
     <Compile Include="Assets\DataRepository.cs" />
     <Compile Include="IDialer.cs" />
     <Compile Include="Enums\Answer.cs" />

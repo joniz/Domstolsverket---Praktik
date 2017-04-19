@@ -8,11 +8,11 @@ namespace Domstol
 	public partial class ProblemTypePage : ContentPage
 	{
 
-		private NavigationItem nItem { get; set; }
+		private MyNavigationItem nItem { get; set; }
 
 		public ProblemTypePage() { InitializeComponent();}
 
-		public ProblemTypePage(NavigationItem n)
+		public ProblemTypePage(MyNavigationItem n)
 		{
 			InitializeComponent();
 
