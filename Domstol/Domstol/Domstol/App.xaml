@@ -8,7 +8,7 @@
             <Style x:Key="ButtonStyle" TargetType="Button">
                 <Setter Property="FontAttributes" Value="Bold"/>
 				<Setter Property="BorderRadius" Value="10"/>
-				<Setter Property="BackgroundColor" Value="#F5F5F5"/>
+				<Setter Property="BackgroundColor" Value="#E0E0E0"/>
             </Style>
 			
 			<OnPlatform x:Key="tabbedBarColor"
