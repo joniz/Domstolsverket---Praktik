@@ -1,10 +1,10 @@
 ﻿using System;
 namespace Domstol
 {
-	public enum Category
+	public static class Category
 	{
-		Ljud,
-		Bild,
+		public static string Video { get { return "Bild"; } }
+		public static string Audio { get { return "Ljud";} }
 
 	}
 }

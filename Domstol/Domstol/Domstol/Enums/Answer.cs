@@ -1,9 +1,10 @@
 ﻿using System;
 namespace Domstol
 {
-	public enum Answer
+	public static class Answer
 	{
-		Yes,
-		No
+		public static string Yes { get { return "Ja";} }
+		public static string No { get { return "Nej";} }
+
 	}
 }

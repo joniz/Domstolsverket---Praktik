@@ -28,14 +28,14 @@ namespace Domstol
 
 
 
-			if (button.Text == Category.Bild.ToString())
+			if (button.Text == Category.Video)
 			{
-				nItem.category = Category.Bild;
+				nItem.category = Category.Video;
 				Navigation.PushAsync(new ProblemPage(nItem));
 			}
-			if (button.Text == Category.Ljud.ToString())
+			if (button.Text == Category.Audio)
 			{
-				nItem.category = Category.Ljud;
+				nItem.category = Category.Audio;
 				Navigation.PushAsync(new ProblemPage(nItem));
 			}
 			

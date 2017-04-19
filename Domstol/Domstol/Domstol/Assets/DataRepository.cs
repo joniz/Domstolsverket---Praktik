@@ -35,12 +35,12 @@ namespace Domstol
 			
 		}
 
-		public List<Problem> getProblemsByCategoryAndRoom(Category c, Room r) 
+		public List<Problem> getProblemsByCategoryAndRoom(string category, string typeOfRoom) 
 		{
 
 			List<Problem> temps = new List<Problem>();
 			foreach (Problem p in problems)
-				if (p.problemCategory == c.ToString() && p.problemTypeOfRoom == r.ToString())
+				if (p.problemCategory == category && p.problemTypeOfRoom == typeOfRoom)
 					temps.Add(p);
 				
 

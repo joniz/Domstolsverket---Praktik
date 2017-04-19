@@ -1,10 +1,10 @@
 ﻿using System;
 namespace Domstol
 {
-	public enum Room
+	public static class Room
 	{
-		Sal,
-		Konferensrum,
-		Samtalsrum
+		public static string Courtroom { get { return "Sal";} }
+		public static string Conferenceroom { get { return "Konferensrum";} }
+		public static string Meetingroom { get { return "Samtalsrum";} }
 	}
 }

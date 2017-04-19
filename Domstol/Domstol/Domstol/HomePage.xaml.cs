@@ -27,21 +27,22 @@ namespace Domstol
 		{
 			Button button = sender as Button;
 
-			if (button.Text == Room.Konferensrum.ToString())
+
+			if (button.Text == Room.Conferenceroom)
 			{
 				nItem.imageName = "Konferensrum.jpg";
-				nItem.typeOfRoom = Room.Konferensrum;
+				nItem.typeOfRoom = Room.Conferenceroom;
 			}
 
-			if (button.Text == Room.Sal.ToString())
+			if (button.Text == Room.Courtroom)
 			{
 				nItem.imageName = "Sal.jpg";
-				nItem.typeOfRoom = Room.Sal;
+				nItem.typeOfRoom = Room.Courtroom;
 			}
-			if (button.Text == Room.Samtalsrum.ToString()) 
+			if (button.Text == Room.Meetingroom) 
 			{
 				nItem.imageName = "Samtalsrum.jpg";
-				nItem.typeOfRoom = Room.Samtalsrum;
+				nItem.typeOfRoom = Room.Meetingroom;
 			
 			}
 

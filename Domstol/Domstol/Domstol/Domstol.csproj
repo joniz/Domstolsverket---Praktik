@@ -69,6 +69,7 @@
     <Compile Include="Enums\Answer.cs" />
     <Compile Include="Enums\Category.cs" />
     <Compile Include="Enums\Room.cs" />
+    <Compile Include="Enums\PictureNames.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">

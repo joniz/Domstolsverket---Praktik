@@ -23,7 +23,7 @@ namespace Domstol
 		
 		
 		}
-		public QuestionPage(Question question, Answer previousAnswer)
+		public QuestionPage(Question question, string previousAnswer)
 		{
 
 

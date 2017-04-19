@@ -18,9 +18,7 @@ namespace Domstol
 			Title = nItem.typeOfRoom + " -> " + nItem.category;
 
 
-			if (nItem.typeOfRoom == Room.Sal)
-
-
+			if (nItem.typeOfRoom == Room.Courtroom)
 				problemList.ItemsSource = App.dataRepository.getProblemsByCategoryAndRoom(
 					nItem.category, nItem.typeOfRoom);
 			
