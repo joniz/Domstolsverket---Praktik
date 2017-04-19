@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Domstol"
              x:Class="Domstol.RootPage"
-            BarBackgroundColor="#6699CC"
+             BarBackgroundColor="#E0E0E0"
 			
             >
 	
@@ -13,7 +13,7 @@
 		</x:Arguments>
 	</NavigationPage>
 
- 	<NavigationPage BarBackgroundColor="Gray" x:Name="manualnav" Icon="manual">
+ 	<NavigationPage BarBackgroundColor="#6699CC" x:Name="manualnav" Icon="manual">
 		<x:Arguments>
 			<local:ManualPage Title="Manual" />
 		</x:Arguments>

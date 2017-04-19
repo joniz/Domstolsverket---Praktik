@@ -4,7 +4,13 @@
              x:Class="Domstol.App">
 	<Application.Resources>
 
-		<!-- Application resource dictionary -->
+		<ResourceDictionary>
+            <Style x:Key="ButtonStyle" TargetType="Button">
+                <Setter Property="FontAttributes" Value="Bold"/>
+				<Setter Property="BorderRadius" Value="10"/>
+				<Setter Property="BackgroundColor" Value="#F5F5F5"/>
+            </Style>
+        </ResourceDictionary>
 
 	</Application.Resources>
 </Application>

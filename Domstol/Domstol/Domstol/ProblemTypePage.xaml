@@ -5,15 +5,7 @@
 	x:Class="Domstol.ProblemTypePage"
 
 	>
-	<ContentPage.Resources>
-		<ResourceDictionary>
-            <Style x:Key="ButtonStyle" TargetType="Button">
-                <Setter Property="FontAttributes" Value="Bold"/>
-				<Setter Property="BorderRadius" Value="10"/>
-				<Setter Property="BackgroundColor" Value="#F5F5F5"/>
-            </Style>
-        </ResourceDictionary>
-	</ContentPage.Resources>
+
 	<ContentPage.Content>
 		<Grid>
 			<Grid.RowDefinitions>
