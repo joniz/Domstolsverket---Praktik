@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:Domstol"
              x:Class="Domstol.HomePage"
              Icon="home"
+			 
             >
 	<ContentPage.Content>
 		

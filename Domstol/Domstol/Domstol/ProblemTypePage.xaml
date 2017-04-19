@@ -5,6 +5,15 @@
 	x:Class="Domstol.ProblemTypePage"
 
 	>
+	<ContentPage.Resources>
+		<ResourceDictionary>
+            <Style x:Key="ButtonStyle" TargetType="Button">
+                <Setter Property="FontAttributes" Value="Bold"/>
+				<Setter Property="BorderRadius" Value="10"/>
+				<Setter Property="BackgroundColor" Value="#F5F5F5"/>
+            </Style>
+        </ResourceDictionary>
+	</ContentPage.Resources>
 	<ContentPage.Content>
 		<Grid>
 			<Grid.RowDefinitions>
@@ -41,25 +50,18 @@
 				/>
 
 			
-
 				<Button Text="Ljud" 
+				Style="{StaticResource ButtonStyle}"
 				Clicked="ButtonClicked"
-				Image="audioSmall"
-				FontAttributes="Bold"
 				Grid.Row="2"
 				Grid.Column = "1"
-				BorderRadius = "10"
-				BackgroundColor="#F5F5F5"
 				/>
 			
 				<Button Text="Bild" 
+				Style="{StaticResource ButtonStyle}"
 				Clicked="ButtonClicked"
-				Image="videoSmall"
-				FontAttributes="Bold"
 				Grid.Row="3"
 				Grid.Column = "1"
-				BorderRadius = "10"
-				BackgroundColor="#F5F5F5"
 				/>
 
 		</Grid>

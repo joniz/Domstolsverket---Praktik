@@ -9,7 +9,8 @@ namespace Domstol
 	{
 
 		private NavigationItem nItem { get; set; }
-	
+
+		public ProblemTypePage() { InitializeComponent();}
 
 		public ProblemTypePage(NavigationItem n)
 		{

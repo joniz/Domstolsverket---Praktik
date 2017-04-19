@@ -35,7 +35,7 @@
 			BorderRadius = "10"
 			BackgroundColor="#F5F5F5"
 			Text="Ja"
-			Clicked="ButtonClicked"
+			Clicked="YesButtonClicked"
 			x:Name="yesButton"
 			/>
 
@@ -45,7 +45,7 @@
 			BorderRadius = "10"
 			BackgroundColor="#F5F5F5"
 			Text="Ring support"
-			Clicked="ButtonClicked"
+			Clicked="CallSupportButtonClicked"
 			x:Name="callButton"
 			IsVisible="false"
 			/>
@@ -57,7 +57,7 @@
 			BorderRadius = "10"
 			BackgroundColor="#F5F5F5"
 			Text="Tillbaka till meny"
-			Clicked="ButtonClicked"
+			Clicked="MenuButtonClicked"
 			x:Name="menuButton"
 			IsVisible="false"
 			/>
@@ -68,7 +68,7 @@
 			BorderRadius = "10"
 			BackgroundColor="#F5F5F5"
 			Text="Nej"
-			Clicked="ButtonClicked"
+			Clicked="NoButtonClicked"
 			x:Name="noButton"
 			/>
 

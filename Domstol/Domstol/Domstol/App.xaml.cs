@@ -19,10 +19,10 @@ namespace Domstol
 		MainPage = new RootPage();
 		
 		}
-        public App(string dbPath)
-        {
+		public App(string dbPath)
+		{
 			InitializeComponent();
-            MainPage = new RootPage();
+			MainPage = new RootPage();
 
 			dataRepository = new DataRepository(dbPath);
 

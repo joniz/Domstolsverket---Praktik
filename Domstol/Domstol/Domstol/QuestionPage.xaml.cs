@@ -52,38 +52,27 @@ namespace Domstol
 
 		}
 
-		void ButtonClicked(object sender, System.EventArgs e)
+		void YesButtonClicked(object sender, System.EventArgs e)
 		{
-			Button b = sender as Button;
-		
-			string choice = b.Text;
+			if (yesQuestion != null)
+				Navigation.PushAsync(new QuestionPage(yesQuestion, Answer.Yes));
 
-
-			switch (choice) 
-			{
-				case "Ja":
-					if (yesQuestion != null)
-						Navigation.PushAsync(new QuestionPage(yesQuestion, Answer.Yes));
-					break;
-				case "Nej":
-					if (noQuestion != null)
-						Navigation.PushAsync(new QuestionPage(noQuestion, Answer.No));
-					break;
-				case "Tillbaka till meny":
-					Navigation.PopToRootAsync();
-					break;
-				case "Ring support":
-					var dialer = DependencyService.Get<IDialer>();
-					if (dialer != null) 
-					{
-						dialer.DialAsync("0364422000");
-					}
-					break;
-			
-			}
-		
-			
-
+		}
+		void CallSupportButtonClicked(object sender, System.EventArgs e)
+		{
+			var dialer = DependencyService.Get<IDialer>();
+			if (dialer != null)
+				dialer.DialAsync("0364422000");
+					
+		}
+		void MenuButtonClicked(object sender, System.EventArgs e)
+		{
+			Navigation.PopToRootAsync();
+		}
+		void NoButtonClicked(object sender, System.EventArgs e)
+		{ 
+			if (noQuestion != null)
+						Navigation.PushAsync(new QuestionPage(noQuestion, Answer.No));	
 		}
 
 		public void initializeQuestion(Question question)
