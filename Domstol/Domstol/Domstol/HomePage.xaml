@@ -76,14 +76,14 @@
 				/>
 
 				<Label
+				Style="{StaticResource RedLine}"
 				Grid.Row="0"
 				Grid.Column="0"
 				Grid.RowSpan="8"
-				BackgroundColor="#CC6666"
-				Text="   "
-				Margin="-6"
+
 
 				/>
+			
 			</Grid>
 		
 		

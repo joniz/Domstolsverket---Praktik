@@ -4,7 +4,33 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	x:Class="Domstol.ProblemPage">
 	<ContentPage.Content>
-		  <ListView x:Name="problemList" ItemSelected="problemSelected" RowHeight="60">
+		<Grid>
+			
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+			
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+
+
+			
+			<ListView x:Name="problemList" 
+			ItemSelected="problemSelected"
+			RowHeight="60"
+			Grid.Row="0"
+			Grid.Column="1"
+			Grid.ColumnSpan="9"
+				>
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -19,6 +45,22 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
+        <Label
+		Style="{StaticResource RedLine}"
+        Grid.Row="0"
+		Grid.Column="0"
+
+
+
+			/>
+
+
+			
+			
+		</Grid>
+		
+		 
 	</ContentPage.Content>
 </ContentPage>
 
