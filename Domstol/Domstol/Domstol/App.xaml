@@ -10,6 +10,7 @@
 				<Setter Property="BorderRadius" Value="10"/>
 				<Setter Property="BackgroundColor" Value="#E0E0E0"/>
 				<Setter Property="TextColor" Value="#0d0d0d"/>
+				<Setter Property="FontSize" Value="Large"/>
             </Style>
 			
 			<OnPlatform x:Key="tabbedBarColor"
@@ -17,6 +18,8 @@
               iOS="#E0E0E0"
               Android="#6699CC"
               WinPhone="#80FF80" />
+			
+  				
         </ResourceDictionary>
 
 	</Application.Resources>

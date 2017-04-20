@@ -15,9 +15,12 @@ namespace Domstol
         {
             InitializeComponent();
 			nItem = new MyNavigationItem();
-			NavigationPage.SetBackButtonTitle(this, "Tillbaka");	
+			NavigationPage.SetBackButtonTitle(this, "Tillbaka");
 
 
+			Startbild.Source = ImageSource.FromFile("Start.jpg");
+			Startbild.Source = "Start.jpg";
+			Startbild.Aspect = Aspect.AspectFill;
    //         this.NavigationItem.SetRightBarButtonItem(
 
 			//new UIBarButtonItem(UIBarButtonSystemItem.Action, (sender, args) => {

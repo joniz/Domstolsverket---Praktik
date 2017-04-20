@@ -11,16 +11,18 @@
 			
 			<Grid>
 				<Grid.RowDefinitions>
-					<RowDefinition Height ="300"/>
+					<RowDefinition Height ="Auto"/>
 					<RowDefinition Height="Auto"/>
 					<RowDefinition Height="Auto" />
 					<RowDefinition Height="Auto"/>
 					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="*"/>
+
 				</Grid.RowDefinitions>
 				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto"/>
 					<ColumnDefinition Width="*"/>
-					<ColumnDefinition Width="*"/>
-					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="Auto"/>
 					<ColumnDefinition Width="*"/>
 					<ColumnDefinition Width="*"/>
 					<ColumnDefinition Width="*"/>
@@ -30,23 +32,19 @@
 				</Grid.ColumnDefinitions>
 
 
-				<Image Source="Start.jpg"
-				Grid.Row = "0"
-				Grid.ColumnSpan = "9"
-
+				<Image x:Name="Startbild"
+				Grid.Row="0"
+				Grid.Column="1"
+				Grid.ColumnSpan="8"
 				/>
 
-
-			
 				<Label Text="Var är du?"
-				HorizontalTextAlignment="Center"
-				VerticalOptions="CenterAndExpand"
-				FontSize="Large"
+				FontSize="35"
+				TextColor="#6699CC"
 				FontAttributes="Bold"
-				Opacity="0.7"
 				Grid.Column = "3"
 				Grid.Row = "1"
-				Grid.ColumnSpan = "3"
+				Grid.ColumnSpan = "5"
 				/>
 
 			
@@ -54,8 +52,9 @@
 				Style="{StaticResource ButtonStyle}"
 				Grid.Row="2"
 				Grid.Column = "2"
-				Grid.ColumnSpan="5"
-				FontSize="Large"
+				Grid.ColumnSpan="6"
+
+
 				/>
 
 			
@@ -63,8 +62,8 @@
 				Style="{StaticResource ButtonStyle}"
 				Grid.Row="3"
 				Grid.Column = "2"
-				Grid.ColumnSpan="5"
-				FontSize="Large"
+				Grid.ColumnSpan="6"
+
 
 				/>
 			
@@ -72,8 +71,18 @@
 				Style="{StaticResource ButtonStyle}"
 				Grid.Row="4"
 				Grid.Column = "2"
-				Grid.ColumnSpan="5"
-				FontSize="Large"
+				Grid.ColumnSpan="6"
+
+				/>
+
+				<Label
+				Grid.Row="0"
+				Grid.Column="0"
+				Grid.RowSpan="8"
+				BackgroundColor="#CC6666"
+				Text="   "
+				Margin="-6"
+
 				/>
 			</Grid>
 		

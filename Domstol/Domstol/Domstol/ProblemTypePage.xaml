@@ -7,21 +7,80 @@
 	>
 
 	<ContentPage.Content>
-		<Grid>
-			<Grid.RowDefinitions>
-				<RowDefinition Height ="300"/>
-				<RowDefinition Height="Auto"/>
-				<RowDefinition Height="Auto" />
-				<RowDefinition Height="Auto"/>
-				<RowDefinition Height="Auto"/>
-			</Grid.RowDefinitions>
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="*"/>
-				<ColumnDefinition Width="*"/>
-				<ColumnDefinition Width="*"/>
-			</Grid.ColumnDefinitions>
+		
+			<Grid>
+				<Grid.RowDefinitions>
+					<RowDefinition Height ="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="*"/>
+
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="Auto"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+				</Grid.ColumnDefinitions>
 
 
+				<Image x:Name="Roompic"
+				Grid.Row="0"
+				Grid.Column="1"
+				Grid.ColumnSpan="8"
+				/>
+
+				<Label Text="Vad behöver du hjälp med?"
+				FontSize="35"
+				TextColor="#6699CC"
+				FontAttributes="Bold"
+				Grid.Column = "3"
+				Grid.Row = "1"
+				Grid.ColumnSpan = "5"
+				/>
+
+			
+				<Button Text="Ljud" Clicked="ButtonClicked"
+				Style="{StaticResource ButtonStyle}"
+				Grid.Row="2"
+				Grid.Column = "2"
+				Grid.ColumnSpan="6"
+
+
+				/>
+
+			
+				<Button Text="Bild" Clicked="ButtonClicked"
+				Style="{StaticResource ButtonStyle}"
+				Grid.Row="3"
+				Grid.Column = "2"
+				Grid.ColumnSpan="6"
+
+
+				/>
+			
+				
+
+				<Label
+				Grid.Row="0"
+				Grid.Column="0"
+				Grid.RowSpan="8"
+				BackgroundColor="#CC6666"
+				Text="   "
+				Margin="-6"
+
+				/>
+			</Grid>
+		
+		
+<!--
 			<Image x:Name="BackgroundPic"
 				Grid.Row = "0"
 				Grid.ColumnSpan = "3"
@@ -54,10 +113,9 @@
 				Clicked="ButtonClicked"
 				Grid.Row="3"
 				Grid.Column = "1"
-				/>
+				/>-->
 
-		</Grid>
-		
+
 		
 	</ContentPage.Content>
 </ContentPage>
