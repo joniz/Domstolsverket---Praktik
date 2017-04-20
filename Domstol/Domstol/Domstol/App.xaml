@@ -15,7 +15,7 @@
 			<OnPlatform x:Key="tabbedBarColor"
               x:TypeArguments="Color"
               iOS="#E0E0E0"
-              Android="Aqua"
+              Android="#6699CC"
               WinPhone="#80FF80" />
         </ResourceDictionary>
 
