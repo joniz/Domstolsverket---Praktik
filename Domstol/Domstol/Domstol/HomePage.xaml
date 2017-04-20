@@ -21,12 +21,18 @@
 					<ColumnDefinition Width="*"/>
 					<ColumnDefinition Width="*"/>
 					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
 				</Grid.ColumnDefinitions>
 
 
 				<Image Source="Start.jpg"
 				Grid.Row = "0"
-				Grid.ColumnSpan = "3"
+				Grid.ColumnSpan = "9"
 
 				/>
 
@@ -38,6 +44,7 @@
 				FontSize="Large"
 				FontAttributes="Bold"
 				Opacity="0.7"
+				Grid.Column = "3"
 				Grid.Row = "1"
 				Grid.ColumnSpan = "3"
 				/>
@@ -46,22 +53,27 @@
 				<Button Text="Sal" Clicked="ButtonClicked"
 				Style="{StaticResource ButtonStyle}"
 				Grid.Row="2"
-				Grid.Column = "1"
-
+				Grid.Column = "2"
+				Grid.ColumnSpan="5"
+				FontSize="Large"
 				/>
 
 			
 				<Button Text="Konferensrum" Clicked="ButtonClicked"
 				Style="{StaticResource ButtonStyle}"
 				Grid.Row="3"
-				Grid.Column = "1"
+				Grid.Column = "2"
+				Grid.ColumnSpan="5"
+				FontSize="Large"
 
 				/>
 			
 				<Button Text="Samtalsrum" Clicked="ButtonClicked"
 				Style="{StaticResource ButtonStyle}"
 				Grid.Row="4"
-				Grid.Column = "1"
+				Grid.Column = "2"
+				Grid.ColumnSpan="5"
+				FontSize="Large"
 				/>
 			</Grid>
 		
