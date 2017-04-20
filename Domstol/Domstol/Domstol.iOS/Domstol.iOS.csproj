@@ -124,6 +124,9 @@
     <BundleResource Include="Resources\Start.jpg" />
     <BundleResource Include="Resources\Domstol2.db" />
     <BundleResource Include="Resources\Konferensrum.jpg" />
+    <BundleResource Include="Resources\Home2.png" />
+    <BundleResource Include="Resources\Manual2.png" />
+    <BundleResource Include="Resources\Home3.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

@@ -35,15 +35,16 @@
 				Grid.Row="0"
 				Grid.Column="1"
 				Grid.ColumnSpan="8"
+				Aspect="AspectFill"
 				/>
 
 				<Label Text="Vad behöver du hjälp med?"
-				FontSize="35"
+				FontSize="Large"
 				TextColor="#6699CC"
 				FontAttributes="Bold"
-				Grid.Column = "3"
+				Grid.Column = "2"
 				Grid.Row = "1"
-				Grid.ColumnSpan = "5"
+				Grid.ColumnSpan = "7"
 				/>
 
 			

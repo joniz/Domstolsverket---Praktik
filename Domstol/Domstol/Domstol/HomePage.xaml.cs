@@ -18,15 +18,8 @@ namespace Domstol
 			NavigationPage.SetBackButtonTitle(this, "Tillbaka");
 
 
-			Startbild.Source = ImageSource.FromFile("Start.jpg");
 			Startbild.Source = "Start.jpg";
-			Startbild.Aspect = Aspect.AspectFill;
-   //         this.NavigationItem.SetRightBarButtonItem(
-
-			//new UIBarButtonItem(UIBarButtonSystemItem.Action, (sender, args) => {
-   //    			// button was clicked
-			//})
-			//, true);
+   
 
 
 

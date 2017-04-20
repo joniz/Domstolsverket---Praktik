@@ -14,6 +14,8 @@ namespace Domstol
 		InitializeComponent();
 		if (Device.RuntimePlatform == TargetPlatform.iOS.ToString())
 		{
+				homenav.Icon = "home";
+			
 
 		}
 

@@ -19,7 +19,6 @@ namespace Domstol
 			nItem = n;
 			Title = nItem.typeOfRoom.ToString();
 			Roompic.Source = nItem.imageName;
-			Roompic.Aspect = Aspect.AspectFill;
 
 		}
 

@@ -17,8 +17,8 @@
 					<RowDefinition Height="Auto"/>
 					<RowDefinition Height="Auto"/>
 					<RowDefinition Height="*"/>
-
 				</Grid.RowDefinitions>
+			
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="Auto"/>
 					<ColumnDefinition Width="*"/>
@@ -36,13 +36,15 @@
 				Grid.Row="0"
 				Grid.Column="1"
 				Grid.ColumnSpan="8"
+				Aspect="AspectFill"
 				/>
 
+			
 				<Label Text="Var är du?"
 				FontSize="35"
 				TextColor="#6699CC"
 				FontAttributes="Bold"
-				Grid.Column = "3"
+				Grid.Column = "4"
 				Grid.Row = "1"
 				Grid.ColumnSpan = "5"
 				/>

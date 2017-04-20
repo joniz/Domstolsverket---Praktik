@@ -28,12 +28,9 @@ namespace Domstol.iOS
             global::Xamarin.Forms.Forms.Init();
 			string dbPath = FileAccessHelper.GetLocalFilePath("Domstol2.db");
 
-	  		LoadApplication(new App(dbPath));
-            
+			LoadApplication(new App(dbPath));
 
             return base.FinishedLaunching(app, options);
         }
-
-
     }
 }

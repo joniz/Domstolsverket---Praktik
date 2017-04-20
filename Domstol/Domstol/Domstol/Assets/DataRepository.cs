@@ -18,7 +18,7 @@ namespace Domstol
 			SQLiteConnection db = new SQLiteConnection(dbPath);
 			problems  = db.Query<Problem>("SELECT * FROM Problems");
 			questions = db.Query<Question>("SELECT * FROM Questions");
-	
+			db.Close();
 		}
 
 
@@ -28,9 +28,7 @@ namespace Domstol
 			foreach (Question q in questions) 
 				if (q.questionID == id)
 					return q;
-			
-			
-			
+
 			return null;
 			
 		}
