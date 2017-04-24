@@ -31,7 +31,6 @@ namespace Domstol
 			initializeQuestion(question);
 
 
-
 			//Check if it's the last question and we came from a 'Yes' alternative
 			if (yesQuestion == null && noQuestion == null && previousAnswer == Answer.Yes) 
 			{
@@ -39,6 +38,7 @@ namespace Domstol
 				noButton.IsVisible = false;
 				menuButton.IsVisible = true;
 			}
+
 
 			//Check if it's the last question, and that we came from a 'No' alternative
 			if (yesQuestion == null && noQuestion == null && previousAnswer == Answer.No) 
@@ -57,6 +57,8 @@ namespace Domstol
 			if (yesQuestion != null)
 				Navigation.PushAsync(new QuestionPage(yesQuestion, Answer.Yes));
 
+	
+
 		}
 		void CallSupportButtonClicked(object sender, System.EventArgs e)
 		{
@@ -72,7 +74,7 @@ namespace Domstol
 		void NoButtonClicked(object sender, System.EventArgs e)
 		{ 
 			if (noQuestion != null)
-						Navigation.PushAsync(new QuestionPage(noQuestion, Answer.No));	
+				Navigation.PushAsync(new QuestionPage(noQuestion, Answer.No));	
 		}
 
 		public void initializeQuestion(Question question)

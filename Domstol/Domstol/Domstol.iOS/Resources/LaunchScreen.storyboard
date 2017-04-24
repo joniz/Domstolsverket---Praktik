@@ -13,19 +13,21 @@
                         <viewControllerLayoutGuide type="bottom" id="9ZL-r4-8FZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yd7-JS-zBw">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" image="Icon-60.png" translatesAutoresizingMaskIntoConstraints="NO" id="23">
-                                <rect key="frame" x="270" y="270" width="60" height="60"/>
-                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Logotyp.png" translatesAutoresizingMaskIntoConstraints="NO" id="23" misplaced="YES">
+                                <rect key="frame" x="11" y="287" width="354" height="93"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="1" height="1"/>
+                                <variation key="heightClass=regular-widthClass=compact" image="DOMLogotyp copy.png"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
                         <constraints>
                             <constraint firstItem="23" firstAttribute="centerY" secondItem="yd7-JS-zBw" secondAttribute="centerY" priority="1" id="39"/>
                             <constraint firstItem="23" firstAttribute="centerX" secondItem="yd7-JS-zBw" secondAttribute="centerX" priority="1" id="41"/>
                         </constraints>
+                        <color key="tintColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XAI-xm-WK6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -34,6 +36,31 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Icon-60.png" width="180" height="180"/>
+        <image name="Icon-60.png" width="60" height="60"/>
+        <image name="Icon-76.png" width="76" height="76"/>
+        <image name="Icon-Small-40.png" width="40" height="40"/>
+        <image name="Icon-Small.png" width="29" height="29"/>
+        <image name="dom.png" width="646" height="220"/>
+        <image name="videoSmall.png" width="24" height="24"/>
+        <image name="audioSmall.png" width="24" height="24"/>
+        <image name="Sal.jpg" width="1620" height="1080"/>
+        <image name="Samtalsrum.jpg" width="1620" height="1080"/>
+        <image name="Start.jpg" width="1620" height="1080"/>
+        <image name="Konferensrum.jpg" width="1620" height="1080"/>
+        <image name="Home2.png" width="30" height="30"/>
+        <image name="Manual2.png" width="30" height="30"/>
+        <image name="Home3.png" width="24" height="24"/>
+        <image name="symbol.png" width="284" height="159"/>
+        <image name="Logotyp.png" width="2362" height="618"/>
+        <image name="icon.png" width="72" height="72"/>
+        <image name="home.png" width="48" height="48"/>
+        <image name="ic_home_2x.png" width="48" height="48"/>
+        <image name="manual.png" width="48" height="48"/>
+        <image name="audioMedium.png" width="48" height="48"/>
+        <image name="videoMedium.png" width="48" height="48"/>
+        <image name="DOMLogotyp copy.png" width="354" height="93"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedScreenMetrics key="destination" type="retina47"/>
+    </simulatedMetricsContainer>
 </document>

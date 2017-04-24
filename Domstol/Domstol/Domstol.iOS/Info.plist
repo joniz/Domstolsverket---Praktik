@@ -50,5 +50,7 @@
 	<string>LaunchScreen</string>
 	<key>CFBundleName</key>
 	<string>Domstol</string>
+	<key>XSLaunchImageAssets</key>
+	<string>Assets.xcassets/LaunchImage.launchimage</string>
 </dict>
 </plist>

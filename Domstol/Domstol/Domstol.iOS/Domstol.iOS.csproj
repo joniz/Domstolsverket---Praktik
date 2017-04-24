@@ -100,12 +100,10 @@
     <None Include="packages.config" />
     <Compile Include="FileAccessHelper.cs" />
     <Compile Include="PhoneDialer.iOS.cs" />
+    <Compile Include="CustomList.cs" />
+    <Compile Include="CustomBackButton.cs" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Default-568h%402x.png" />
-    <BundleResource Include="Resources\Default-Portrait.png" />
-    <BundleResource Include="Resources\Default-Portrait%402x.png" />
-    <BundleResource Include="Resources\Default%402x.png" />
     <BundleResource Include="Resources\Icon-60%402x.png" />
     <BundleResource Include="Resources\Icon-60%403x.png" />
     <BundleResource Include="Resources\Icon-76%402x.png" />
@@ -127,6 +125,9 @@
     <BundleResource Include="Resources\Home2.png" />
     <BundleResource Include="Resources\Manual2.png" />
     <BundleResource Include="Resources\Home3.png" />
+    <BundleResource Include="Resources\symbol.png" />
+    <BundleResource Include="Resources\Logotyp.png" />
+    <BundleResource Include="Resources\DOMLogotyp copy.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -186,6 +187,13 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\videoMedium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default%402x.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-568h%402x.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-Portrait.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-Portrait%402x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
