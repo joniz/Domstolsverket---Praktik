@@ -11,7 +11,7 @@
 			
 			<Grid>
 				<Grid.RowDefinitions>
-					<RowDefinition Height ="Auto"/>
+					<RowDefinition Height="Auto"/>
 					<RowDefinition Height="Auto"/>
 					<RowDefinition Height="Auto" />
 					<RowDefinition Height="Auto"/>
@@ -31,7 +31,9 @@
 					<ColumnDefinition Width="*"/>
 				</Grid.ColumnDefinitions>
 
+			
 
+			
 				<Image x:Name="Startbild"
 				Grid.Row="0"
 				Grid.Column="1"
@@ -39,49 +41,48 @@
 				Aspect="AspectFill"
 				/>
 
-			
-				<Label Text="Var är du?"
-				FontSize="35"
-				TextColor="#6699CC"
-				FontAttributes="Bold"
-				Grid.Column = "4"
-				Grid.Row = "1"
-				Grid.ColumnSpan = "5"
-				/>
 
 			
-				<Button Text="Sal" Clicked="ButtonClicked"
-				Style="{StaticResource ButtonStyle}"
-				Grid.Row="2"
-				Grid.Column = "2"
-				Grid.ColumnSpan="6"
+				<ListView x:Name="Lista" 
+					ItemSelected="roomSelected"
+					RowHeight="60"
+					Grid.Row="1"
+					Grid.Column="1"
+					Grid.RowSpan="5"
+					Grid.ColumnSpan="8"
+					>	
+					<ListView.Header>
+						<StackLayout Padding="120,5,0,0">
+							<Label 
+							TextColor="#6699CC"
+							FontSize="Large"
+							FontAttributes="Bold"
+							Text="Var är du?"/>
+							</StackLayout>
+					</ListView.Header>
+            		<ListView.ItemTemplate>
+                		<DataTemplate>
+                    		<ViewCell>
+                        		<StackLayout Orientation="Horizontal" Padding="15">
+                      
+                            		<StackLayout Orientation ="Vertical">
+                                		<Label Text="{Binding}" FontSize="Large"/>
+                            		</StackLayout>
+                        		</StackLayout>
+                    		</ViewCell>
 
-
-				/>
+                		</DataTemplate>
+            		</ListView.ItemTemplate>
+        		</ListView>
 
 			
-				<Button Text="Konferensrum" Clicked="ButtonClicked"
-				Style="{StaticResource ButtonStyle}"
-				Grid.Row="3"
-				Grid.Column = "2"
-				Grid.ColumnSpan="6"
 
-
-				/>
-			
-				<Button Text="Samtalsrum" Clicked="ButtonClicked"
-				Style="{StaticResource ButtonStyle}"
-				Grid.Row="4"
-				Grid.Column = "2"
-				Grid.ColumnSpan="6"
-
-				/>
 
 				<Label
 				Style="{StaticResource RedLine}"
 				Grid.Row="0"
 				Grid.Column="0"
-				Grid.RowSpan="8"
+				Grid.RowSpan="6"
 
 
 				/>

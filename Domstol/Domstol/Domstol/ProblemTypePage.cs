@@ -20,29 +20,47 @@ namespace Domstol
 			Title = nItem.typeOfRoom.ToString();
 			Roompic.Source = nItem.imageName;
 
+			List<string> problemtypes = new List<string>();
+			problemtypes.Add(Category.Audio);
+			problemtypes.Add(Category.Video);
+
+			Lista.ItemsSource = problemtypes;
+
+
 		}
 
-
-		void ButtonClicked(object sender, System.EventArgs e)
+		void problemTypeSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
 		{
-			Button button = sender as Button;
+
+
+			string listText = e.SelectedItem as string;
 
 
 
-			if (button.Text == Category.Video)
+			if (listText != null)
 			{
-				nItem.category = Category.Video;
-				Navigation.PushAsync(new ProblemPage(nItem));
+
+				if (listText == Category.Video)
+				{
+					nItem.category = Category.Video;
+					Navigation.PushAsync(new ProblemPage(nItem));
+				}
+				if (listText == Category.Audio)
+				{
+					nItem.category = Category.Audio;
+					Navigation.PushAsync(new ProblemPage(nItem));
+				}
+
+				((ListView)sender).SelectedItem = null;
+
+
+
+
 			}
-			if (button.Text == Category.Audio)
-			{
-				nItem.category = Category.Audio;
-				Navigation.PushAsync(new ProblemPage(nItem));
-			}
-			
-			
-			
-			}
+	
 		}
+
+	
 	}
+}
 

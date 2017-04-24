@@ -19,41 +19,56 @@ namespace Domstol
 
 
 			Startbild.Source = "Start.jpg";
-   
 
+			List<string> rooms = new List<string>();
+			rooms.Add(Room.Conferenceroom);
+			rooms.Add(Room.Courtroom);
+			rooms.Add(Room.Meetingroom);
+			Lista.ItemsSource = rooms;
 
 
 
 
         }
-		void ButtonClicked(object sender, System.EventArgs e)
+
+		void roomSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
 		{
-			Button button = sender as Button;
+
+	
+			string listText = e.SelectedItem as string;
+		
 
 
-			if (button.Text == Room.Conferenceroom)
+			if (listText != null)
 			{
-				nItem.imageName = PictureNames.ConferenceRoom;
-				nItem.typeOfRoom = Room.Conferenceroom;
-			}
 
-			if (button.Text == Room.Courtroom)
-			{
-				nItem.imageName = PictureNames.CourtRoom;
-				nItem.typeOfRoom = Room.Courtroom;
-			}
-			if (button.Text == Room.Meetingroom) 
-			{
-				nItem.imageName = PictureNames.MeetingRoom;
-				nItem.typeOfRoom = Room.Meetingroom;
+				if (listText == Room.Conferenceroom)
+				{
+					nItem.imageName = PictureNames.ConferenceRoom;
+					nItem.typeOfRoom = Room.Conferenceroom;
+				}
+
+				if (listText == Room.Courtroom)
+				{
+					nItem.imageName = PictureNames.CourtRoom;
+					nItem.typeOfRoom = Room.Courtroom;
+				}
+				if (listText == Room.Meetingroom) 
+				{
+					nItem.imageName = PictureNames.MeetingRoom;
+					nItem.typeOfRoom = Room.Meetingroom;
 			
+				}
+
+				((ListView)sender).SelectedItem = null;
+
+				Navigation.PushAsync(new ProblemTypePage(nItem));
+
+
+
 			}
-
-					
-			Navigation.PushAsync(new ProblemTypePage(nItem));
-
-			
 
 		}
+
     }
 }
