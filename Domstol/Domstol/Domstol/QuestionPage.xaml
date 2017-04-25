@@ -34,22 +34,29 @@
 
 
 			</StackLayout>
-			<Frame
-			Grid.Row ="1"
-			Grid.Column = "1"
-			Grid.ColumnSpan = "9"
-			OutlineColor="Black"
+			<ScrollView
+				Grid.Row ="1"
+				Grid.Column = "1"
+				Grid.ColumnSpan = "9"
+				>
+				<Frame
+
+				OutlineColor="Black"
 				>
 
+				<StackLayout Orientation="Vertical">
+					<Label 
+					LineBreakMode="WordWrap" 
+					x:Name="questionLabel"
 
-				<Label 
-				LineBreakMode="WordWrap" 
-				x:Name="questionLabel"
-
-				/>
-
-			</Frame>
-
+					/>
+					<Image
+					x:Name="ImageName"
+					/>
+					</StackLayout>
+					
+				</Frame>
+			</ScrollView>
 
 			<Button 
 			Grid.Row="2" 
