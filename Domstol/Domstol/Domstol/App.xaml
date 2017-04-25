@@ -19,11 +19,9 @@
 			<Style x:Key="PreviousQuestionsButtonStyle" TargetType="Button">
                 <Setter Property="FontAttributes" Value="Bold"/>
 				<Setter Property="BorderRadius" Value="8"/>
-				<Setter Property="BackgroundColor" Value="#E0E0E0"/>
+				<Setter Property="BackgroundColor" Value="#6699CC"/>
 				<Setter Property="TextColor" Value="#0d0d0d"/>
 				<Setter Property="FontSize" Value="Medium"/>
-				<Setter Property="BorderWidth" Value="2"/>
-				<Setter Property="BorderColor" Value="#C0C0C0"/>
             </Style>
 
 			
@@ -46,6 +44,7 @@
               iOS="#ffffff"
               Android="#6699CC"
               WinPhone="#80FF80" />
+             
   				
         </ResourceDictionary>
 

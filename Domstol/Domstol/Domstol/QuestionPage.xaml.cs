@@ -22,29 +22,31 @@ namespace Domstol
 		public QuestionPage(Question question)
 		{
             InitializeComponent();
-			initializeQuestion(question);
+			initializeQuestions(question);
 		}
 
 		public QuestionPage(Question question, string previousAnswer)
 		{
 
 			InitializeComponent();
-			initializeQuestion(question);
+			initializeQuestions(question);
 
 			BackButtonWasPressed = true;
 
+
+			//Add navigation-buttons for the previous questions
 			for (int i = 1; i <= App.previousQuestions.Count; i++)
 			{
 				Button b = new Button();
 				b.Style = (Style)Application.Current.Resources ["PreviousQuestionsButtonStyle"];
 				b.Text = i.ToString();
 				b.Clicked += PreviousQuestionClicked;
-				Questions.Children.Add(b);
+				PreviousQuestionsStack.Children.Add(b);
 			}
 
 		
 
-			//Check if it's the last question and we came from a 'Yes' alternative
+			//Check if it's the last question and if we came from a 'Yes' alternative
 			if (yesQuestion == null && noQuestion == null && previousAnswer == Answer.Yes) 
 			{
 				yesButton.IsVisible = false;
@@ -53,7 +55,7 @@ namespace Domstol
 			}
 
 
-			//Check if it's the last question, and that we came from a 'No' alternative
+			//Check if it's the last question and if we came from a 'No' alternative
 			if (yesQuestion == null && noQuestion == null && previousAnswer == Answer.No) 
 			{
 				yesButton.IsVisible = false;
@@ -73,22 +75,8 @@ namespace Domstol
 				Navigation.PushAsync(new QuestionPage(yesQuestion, Answer.Yes));
 				BackButtonWasPressed = false;
 			}
+		}
 
-	
-
-		}
-		void CallSupportButtonClicked(object sender, System.EventArgs e)
-		{
-			var dialer = DependencyService.Get<IDialer>();
-			if (dialer != null)
-				dialer.DialAsync("0364422000");
-					
-		}
-		void MenuButtonClicked(object sender, System.EventArgs e)
-		{
-			Navigation.PopToRootAsync();
-			App.previousQuestions.Clear();
-		}
 		void NoButtonClicked(object sender, System.EventArgs e)
 		{
 			if (noQuestion != null)
@@ -99,15 +87,27 @@ namespace Domstol
 			}
 		}
 
-		public void initializeQuestion(Question question)
+		void CallSupportButtonClicked(object sender, System.EventArgs e)
+		{
+			var dialer = DependencyService.Get<IDialer>();
+			if (dialer != null)
+				dialer.DialAsync("0364422000");
+					
+		}
+
+		void MenuButtonClicked(object sender, System.EventArgs e)
+		{
+			Navigation.PopToRootAsync();
+			App.previousQuestions.Clear();
+		}
+
+		public void initializeQuestions(Question question)
 		{
 			currentQuestion = question;
 			questionLabel.Text = question.questionText;
 			yesQuestion = App.dataRepository.getQuestionByID(currentQuestion.questionYesID);
 			noQuestion = App.dataRepository.getQuestionByID(currentQuestion.questionNoID);
-		
 		}
-
 
 		private void PreviousQuestionClicked(object sender, EventArgs e)
 		{
@@ -120,8 +120,7 @@ namespace Domstol
 			base.OnDisappearing();
 			if (BackButtonWasPressed)
 				App.previousQuestions.Pop();
-			
-			
+						
 			BackButtonWasPressed = true;
 		}
 

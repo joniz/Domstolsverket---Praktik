@@ -27,8 +27,10 @@
 				Grid.Row = "0"
 				Grid.Column = "1"
 				Grid.ColumnSpan="5"
-				x:Name="Questions"
-				Orientation="Horizontal">
+				x:Name="PreviousQuestionsStack"
+				Orientation="Horizontal"
+				Spacing="1"
+				>
 
 
 			</StackLayout>

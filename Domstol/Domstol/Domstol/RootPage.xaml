@@ -7,15 +7,15 @@
 			
             >
 	
-	<NavigationPage BarBackgroundColor="{StaticResource NavigationBarColor}"
+	<NavigationPage 
+		BarBackgroundColor="{StaticResource NavigationBarColor}"
 		x:Name="homenav"
 		Icon="home"
-		Title="Hem"
 		>
 
 		
 		<x:Arguments>
-			<local:HomePage  Title="Hem"/>
+			<local:HomePage Title="Hem"/>
 		</x:Arguments>
 
 		
@@ -24,7 +24,6 @@
  	<NavigationPage BarBackgroundColor="{StaticResource NavigationBarColor}" 
 		x:Name="manualnav"
 		Icon="Manual2"
-		Title="Uforska"
 		>
 
 		

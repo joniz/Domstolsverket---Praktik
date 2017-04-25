@@ -15,6 +15,7 @@ namespace Domstol
 		{
 			InitializeComponent();
 			QuestionLabel.Text = q.questionText;
+
 		}
 	}
 }

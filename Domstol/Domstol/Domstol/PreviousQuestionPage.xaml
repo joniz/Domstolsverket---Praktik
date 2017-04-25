@@ -5,7 +5,7 @@
 			OutlineColor="Black">
 			<StackLayout>
 				
-				<Label Text="Föregående fråga:"/>	
+				<Label Text="Förgående fråga: "/>	
 				<Label
 					x:Name="QuestionLabel"
 					LineBreakMode="WordWrap"
