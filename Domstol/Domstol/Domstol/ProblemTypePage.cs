@@ -19,6 +19,10 @@ namespace Domstol
 			nItem = n;
 			Title = nItem.typeOfRoom.ToString();
 			Roompic.Source = nItem.imageName;
+			NavigationPage.SetBackButtonTitle(this, "Tillbaka");
+
+
+
 
 			List<string> problemtypes = new List<string>();
 			problemtypes.Add(Category.Audio);

@@ -18,11 +18,24 @@ namespace Domstol.iOS
 		{
 			base.ViewDidLoad();
 
-			//UINavigationBar.Appearance.BarTintColor = UIColor.DarkGray;
+			var attrs = new UITextAttributes()
+			{
+				
+				TextColor = UIColor.FromRGB(102,153,204),
+				TextShadowColor = UIColor.Black,
 
 
+			};
 
-			//this.NavigationItem.LeftBarButtonItem.TintColor = UIColor.Red;
+
+			//Color of backbutton
+			UINavigationBar.Appearance.TintColor = UIColor.FromRGB(102,153,204);
+
+
+			//Appearence of title text
+			UINavigationBar.Appearance.SetTitleTextAttributes(attrs);
+			NavigationItem.Title = "FromRenderer";
+
 		}
 
 	}

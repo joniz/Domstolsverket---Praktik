@@ -18,11 +18,13 @@ namespace Domstol
 		public QuestionPage() 
 		{
             InitializeComponent();
+			NavigationPage.SetBackButtonTitle(this, "Tillbaka");
 		}
 		public QuestionPage(Question question)
 		{
             InitializeComponent();
 			initializeQuestions(question);
+			NavigationPage.SetBackButtonTitle(this, "Tillbaka");
 		}
 
 		public QuestionPage(Question question, string previousAnswer)
@@ -30,6 +32,10 @@ namespace Domstol
 
 			InitializeComponent();
 			initializeQuestions(question);
+			NavigationPage.SetBackButtonTitle(this, "Tillbaka");
+
+
+
 
 			BackButtonWasPressed = true;
 

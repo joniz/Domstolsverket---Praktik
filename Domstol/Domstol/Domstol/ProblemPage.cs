@@ -16,7 +16,7 @@ namespace Domstol
 			
 			InitializeComponent();
 			Title = nItem.typeOfRoom + " -> " + nItem.category;
-
+			NavigationPage.SetBackButtonTitle(this, "Tillbaka");
 
 			if (nItem.typeOfRoom == Room.Courtroom)
 				problemList.ItemsSource = App.dataRepository.getProblemsByCategoryAndRoom(
