@@ -70,6 +70,10 @@
     <Compile Include="Enums\Category.cs" />
     <Compile Include="Enums\Room.cs" />
     <Compile Include="Enums\PictureNames.cs" />
+    <Compile Include="Models\QuestionList.cs" />
+    <Compile Include="PreviousQuestionPage.xaml.cs">
+      <DependentUpon>PreviousQuestionPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
@@ -86,6 +90,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="QuestionPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PreviousQuestionPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

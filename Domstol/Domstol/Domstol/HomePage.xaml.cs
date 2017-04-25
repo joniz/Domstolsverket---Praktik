@@ -26,6 +26,8 @@ namespace Domstol
 			rooms.Add(Room.Meetingroom);
 			Lista.ItemsSource = rooms;
 
+			if(App.previousQuestions != null)
+				App.previousQuestions.Clear();
 
 
 

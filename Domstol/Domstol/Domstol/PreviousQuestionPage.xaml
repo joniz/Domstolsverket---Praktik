@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Domstol.PreviousQuestionPage">
+	<ContentPage.Content>
+		<Frame 
+			OutlineColor="Black">
+			<StackLayout>
+				
+				<Label Text="Föregående fråga:"/>	
+				<Label
+					x:Name="QuestionLabel"
+					LineBreakMode="WordWrap"
+					/>
+				
+			</StackLayout>
+		</Frame>
+	</ContentPage.Content>
+</ContentPage>
