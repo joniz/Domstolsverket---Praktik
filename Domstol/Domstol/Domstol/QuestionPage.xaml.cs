@@ -111,6 +111,7 @@ namespace Domstol
 		{
 			currentQuestion = question;
 			questionLabel.Text = question.questionText;
+			ImageName.Source = question.questionImageName;
 			yesQuestion = App.dataRepository.getQuestionByID(currentQuestion.questionYesID);
 			noQuestion = App.dataRepository.getQuestionByID(currentQuestion.questionNoID);
 		}
