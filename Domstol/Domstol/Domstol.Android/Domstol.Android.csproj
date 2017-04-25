@@ -162,7 +162,7 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\home.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\manual.png" />
+    <AndroidResource Include="Resources\drawable\Manual2.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\audioPic2.png" />

@@ -2165,7 +2165,7 @@ namespace Domstol.Droid
 			public const int Konferensrum = 2130837652;
 			
 			// aapt resource value: 0x7f020095
-			public const int manual = 2130837653;
+			public const int Manual2 = 2130837653;
 			
 			// aapt resource value: 0x7f020096
 			public const int mr_dialog_material_background_dark = 2130837654;

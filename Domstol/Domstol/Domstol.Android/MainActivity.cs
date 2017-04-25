@@ -24,7 +24,7 @@ namespace Domstol.Droid
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
             global::Xamarin.Forms.DependencyService.Register<PhoneDialer>();
-			string dbPath = FileAccessHelper.GetLocalFilePath("Domstol.db3");
+			string dbPath = FileAccessHelper.GetLocalFilePath("Domstol2.db");
 	  		LoadApplication(new App(dbPath));
 
         }
