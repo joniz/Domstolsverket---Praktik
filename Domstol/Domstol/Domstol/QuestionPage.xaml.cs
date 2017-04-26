@@ -7,6 +7,8 @@ namespace Domstol
 {
 	public partial class QuestionPage : ContentPage
 	{
+		
+
 		void Handle_SelectedIndexChanged(object sender, System.EventArgs e)
 		{
 			int questionIndex = dropdownlist.SelectedIndex;
@@ -14,6 +16,8 @@ namespace Domstol
 				Navigation.PushAsync(new PreviousQuestionPage(App.previousQuestions[questionIndex]));
 			
 			BackButtonWasPressed = false;
+			dropdownlist.SelectedIndex = -1;
+		
 		}
 
 
@@ -129,10 +133,8 @@ namespace Domstol
 				App.previousQuestions.Pop();
 						
 			BackButtonWasPressed = true;
-		
-			dropdownlist.Items.Clear();
-			//for (int i = 1; i <= App.previousQuestions.Count; i++)
-			//	dropdownlist.Items.Add("Fråga: " + i);
+			//dropdownlist.SelectedIndex = -1;
+
 		}
 
 
