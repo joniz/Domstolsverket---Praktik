@@ -12,7 +12,6 @@ namespace Domstol
 		public static DataRepository dataRepository { get; set; }
 		public static QuestionList<Question> previousQuestions { get; set; }
 
-
 		public App() 
 		{
         InitializeComponent();
@@ -25,6 +24,9 @@ namespace Domstol
 			MainPage = new RootPage();
 			dataRepository = new DataRepository(dbPath);
 			previousQuestions = new QuestionList<Question>();
+
+
+
 			if (Current.Resources == null)
 			 {
     			Current.Resources = new ResourceDictionary();

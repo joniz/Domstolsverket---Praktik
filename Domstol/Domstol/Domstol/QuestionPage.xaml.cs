@@ -7,10 +7,15 @@ namespace Domstol
 {
 	public partial class QuestionPage : ContentPage
 	{
-		void Handle_Focused(object sender, Xamarin.Forms.FocusEventArgs e)
+		void Handle_SelectedIndexChanged(object sender, System.EventArgs e)
 		{
-			var se = sender;
+			int questionIndex = dropdownlist.SelectedIndex;
+			if(questionIndex >= 0)
+				Navigation.PushAsync(new PreviousQuestionPage(App.previousQuestions[questionIndex]));
+			
+			BackButtonWasPressed = false;
 		}
+
 
 
 
@@ -31,6 +36,7 @@ namespace Domstol
             InitializeComponent();
 			initializeQuestions(question);
 			NavigationPage.SetBackButtonTitle(this, "Tillbaka");
+			dropdownlist.IsVisible = false;
 		}
 
 		public QuestionPage(Question question, string previousAnswer)
@@ -44,17 +50,10 @@ namespace Domstol
 
 
 			BackButtonWasPressed = true;
+			dropdownlist.IsVisible = true;
 
-
-			//Add navigation-buttons for the previous questions
 			for (int i = 1; i <= App.previousQuestions.Count; i++)
-			{
-				Button b = new Button();
-				b.Style = (Style)Application.Current.Resources ["PreviousQuestionsButtonStyle"];
-				b.Text = i.ToString();
-				b.Clicked += PreviousQuestionClicked;
-				PreviousQuestionsStack.Children.Add(b);
-			}
+				dropdownlist.Items.Add("Fråga: " + i);
 
 		
 
@@ -120,15 +119,9 @@ namespace Domstol
 			ImageName.Source = question.questionImageName;
 			yesQuestion = App.dataRepository.getQuestionByID(currentQuestion.questionYesID);
 			noQuestion = App.dataRepository.getQuestionByID(currentQuestion.questionNoID);
-			dropdownlist.ItemsSource = App.previousQuestions;
+
 		}
 
-		private void PreviousQuestionClicked(object sender, EventArgs e)
-		{
-			int index = Int32.Parse((sender as Button).Text);
-			Navigation.PushAsync(new PreviousQuestionPage(App.previousQuestions[index-1]));
-			BackButtonWasPressed = false;
-		}
 		protected override void OnDisappearing()
 		{
 			base.OnDisappearing();
@@ -136,6 +129,10 @@ namespace Domstol
 				App.previousQuestions.Pop();
 						
 			BackButtonWasPressed = true;
+		
+			dropdownlist.Items.Clear();
+			//for (int i = 1; i <= App.previousQuestions.Count; i++)
+			//	dropdownlist.Items.Add("Fråga: " + i);
 		}
 
 
