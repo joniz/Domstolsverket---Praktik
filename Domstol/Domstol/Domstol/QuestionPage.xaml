@@ -31,7 +31,14 @@
 				Orientation="Horizontal"
 				Spacing="1"
 				>
+				<Picker 
+					x:Name="dropdownlist"
+					Title="Förgående frågor"
+				
+				/>
+					
 
+				
 
 			</StackLayout>
 			<ScrollView

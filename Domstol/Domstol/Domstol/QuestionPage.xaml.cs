@@ -7,6 +7,12 @@ namespace Domstol
 {
 	public partial class QuestionPage : ContentPage
 	{
+		void Handle_Focused(object sender, Xamarin.Forms.FocusEventArgs e)
+		{
+			var se = sender;
+		}
+
+
 
 		private Question currentQuestion { get; set; }
 		private Question yesQuestion { get; set; }
@@ -114,6 +120,7 @@ namespace Domstol
 			ImageName.Source = question.questionImageName;
 			yesQuestion = App.dataRepository.getQuestionByID(currentQuestion.questionYesID);
 			noQuestion = App.dataRepository.getQuestionByID(currentQuestion.questionNoID);
+			dropdownlist.ItemsSource = App.previousQuestions;
 		}
 
 		private void PreviousQuestionClicked(object sender, EventArgs e)
