@@ -11,11 +11,12 @@ namespace Domstol
 
 		void Handle_SelectedIndexChanged(object sender, System.EventArgs e)
 		{
+            BackButtonWasPressed = false;
 			int questionIndex = dropdownlist.SelectedIndex;
 			if(questionIndex >= 0)
 				Navigation.PushModalAsync(new PreviousQuestionPage(App.previousQuestions[questionIndex]));
 			
-			BackButtonWasPressed = false;
+			
 			dropdownlist.SelectedIndex = -1;
 		
 		}
