@@ -20,6 +20,12 @@ namespace Domstol
 
 			Startbild.Source = "Start.jpg";
 
+
+			Rectangle shape = new Rectangle();
+
+
+
+
 			List<string> rooms = new List<string>();
 			rooms.Add(Room.Conferenceroom);
 			rooms.Add(Room.Courtroom);

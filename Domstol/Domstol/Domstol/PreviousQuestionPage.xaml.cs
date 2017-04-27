@@ -7,6 +7,12 @@ namespace Domstol
 {
 	public partial class PreviousQuestionPage : ContentPage
 	{
+		
+		void DoneButtonClicked(object sender, System.EventArgs e)
+		{
+			Navigation.PopModalAsync();
+		}
+
 		public PreviousQuestionPage()
 		{
 			InitializeComponent();
@@ -15,6 +21,7 @@ namespace Domstol
 		{
 			InitializeComponent();
 			QuestionLabel.Text = q.questionText;
+
 
 		}
 	}

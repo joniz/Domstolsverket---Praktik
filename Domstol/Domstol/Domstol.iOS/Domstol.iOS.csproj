@@ -102,6 +102,7 @@
     <Compile Include="PhoneDialer.iOS.cs" />
     <Compile Include="CustomList.cs" />
     <Compile Include="CustomBackButton.cs" />
+    <Compile Include="NativeiOSListViewCell.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />

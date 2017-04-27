@@ -13,7 +13,7 @@ namespace Domstol
 		{
 			int questionIndex = dropdownlist.SelectedIndex;
 			if(questionIndex >= 0)
-				Navigation.PushAsync(new PreviousQuestionPage(App.previousQuestions[questionIndex]));
+				Navigation.PushModalAsync(new PreviousQuestionPage(App.previousQuestions[questionIndex]));
 			
 			BackButtonWasPressed = false;
 			dropdownlist.SelectedIndex = -1;

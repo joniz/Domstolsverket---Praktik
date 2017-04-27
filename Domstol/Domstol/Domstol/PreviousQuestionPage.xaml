@@ -1,17 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Domstol.PreviousQuestionPage">
 	<ContentPage.Content>
-		<Frame 
-			OutlineColor="Black">
-			<StackLayout>
-				
-				<Label Text="Förgående fråga: "/>	
+
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="auto"/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="auto"/>
+				<ColumnDefinition Width="auto"/>
+			</Grid.ColumnDefinitions>
+
+			<Frame 
+			OutlineColor="Black"
+			Grid.Row="0"
+			Grid.Column="0"
+			Grid.ColumnSpan="3"
+			Grid.RowSpan="2"
+
+				>
+
 				<Label
 					x:Name="QuestionLabel"
 					LineBreakMode="WordWrap"
 					/>
 				
-			</StackLayout>
-		</Frame>
+		
+			</Frame>
+			<Button 
+				Text="Tillbaka"
+				Grid.Row="3"
+				Grid.Column="0"
+				Grid.ColumnSpan="3"
+				Clicked="DoneButtonClicked"
+			/>
+		</Grid>
+
 	</ContentPage.Content>
 </ContentPage>
