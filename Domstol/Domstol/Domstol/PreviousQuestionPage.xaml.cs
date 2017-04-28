@@ -7,7 +7,8 @@ namespace Domstol
 {
 	public partial class PreviousQuestionPage : ContentPage
 	{
-		
+
+		private Question currentQuestion { get; set; }
 		void DoneButtonClicked(object sender, System.EventArgs e)
 		{
 			Navigation.PopModalAsync();
@@ -21,8 +22,16 @@ namespace Domstol
 		{
 			InitializeComponent();
 			QuestionLabel.Text = q.questionText;
+			currentQuestion = q;
 
+			if (q.questionMoreInfo != null)
+				MoreInfoButton.IsVisible = true;
 
+		}
+
+		void MoreInfoClicked(object sender, System.EventArgs e)
+		{
+			Navigation.PushModalAsync(new NavigationPage(new MoreInfoPage(currentQuestion)));
 		}
 	}
 }

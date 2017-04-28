@@ -11,21 +11,13 @@
 		<Grid>
 			<Grid.RowDefinitions>
 				<RowDefinition Height="*"/>
-				<RowDefinition Height="*"/>
+				<RowDefinition Height="auto"/>
 				<RowDefinition Height="auto"/>
 			</Grid.RowDefinitions>
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="*"/>
-				<ColumnDefinition Width="auto"/>
-				<ColumnDefinition Width="auto"/>
-			</Grid.ColumnDefinitions>
 
 			<Frame 
 			OutlineColor="Black"
 			Grid.Row="0"
-			Grid.Column="0"
-			Grid.ColumnSpan="3"
-			Grid.RowSpan="2"
 
 				>
 
@@ -36,12 +28,20 @@
 				
 		
 			</Frame>
+			<Button
+				Text="Mer information"
+				x:Name="MoreInfoButton"
+				Grid.Row="1"
+				Clicked="MoreInfoClicked"
+				IsVisible="false"
+				Style="{StaticResource ButtonStyle}"
+
+			/>
 			<Button 
-				Text="Tillbaka"
-				Grid.Row="3"
-				Grid.Column="0"
-				Grid.ColumnSpan="3"
+				Text="Klar"
+				Grid.Row="2"
 				Clicked="DoneButtonClicked"
+				Style="{StaticResource ButtonStyle}"
 			/>
 		</Grid>
 
