@@ -15,7 +15,7 @@ namespace Domstol
 		{
 			
 			InitializeComponent();
-			Title = nItem.typeOfRoom + " -> " + nItem.category;
+			Title = nItem.category;
 			NavigationPage.SetBackButtonTitle(this, "Tillbaka");
 
 

@@ -2,68 +2,55 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Domstol.QuestionPage">
 	<ContentPage.Content>
 		
-		<Grid>
+		<Grid RowSpacing="10">
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="auto"/>
-				<ColumnDefinition Width="*"/>
-				<ColumnDefinition Width="Auto"/>
-				<ColumnDefinition Width="*"/>
-				<ColumnDefinition Width="*"/>
-				<ColumnDefinition Width="*"/>
-				<ColumnDefinition Width="*"/>
 				<ColumnDefinition Width="*"/>
 				<ColumnDefinition Width="*"/>
 			</Grid.ColumnDefinitions>
 			<Grid.RowDefinitions>
 				<RowDefinition Height="auto"/>
 				<RowDefinition Height="auto"/>
-				<RowDefinition Height="auto"/>	
-				<RowDefinition Height="auto"/>
-				<RowDefinition Height="*"/>
-				<RowDefinition Height="*"/>
-				<RowDefinition Height="auto"/>
+				<RowDefinition Height="*"/>	
 				<RowDefinition Height="auto"/>
 				<RowDefinition Height="auto"/>
 			</Grid.RowDefinitions>
 				
 
 			
-			<ScrollView
-				Grid.Row ="1"
-				Grid.Column = "1"
-				Grid.ColumnSpan = "9"
 
-				>
-				<Frame
+			<Frame
 				Padding="5"
 				OutlineColor="Black"
+				Grid.Row="0"
+				Grid.Column = "1"
+				Grid.ColumnSpan="2"
 				>
-					<Grid x:Name="FrameGrid">
-						<Label 
-						LineBreakMode="WordWrap" 
-						x:Name="questionLabel"
+				<ScrollView>
+					<Label 
+					LineBreakMode="WordWrap" 
+					x:Name="questionLabel"
 
-						/>
-
-					</Grid>
+				/>
+				</ScrollView>
+				
 					
 				</Frame>
-			</ScrollView>
+		
 
 			<Picker 
 				x:Name="dropdownlist"
 				SelectedIndexChanged="Handle_SelectedIndexChanged"
 				Title="Förgående frågor"
-				Grid.Row="2"
+				Grid.Row="1"
 				Grid.Column="1"
-				Grid.ColumnSpan="5"
+	
 
                     
 			/>
 			<Button
-				Grid.Row="2"
-				Grid.Column="6"
-				Grid.ColumnSpan="4"
+				Grid.Row="1"
+				Grid.Column="2"
 				x:Name="MoreInfoButton"
 				IsVisible = "false"
 				Style="{StaticResource ButtonStyle}"
@@ -77,47 +64,48 @@
 
 			
 			<Button 
-			Grid.Row="6" 
-			Grid.Column="2" 
-			Grid.ColumnSpan="7"
-			Style="{StaticResource ButtonStyle}"
-			Text="Ja"
-			Clicked="YesButtonClicked"
-			x:Name="yesButton"
+				Grid.Row="3" 
+				Grid.Column="1"
+				Grid.ColumnSpan="2"
+				Style="{StaticResource ButtonStyle}"
+				Text="Ja"
+				Clicked="YesButtonClicked"
+				x:Name="yesButton"
 
 			/>
 			<Button 
-			Grid.Row="7"
-			Grid.Column="2"
-			Grid.ColumnSpan="7"
-			Style="{StaticResource ButtonStyle}"
-			Text="Nej"
-			Clicked="NoButtonClicked"
-			x:Name="noButton"
+				Grid.Row="4"
+				Grid.Column="1"
+				Grid.ColumnSpan="2"
+				Style="{StaticResource ButtonStyle}"
+				Text="Nej"
+				Clicked="NoButtonClicked"
+				x:Name="noButton"
 			/>
 
 			<Button 
-			Grid.Row="6" 
-			Grid.Column="2" 
-			Grid.ColumnSpan="7"	
-			Style="{StaticResource ButtonStyle}"
-			Text="Ring support"
-			Clicked="CallSupportButtonClicked"
-			x:Name="callButton"
-			IsVisible="false"
+				Grid.Row="3" 
+				Grid.Column="1"
+				Grid.ColumnSpan="2"
+				Style="{StaticResource ButtonStyle}"
+				Text="Ring support"
+				Clicked="CallSupportButtonClicked"
+				x:Name="callButton"
+				IsVisible="false"
 
 			/>
 
 			
 			<Button 
-			Grid.Row="7" 
-			Grid.Column="2"
-			Grid.ColumnSpan="7"
-			Style="{StaticResource ButtonStyle}"
-			Text="Tillbaka till meny"
-			Clicked="MenuButtonClicked"
-			x:Name="menuButton"
-			IsVisible="false"
+				Grid.Row="4" 
+				Grid.Column="1"
+				Grid.ColumnSpan="2"
+				Style="{StaticResource ButtonStyle}"
+				Text="Tillbaka till meny"
+				Clicked="MenuButtonClicked"
+				x:Name="menuButton"
+				IsVisible="false"
+
 			/>
 			
 
@@ -127,7 +115,7 @@
 				Style="{StaticResource RedLine}"
 				Grid.Row="0"
 				Grid.Column="0"
-				Grid.RowSpan="9"
+				Grid.RowSpan="5"
 			/>
 
 			
