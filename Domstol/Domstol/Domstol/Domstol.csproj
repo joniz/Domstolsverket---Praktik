@@ -74,6 +74,9 @@
     <Compile Include="PreviousQuestionPage.xaml.cs">
       <DependentUpon>PreviousQuestionPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MoreInfoPage.xaml.cs">
+      <DependentUpon>MoreInfoPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
@@ -93,6 +96,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="PreviousQuestionPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoreInfoPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

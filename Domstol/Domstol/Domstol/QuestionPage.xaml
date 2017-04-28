@@ -4,7 +4,7 @@
 		
 		<Grid>
 			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition Width="auto"/>
 				<ColumnDefinition Width="*"/>
 				<ColumnDefinition Width="Auto"/>
 				<ColumnDefinition Width="*"/>
@@ -20,31 +20,14 @@
 				<RowDefinition Height="auto"/>	
 				<RowDefinition Height="auto"/>
 				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="auto"/>
+				<RowDefinition Height="auto"/>
+				<RowDefinition Height="auto"/>
 			</Grid.RowDefinitions>
-
-
-			<StackLayout 
-				Grid.Row = "0"
-				Grid.Column = "4"
-				Grid.ColumnSpan="5"
-				x:Name="PreviousQuestionsStack"
-				Orientation="Horizontal"
-				Spacing="1"
-                
-                
-				>
-				<Picker 
-					x:Name="dropdownlist"
-					SelectedIndexChanged="Handle_SelectedIndexChanged"
-					Title="Förgående frågor"
-                    
-
-				/>
-					
-
 				
 
-			</StackLayout>
+			
 			<ScrollView
 				Grid.Row ="1"
 				Grid.Column = "1"
@@ -52,26 +35,49 @@
 
 				>
 				<Frame
-
+				Padding="5"
 				OutlineColor="Black"
 				>
+					<Grid x:Name="FrameGrid">
+						<Label 
+						LineBreakMode="WordWrap" 
+						x:Name="questionLabel"
 
-				<StackLayout Orientation="Vertical">
-					<Label 
-					LineBreakMode="WordWrap" 
-					x:Name="questionLabel"
+						/>
 
-					/>
-					<Image
-					x:Name="ImageName"
-					/>
-					</StackLayout>
+					</Grid>
 					
 				</Frame>
 			</ScrollView>
 
+			<Picker 
+				x:Name="dropdownlist"
+				SelectedIndexChanged="Handle_SelectedIndexChanged"
+				Title="Förgående frågor"
+				Grid.Row="2"
+				Grid.Column="1"
+				Grid.ColumnSpan="5"
+
+                    
+			/>
+			<Button
+				Grid.Row="2"
+				Grid.Column="6"
+				Grid.ColumnSpan="4"
+				x:Name="MoreInfoButton"
+				IsVisible = "false"
+				Style="{StaticResource ButtonStyle}"
+				Text="Mer info"
+				Clicked="MoreInfoButtonClicked"
+			/>	
+
+
+
+
+
+			
 			<Button 
-			Grid.Row="2" 
+			Grid.Row="6" 
 			Grid.Column="2" 
 			Grid.ColumnSpan="7"
 			Style="{StaticResource ButtonStyle}"
@@ -80,9 +86,18 @@
 			x:Name="yesButton"
 
 			/>
+			<Button 
+			Grid.Row="7"
+			Grid.Column="2"
+			Grid.ColumnSpan="7"
+			Style="{StaticResource ButtonStyle}"
+			Text="Nej"
+			Clicked="NoButtonClicked"
+			x:Name="noButton"
+			/>
 
 			<Button 
-			Grid.Row="2" 
+			Grid.Row="6" 
 			Grid.Column="2" 
 			Grid.ColumnSpan="7"	
 			Style="{StaticResource ButtonStyle}"
@@ -95,7 +110,7 @@
 
 			
 			<Button 
-			Grid.Row="3" 
+			Grid.Row="7" 
 			Grid.Column="2"
 			Grid.ColumnSpan="7"
 			Style="{StaticResource ButtonStyle}"
@@ -105,27 +120,14 @@
 			IsVisible="false"
 			/>
 			
-			<Button 
-			Grid.Row="3"
-			Grid.Column="2"
-			Grid.ColumnSpan="7"
-			Style="{StaticResource ButtonStyle}"
-			Text="Nej"
-			Clicked="NoButtonClicked"
-			x:Name="noButton"
-			/>
 
-			<Label 
-				x:Name="PageNr"
-				Grid.Row = "4"
-				Grid.Column ="3"
 
-			/>
+
 			<Label
 				Style="{StaticResource RedLine}"
 				Grid.Row="0"
 				Grid.Column="0"
-				Grid.RowSpan="5"
+				Grid.RowSpan="9"
 			/>
 
 			

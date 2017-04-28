@@ -14,6 +14,7 @@ namespace Domstol
 		public string questionText { get; set; }
 
 		public string questionImageName { get; set; }
-		
+
+		public string questionMoreInfo { get; set; }
 	}
 }

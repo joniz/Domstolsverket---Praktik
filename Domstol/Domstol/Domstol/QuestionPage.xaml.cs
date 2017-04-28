@@ -7,22 +7,10 @@ namespace Domstol
 {
 	public partial class QuestionPage : ContentPage
 	{
-		
-
-		void Handle_SelectedIndexChanged(object sender, System.EventArgs e)
+		void MoreInfoButtonClicked(object sender, System.EventArgs e)
 		{
-            BackButtonWasPressed = false;
-			int questionIndex = dropdownlist.SelectedIndex;
-			if(questionIndex >= 0)
-				Navigation.PushModalAsync(new PreviousQuestionPage(App.previousQuestions[questionIndex]));
-			
-			
-			dropdownlist.SelectedIndex = -1;
-		
+			Navigation.PushModalAsync(new NavigationPage(new MoreInfoPage(currentQuestion)));
 		}
-
-
-
 
 		private Question currentQuestion { get; set; }
 		private Question yesQuestion { get; set; }
@@ -31,17 +19,20 @@ namespace Domstol
 
 
 
-		public QuestionPage() 
+		public QuestionPage()
 		{
-            InitializeComponent();
+			InitializeComponent();
 			NavigationPage.SetBackButtonTitle(this, "Tillbaka");
 		}
 		public QuestionPage(Question question)
 		{
-            InitializeComponent();
+			InitializeComponent();
 			initializeQuestions(question);
 			NavigationPage.SetBackButtonTitle(this, "Tillbaka");
 			dropdownlist.IsVisible = false;
+			if (currentQuestion.questionMoreInfo != null)
+				MoreInfoButton.IsVisible = true;
+
 		}
 
 		public QuestionPage(Question question, string previousAnswer)
@@ -49,6 +40,7 @@ namespace Domstol
 
 			InitializeComponent();
 			initializeQuestions(question);
+			initializePage(previousAnswer);
 			NavigationPage.SetBackButtonTitle(this, "Tillbaka");
 
 
@@ -60,25 +52,9 @@ namespace Domstol
 			for (int i = 1; i <= App.previousQuestions.Count; i++)
 				dropdownlist.Items.Add("Fråga: " + i);
 
-		
-
-			//Check if it's the last question and if we came from a 'Yes' alternative
-			if (yesQuestion == null && noQuestion == null && previousAnswer == Answer.Yes) 
-			{
-				yesButton.IsVisible = false;
-				noButton.IsVisible = false;
-				menuButton.IsVisible = true;
-			}
 
 
-			//Check if it's the last question and if we came from a 'No' alternative
-			if (yesQuestion == null && noQuestion == null && previousAnswer == Answer.No) 
-			{
-				yesButton.IsVisible = false;
-				noButton.IsVisible = false;
-				menuButton.IsVisible = true;
-				callButton.IsVisible = true;
-			}
+
 
 
 		}
@@ -108,7 +84,7 @@ namespace Domstol
 			var dialer = DependencyService.Get<IDialer>();
 			if (dialer != null)
 				dialer.DialAsync("0364422000");
-					
+
 		}
 
 		void MenuButtonClicked(object sender, System.EventArgs e)
@@ -121,7 +97,7 @@ namespace Domstol
 		{
 			currentQuestion = question;
 			questionLabel.Text = question.questionText;
-			ImageName.Source = question.questionImageName;
+			//ImageName.Source = question.questionImageName;
 			yesQuestion = App.dataRepository.getQuestionByID(currentQuestion.questionYesID);
 			noQuestion = App.dataRepository.getQuestionByID(currentQuestion.questionNoID);
 
@@ -132,14 +108,61 @@ namespace Domstol
 			base.OnDisappearing();
 			if (BackButtonWasPressed)
 				App.previousQuestions.Pop();
-						
+
 			BackButtonWasPressed = true;
-			//dropdownlist.SelectedIndex = -1;
+
 
 		}
 
+		void Handle_SelectedIndexChanged(object sender, System.EventArgs e)
+		{
+			BackButtonWasPressed = false;
+			int questionIndex = dropdownlist.SelectedIndex;
+			if (questionIndex >= 0)
+				Navigation.PushModalAsync(new NavigationPage(
+					new PreviousQuestionPage(App.previousQuestions[questionIndex])));
 
 
+			dropdownlist.SelectedIndex = -1;
+		}
+
+		public void initializePage(string previousAnswer)
+		{
+
+
+
+
+
+
+			//Check if it's the last question and if we came from a 'Yes' alternative
+			if (yesQuestion == null && noQuestion == null && previousAnswer == Answer.Yes) 
+			{
+				yesButton.IsVisible = false;
+				noButton.IsVisible = false;
+				menuButton.IsVisible = true;
+			}
+
+
+			//Check if it's the last question and if we came from a 'No' alternative
+			if (yesQuestion == null && noQuestion == null && previousAnswer == Answer.No) 
+			{
+				yesButton.IsVisible = false;
+				noButton.IsVisible = false;
+				menuButton.IsVisible = true;
+				callButton.IsVisible = true;
+			}
+
+			if (currentQuestion.questionMoreInfo != null)
+				MoreInfoButton.IsVisible = true;
+			
+			
+			
+			
+
+
+		
+		
+		}
 
 	}
 }

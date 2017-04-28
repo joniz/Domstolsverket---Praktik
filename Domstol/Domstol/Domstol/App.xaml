@@ -9,8 +9,8 @@
             <Style x:Key="ButtonStyle" TargetType="Button">
                 <Setter Property="FontAttributes" Value="Bold"/>
 				<Setter Property="BorderRadius" Value="8"/>
-				<Setter Property="BackgroundColor" Value="#E0E0E0"/>
-				<Setter Property="TextColor" Value="#0d0d0d"/>
+				<Setter Property="BackgroundColor" Value="#ffffff"/>
+				<Setter Property="TextColor" Value="#6699CC"/>
 				<Setter Property="FontSize" Value="Large"/>
 				<Setter Property="BorderWidth" Value="2"/>
 				<Setter Property="BorderColor" Value="#C0C0C0"/>
