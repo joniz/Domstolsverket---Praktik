@@ -27,9 +27,9 @@ namespace Domstol
 
 
 			List<string> rooms = new List<string>();
-			rooms.Add(Room.Conferenceroom);
-			rooms.Add(Room.Courtroom);
-			rooms.Add(Room.Meetingroom);
+			rooms.Add(LanguageStrings.Conferenceroom);
+			rooms.Add(LanguageStrings.Courtroom);
+			rooms.Add(LanguageStrings.Meetingroom);
 			Lista.ItemsSource = rooms;
 
 			if(App.previousQuestions != null)
@@ -50,21 +50,21 @@ namespace Domstol
 			if (listText != null)
 			{
 
-				if (listText == Room.Conferenceroom)
+				if (listText == LanguageStrings.Conferenceroom)
 				{
 					nItem.imageName = PictureNames.ConferenceRoom;
-					nItem.typeOfRoom = Room.Conferenceroom;
+					nItem.typeOfRoom = LanguageStrings.Conferenceroom;
 				}
 
-				if (listText == Room.Courtroom)
+				if (listText == LanguageStrings.Courtroom)
 				{
 					nItem.imageName = PictureNames.CourtRoom;
-					nItem.typeOfRoom = Room.Courtroom;
+					nItem.typeOfRoom = LanguageStrings.Courtroom;
 				}
-				if (listText == Room.Meetingroom) 
+				if (listText == LanguageStrings.Meetingroom) 
 				{
 					nItem.imageName = PictureNames.MeetingRoom;
-					nItem.typeOfRoom = Room.Meetingroom;
+					nItem.typeOfRoom = LanguageStrings.Meetingroom;
 			
 				}
 

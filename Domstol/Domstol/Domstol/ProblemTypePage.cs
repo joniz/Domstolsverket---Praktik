@@ -25,8 +25,8 @@ namespace Domstol
 
 
 			List<string> problemtypes = new List<string>();
-			problemtypes.Add(Category.Audio);
-			problemtypes.Add(Category.Video);
+			problemtypes.Add(LanguageStrings.Audio);
+			problemtypes.Add(LanguageStrings.Video);
 
 			Lista.ItemsSource = problemtypes;
 
@@ -44,14 +44,14 @@ namespace Domstol
 			if (listText != null)
 			{
 
-				if (listText == Category.Video)
+				if (listText == LanguageStrings.Video)
 				{
-					nItem.category = Category.Video;
+					nItem.category = LanguageStrings.Video;
 					Navigation.PushAsync(new ProblemPage(nItem));
 				}
-				if (listText == Category.Audio)
+				if (listText == LanguageStrings.Audio)
 				{
-					nItem.category = Category.Audio;
+					nItem.category = LanguageStrings.Audio;
 					Navigation.PushAsync(new ProblemPage(nItem));
 				}
 

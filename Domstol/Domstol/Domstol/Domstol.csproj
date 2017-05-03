@@ -66,9 +66,6 @@
     <Compile Include="Models\MyNavigationItem.cs" />
     <Compile Include="Assets\DataRepository.cs" />
     <Compile Include="IDialer.cs" />
-    <Compile Include="Enums\Answer.cs" />
-    <Compile Include="Enums\Category.cs" />
-    <Compile Include="Enums\Room.cs" />
     <Compile Include="Enums\PictureNames.cs" />
     <Compile Include="Models\QuestionList.cs" />
     <Compile Include="PreviousQuestionPage.xaml.cs">
@@ -76,6 +73,10 @@
     </Compile>
     <Compile Include="MoreInfoPage.xaml.cs">
       <DependentUpon>MoreInfoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\LanguageStrings.cs" />
+    <Compile Include="PreviousQuestionSelectionPage.xaml.cs">
+      <DependentUpon>PreviousQuestionSelectionPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -99,6 +100,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="MoreInfoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PreviousQuestionSelectionPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
