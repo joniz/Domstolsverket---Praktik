@@ -1,57 +1,54 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage 
-	xmlns="http://xamarin.com/schemas/2014/forms" 
-	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-	x:Class="Domstol.ProblemTypePage"
-
-	>
-
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Domstol"
+             x:Class="Domstol.ProblemTypePage" 
+            >
 	<ContentPage.Content>
 		
+			
 			<Grid>
 				<Grid.RowDefinitions>
-					<RowDefinition Height ="Auto"/>
+					<RowDefinition Height="Auto"/>
 					<RowDefinition Height="Auto"/>
 					<RowDefinition Height="Auto" />
 					<RowDefinition Height="Auto"/>
 					<RowDefinition Height="Auto"/>
 					<RowDefinition Height="*"/>
-
 				</Grid.RowDefinitions>
+			
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="Auto"/>
 					<ColumnDefinition Width="*"/>
-					<ColumnDefinition Width="Auto"/>
-					<ColumnDefinition Width="*"/>
-					<ColumnDefinition Width="*"/>
-					<ColumnDefinition Width="*"/>
-					<ColumnDefinition Width="*"/>
-					<ColumnDefinition Width="*"/>
-					<ColumnDefinition Width="*"/>
+		
 				</Grid.ColumnDefinitions>
 
+			
 
+			
 				<Image x:Name="Roompic"
 				Grid.Row="0"
 				Grid.Column="1"
 				Grid.ColumnSpan="8"
 				Aspect="AspectFill"
 				/>
+
+
+			
 				<ListView x:Name="Lista" 
 					ItemSelected="problemTypeSelected"
-					RowHeight="60"
 					Grid.Row="1"
 					Grid.Column="1"
+					Grid.RowSpan="5"
 					Grid.ColumnSpan="8"
-					Grid.RowSpan="6"
-					>
+					>	
 					<ListView.Header>
-						<StackLayout Padding="50,5,0,0">
+						<StackLayout Padding="120,5,0,0">
 							<Label 
 							TextColor="#6699CC"
 							FontSize="Large"
 							FontAttributes="Bold"
-							Text="Vad behöver du hjälp med?"/>
+							Text="Var är du?"/>
 							</StackLayout>
 					</ListView.Header>
             		<ListView.ItemTemplate>
@@ -68,21 +65,23 @@
                 		</DataTemplate>
             		</ListView.ItemTemplate>
         		</ListView>
+
 			
-				
+
 
 				<Label
 				Style="{StaticResource RedLine}"
 				Grid.Row="0"
 				Grid.Column="0"
-				Grid.RowSpan="8"
+				Grid.RowSpan="6"
 
 
 				/>
+			
 			</Grid>
 		
-
-
 		
 	</ContentPage.Content>
+   
+
 </ContentPage>

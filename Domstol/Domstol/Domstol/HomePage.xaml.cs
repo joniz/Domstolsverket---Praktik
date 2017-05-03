@@ -21,7 +21,6 @@ namespace Domstol
 			Startbild.Source = "Start.jpg";
 
 
-			Rectangle shape = new Rectangle();
 
 
 

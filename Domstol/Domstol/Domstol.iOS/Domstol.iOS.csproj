@@ -100,7 +100,6 @@
     <None Include="packages.config" />
     <Compile Include="FileAccessHelper.cs" />
     <Compile Include="PhoneDialer.iOS.cs" />
-    <Compile Include="CustomList.cs" />
     <Compile Include="CustomBackButton.cs" />
     <Compile Include="ListViewCellRenderer.cs" />
     <Compile Include="MyListViewRenderer.cs" />

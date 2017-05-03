@@ -29,6 +29,7 @@
 					<Label 
 					LineBreakMode="WordWrap" 
 					x:Name="questionLabel"
+					FontSize="Medium"
 
 				/>
 				</ScrollView>
@@ -51,12 +52,13 @@
                 ItemSelected="Handle_ItemSelected"
                 >
 					<ListView.RowHeight>40</ListView.RowHeight>
+				
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout Orientation="Horizontal" Padding="15,5,0,0">
                                     <StackLayout Orientation ="Vertical">
-                                        <Label Text="{Binding}" FontSize="Large"/>
+                                        <Label Text="{Binding}" FontAttributes="Bold" FontSize="Large"/>
                                     </StackLayout>
                                 </StackLayout>
                             </ViewCell>

@@ -32,12 +32,9 @@ namespace Domstol
 
 				Problem p = e.SelectedItem as Problem;
 
-
 				Question q = App.dataRepository.getQuestionByID(p.firstQuestionID);
 
 				((ListView)sender).SelectedItem = null;
-
-
 
 				if (q != null)
 					Navigation.PushAsync(new QuestionPage(q));

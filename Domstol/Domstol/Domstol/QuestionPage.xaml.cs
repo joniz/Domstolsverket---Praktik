@@ -24,16 +24,13 @@ namespace Domstol
 		{
 			InitializeComponent();
 			initializeQuestions(question);
-
 		}
 
 		public QuestionPage(Question question, string previousAnswer)
 		{
-
 			InitializeComponent();
 			initializeQuestions(question);
 			initializePage(previousAnswer);
-
 		}
 
 
