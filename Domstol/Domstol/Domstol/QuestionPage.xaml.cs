@@ -34,11 +34,6 @@ namespace Domstol
 			initializeQuestions(question);
 			initializePage(previousAnswer);
 
-
-
-
-
-
 		}
 
 

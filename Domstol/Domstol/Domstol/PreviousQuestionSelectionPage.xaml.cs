@@ -26,7 +26,7 @@ namespace Domstol
 
 
 				if (q != null)
-					Navigation.PushModalAsync(new PreviousQuestionPage(q));
+					Navigation.PushModalAsync(new NavigationPage(new PreviousQuestionPage(q)));
 
 
 			}
