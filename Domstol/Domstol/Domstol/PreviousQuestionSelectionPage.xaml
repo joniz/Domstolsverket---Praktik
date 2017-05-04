@@ -24,7 +24,7 @@
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" Padding="15">
                             <StackLayout Orientation ="Vertical">
-                                <Label Text="{Binding questionText}" FontSize="Medium"/>
+                                <Label LineBreakMode="TailTruncation" Text="{Binding questionText}" FontSize="Medium"/>
                             </StackLayout>
                         </StackLayout>
                     </ViewCell>

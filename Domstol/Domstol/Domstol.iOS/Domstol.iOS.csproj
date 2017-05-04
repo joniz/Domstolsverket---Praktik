@@ -103,6 +103,7 @@
     <Compile Include="CustomBackButton.cs" />
     <Compile Include="ListViewCellRenderer.cs" />
     <Compile Include="MyListViewRenderer.cs" />
+    <Compile Include="ExpandingRowListRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />

@@ -48,7 +48,7 @@
 							TextColor="#6699CC"
 							FontSize="Large"
 							FontAttributes="Bold"
-							Text="Var är du?"/>
+							Text="Vad behöver du hjälp med?"/>
 							</StackLayout>
 					</ListView.Header>
             		<ListView.ItemTemplate>

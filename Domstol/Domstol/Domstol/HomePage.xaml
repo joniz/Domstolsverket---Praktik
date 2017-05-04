@@ -58,7 +58,8 @@
                         		<StackLayout Orientation="Horizontal" Padding="15">
                       
                             		<StackLayout Orientation ="Vertical">
-                                		<Label Text="{Binding}" FontSize="Large"/>
+                
+										<Label Text="{Binding}" FontSize="Large"/>
                             		</StackLayout>
                         		</StackLayout>
                     		</ViewCell>

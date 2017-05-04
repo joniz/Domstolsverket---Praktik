@@ -2,6 +2,7 @@
 <ContentPage 
 	xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:Domstol"
 	x:Class="Domstol.ProblemPage">
 	<ContentPage.Content>
 		<Grid>
@@ -16,9 +17,8 @@
 
 
 			
-			<ListView x:Name="problemList" 
+			<local:ExpandingRowList x:Name="problemList" 
 			ItemSelected="problemSelected"
-			RowHeight="60"
 			Grid.Row="0"
 			Grid.Column="1"
 				>
@@ -28,14 +28,14 @@
                         <StackLayout Orientation="Horizontal" Padding="15">
                       
                             <StackLayout Orientation ="Vertical">
-                                <Label Text="{Binding problemDescription}" FontSize="Medium"/>
+								<Label Text="{Binding problemDescription}" LineBreakMode="WordWrap" FontSize="Large"/>
                             </StackLayout>
                         </StackLayout>
                     </ViewCell>
 
                 </DataTemplate>
             </ListView.ItemTemplate>
-        </ListView>
+        </local:ExpandingRowList>
 
         <Label
 		Style="{StaticResource RedLine}"
