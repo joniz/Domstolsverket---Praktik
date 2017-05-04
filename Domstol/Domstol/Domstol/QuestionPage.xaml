@@ -51,7 +51,7 @@
                 x:Name="ButtonList"
                 ItemSelected="Handle_ItemSelected"
                 >
-					<ListView.RowHeight>40</ListView.RowHeight>
+					<ListView.RowHeight>43</ListView.RowHeight>
 				
                     <ListView.ItemTemplate>
                         <DataTemplate>

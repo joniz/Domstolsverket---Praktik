@@ -18,19 +18,23 @@ namespace MyNamespace
 				var tbl = new UITableView(this.Bounds, UITableViewStyle.Grouped)
 				{
 					Source = this.Control.Source,
-
 				};
 
 
 				tbl.BackgroundColor = UIColor.White;
 
-				CoreGraphics.CGRect frame = new CoreGraphics.CGRect(0,0,0,0);
-				this.Control.TableHeaderView = frame;
+
+				//Hide unwanted margin at top of UITableView
+				var frame = CoreGraphics.CGRect.Empty;
+				frame.Height = 1;
+				tbl.TableHeaderView = new UIView(frame);
+
+
+				tbl.ScrollEnabled = false;
+
+
 				this.SetNativeControl(tbl);
-			
 
-
-				this.Control.ScrollEnabled = false;
 			}
 		}
 
