@@ -14,12 +14,14 @@ namespace Domstol
 		protected override void OnElementChanged(ElementChangedEventArgs<ListView> e)
 		{
 			base.OnElementChanged(e);
-			if (this.Control != null)
+			if (this.Control != null && e.NewElement !=null)
 			{
 				tbl = new UITableView(this.Bounds, UITableViewStyle.Grouped)
 				{
 					Source = this.Control.Source,
 				};
+
+
 
 
 			

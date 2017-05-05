@@ -19,6 +19,9 @@ namespace Domstol
 			problems  = db.Query<Problem>("SELECT * FROM Problems");
 			questions = db.Query<Question>("SELECT * FROM Questions");
 			db.Close();
+
+
+
 		}
 
 

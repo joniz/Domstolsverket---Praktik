@@ -43,9 +43,15 @@ namespace Domstol
 			yesQuestion = App.dataRepository.getQuestionByID(currentQuestion.questionYesID);
 			noQuestion = App.dataRepository.getQuestionByID(currentQuestion.questionNoID);
 
-			ListAlternatives = new List<string>() { LanguageStrings.Yes,
-				LanguageStrings.No};
+			ListAlternatives = new List<string>();
 
+
+			if (yesQuestion != null)
+				ListAlternatives.Add(LanguageStrings.Yes);
+
+			if (noQuestion != null)
+				ListAlternatives.Add(LanguageStrings.No);
+			
 			if (question.questionMoreInfo != null)
 				ListAlternatives.Add(LanguageStrings.MoreInfo);
 
@@ -112,14 +118,17 @@ namespace Domstol
 
 				if (selectedChoice == LanguageStrings.Yes)
 				{
+
 					if (yesQuestion != null)
 					{
 						App.previousQuestions.Push(currentQuestion);
 						Navigation.PushAsync(new QuestionPage(yesQuestion, LanguageStrings.Yes));
 						BackButtonWasPressed = false;
 					}
+				
 
 				}
+
 				if (selectedChoice == LanguageStrings.No)
 				{
 					if (noQuestion != null)
@@ -131,14 +140,17 @@ namespace Domstol
 					}
 
 				}
+
 				if (selectedChoice == LanguageStrings.PreviousQuestions)
 				{
 					Navigation.PushAsync(new PreviousQuestionSelectionPage());
 					BackButtonWasPressed = false;
 
 				}
+
 				if (selectedChoice == LanguageStrings.BackToMenu)
 				{
+
 					Navigation.PopToRootAsync();
 					App.previousQuestions.Clear();
 
