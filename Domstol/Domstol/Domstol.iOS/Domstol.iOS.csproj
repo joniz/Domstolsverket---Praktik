@@ -101,9 +101,10 @@
     <Compile Include="FileAccessHelper.cs" />
     <Compile Include="PhoneDialer.iOS.cs" />
     <Compile Include="CustomBackButton.cs" />
-    <Compile Include="ListViewCellRenderer.cs" />
-    <Compile Include="MyListViewRenderer.cs" />
-    <Compile Include="ExpandingRowListRenderer.cs" />
+    <Compile Include="Renderers\CustomListView1Renderer.cs" />
+    <Compile Include="Renderers\ExpandingRowListRenderer.cs" />
+    <Compile Include="Renderers\ListViewCellRenderer.cs" />
+    <Compile Include="Renderers\StandardListViewRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -245,6 +246,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\App-icon\" />
+    <Folder Include="Renderers\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

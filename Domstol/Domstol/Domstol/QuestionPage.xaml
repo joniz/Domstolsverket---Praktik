@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Domstol.QuestionPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:local="clr-namespace:Domstol"
+	x:Class="Domstol.QuestionPage">
 	<ContentPage.Content>
 		
 		<Grid RowSpacing="10" x:Name="TheGrid">
@@ -47,7 +50,7 @@
 				x:Name="Stacklay"
 				
 			>
-			<ListView
+			<local:CustomListView1
                 x:Name="ButtonList"
                 ItemSelected="Handle_ItemSelected"
                 >
@@ -65,7 +68,7 @@
 
                         </DataTemplate>
                     </ListView.ItemTemplate>
-                </ListView>
+                </local:CustomListView1>
 
 
 			</StackLayout>

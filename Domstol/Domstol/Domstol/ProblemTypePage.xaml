@@ -35,7 +35,7 @@
 
 
 			
-				<ListView x:Name="Lista" 
+				<local:CustomListView1 x:Name="Lista" 
 					ItemSelected="problemTypeSelected"
 					Grid.Row="1"
 					Grid.Column="1"
@@ -64,7 +64,7 @@
 
                 		</DataTemplate>
             		</ListView.ItemTemplate>
-        		</ListView>
+        		</local:CustomListView1>
 
 			
 

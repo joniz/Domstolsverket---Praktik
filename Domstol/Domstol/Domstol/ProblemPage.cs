@@ -21,6 +21,7 @@ namespace Domstol
 
 			problemList.ItemsSource = App.dataRepository.getProblemsByCategoryAndRoom(
 					nItem.category, nItem.typeOfRoom);
+
 			
 			
 		}
@@ -36,12 +37,16 @@ namespace Domstol
 
 				((ListView)sender).SelectedItem = null;
 
+
 				if (q != null)
 					Navigation.PushAsync(new QuestionPage(q));
 
+
 			}
 
+
 		}
+
 
 	}
 }

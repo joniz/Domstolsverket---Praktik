@@ -20,7 +20,7 @@ namespace Domstol
 			cell.Accessory = UITableViewCellAccessory.DisclosureIndicator;
 
 
-
+			//cell.ValueForKeyPath;
 
 
             return cell;

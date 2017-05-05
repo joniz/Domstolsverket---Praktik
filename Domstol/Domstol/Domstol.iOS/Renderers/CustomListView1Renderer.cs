@@ -2,13 +2,13 @@
 using UIKit;
 using Xamarin.Forms.Platform.iOS;
 using Xamarin.Forms;
-using MyNamespace;
+using Domstol;
 
-[assembly: ExportRenderer(typeof(ListView), typeof(MyListViewRenderer))]
+[assembly: ExportRenderer(typeof(CustomListView1), typeof(CustomListView1Renderer))]
 
-namespace MyNamespace
+namespace Domstol
 {
-	public class MyListViewRenderer : ListViewRenderer
+	public class CustomListView1Renderer : ListViewRenderer
 	{
 		protected UITableView tbl;
 		protected override void OnElementChanged(ElementChangedEventArgs<ListView> e)
@@ -22,11 +22,13 @@ namespace MyNamespace
 				};
 
 
+			
+
 				tbl.BackgroundColor = UIColor.White;
 
 
 
-				//Hide unwanted margin at top of UITableView
+				//Hide unwanted margin at top of grouped UITableView
 				var frame = CoreGraphics.CGRect.Empty;
 				frame.Height = 1;
 				tbl.TableHeaderView = new UIView(frame);
@@ -37,8 +39,12 @@ namespace MyNamespace
 
 				this.SetNativeControl(tbl);
 
+
 			}
+
+
 		}
+
 
 	
 

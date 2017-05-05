@@ -9,7 +9,7 @@ using Domstol;
 
 namespace MyNamespace
 {
-	public class ExpandingRowListRenderer : MyListViewRenderer
+	public class ExpandingRowListRenderer : ListViewRenderer
 	{
 		protected override void OnElementChanged(ElementChangedEventArgs<ListView> e)
 		{
@@ -17,15 +17,14 @@ namespace MyNamespace
 			if (this.Control != null)
 			{
 
-				tbl.RowHeight = 200;
 
-			
+				this.Control.RowHeight = 80;
 
-
-
+				this.Control.TableFooterView = new UIView();
 
 
-				this.SetNativeControl(tbl);
+
+
 
 			}
 		}

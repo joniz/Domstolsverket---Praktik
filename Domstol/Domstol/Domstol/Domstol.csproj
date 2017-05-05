@@ -79,7 +79,8 @@
       <DependentUpon>PreviousQuestionSelectionPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="CustomCell.cs" />
-    <Compile Include="ExpandingRowList.cs" />
+    <Compile Include="Models\CustomListView1.cs" />
+    <Compile Include="Models\ExpandingRowList.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
