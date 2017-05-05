@@ -48,6 +48,7 @@ namespace Domstol
 
 			if (yesQuestion != null)
 				ListAlternatives.Add(LanguageStrings.Yes);
+					
 
 			if (noQuestion != null)
 				ListAlternatives.Add(LanguageStrings.No);
@@ -57,6 +58,9 @@ namespace Domstol
 
 			if (App.previousQuestions.Count > 0)
 				ListAlternatives.Add(LanguageStrings.PreviousQuestions);
+
+			if(yesQuestion == null)
+				ListAlternatives.Add(LanguageStrings.BackToMenu);
 
 
 			NavigationPage.SetBackButtonTitle(this, LanguageStrings.Back);
@@ -76,6 +80,7 @@ namespace Domstol
 			if (yesQuestion == null && noQuestion == null && previousAnswer == LanguageStrings.Yes)
 			{
 				ListAlternatives.Clear();
+				ListAlternatives.Add(LanguageStrings.PreviousQuestions);
 				ListAlternatives.Add(LanguageStrings.BackToMenu);
 
 			}
@@ -85,8 +90,10 @@ namespace Domstol
 			if (yesQuestion == null && noQuestion == null && previousAnswer == LanguageStrings.No)
 			{
 				ListAlternatives.Clear();
-				ListAlternatives.Add(LanguageStrings.BackToMenu);
 				ListAlternatives.Add(LanguageStrings.CallSupport);
+				ListAlternatives.Add(LanguageStrings.PreviousQuestions);
+				ListAlternatives.Add(LanguageStrings.BackToMenu);
+
 			}
 
 
