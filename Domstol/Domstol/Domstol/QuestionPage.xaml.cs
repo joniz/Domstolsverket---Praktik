@@ -169,8 +169,13 @@ namespace Domstol
 					if (dialer != null)
 						dialer.DialAsync("0364422000");
 
-
-
+				}
+				if (selectedChoice == LanguageStrings.MoreInfo) 
+				{
+					Navigation.PushModalAsync(new NavigationPage(new MoreInfoPage(currentQuestion)));
+				
+				
+				
 				}
 			}
 
