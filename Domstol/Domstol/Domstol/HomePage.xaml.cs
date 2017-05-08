@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,24 +20,30 @@ namespace Domstol
 
 			Startbild.Source = "Start.jpg";
 
+			Lista.ItemsSource = getRooms();
 
-
-
-
-
-			List<string> rooms = new List<string>();
-			rooms.Add(LanguageStrings.Conferenceroom);
-			rooms.Add(LanguageStrings.Courtroom);
-			rooms.Add(LanguageStrings.Meetingroom);
-			Lista.ItemsSource = rooms;
-
-			if(App.previousQuestions != null)
-				App.previousQuestions.Clear();
 
 
 
         }
 
+		protected override void OnDisappearing()
+		{
+		
+			base.OnDisappearing();
+
+			Lista.ItemsSource = getRooms();
+		}
+
+		public List<string> getRooms() 
+		{
+			List<string> rooms = new List<string>();
+			rooms.Add(LanguageStrings.Conferenceroom);
+			rooms.Add(LanguageStrings.Courtroom);
+			rooms.Add(LanguageStrings.Meetingroom);
+			return rooms;
+		
+		}
 		void roomSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
 		{
 

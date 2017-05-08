@@ -16,5 +16,7 @@ namespace Domstol
 		public string questionImageName { get; set; }
 
 		public string questionMoreInfo { get; set; }
+
+		public string questionSupportNumber { get; set; }
 	}
 }

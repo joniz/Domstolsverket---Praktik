@@ -10,7 +10,7 @@ namespace Domstol
 	public partial class App : Application
 	{
 		public static DataRepository dataRepository { get; set; }
-		public static QuestionList<Question> previousQuestions { get; set; }
+		public static QuestionList<Question> AllQuestions { get; set; }
 
 		public App() 
 		{
@@ -23,7 +23,7 @@ namespace Domstol
 			InitializeComponent();
 			MainPage = new RootPage();
 			dataRepository = new DataRepository(dbPath);
-			previousQuestions = new QuestionList<Question>();
+			AllQuestions = new QuestionList<Question>();
 
 
 

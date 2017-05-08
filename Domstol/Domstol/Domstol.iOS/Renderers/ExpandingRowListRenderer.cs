@@ -17,8 +17,9 @@ namespace MyNamespace
 			if (this.Control != null)
 			{
 
-
+				//Set height of the rows in the tableview
 				this.Control.RowHeight = 80;
+
 
 				this.Control.TableFooterView = new UIView();
 

@@ -22,10 +22,6 @@ namespace Domstol
 				};
 
 
-
-
-			
-
 				tbl.BackgroundColor = UIColor.White;
 
 

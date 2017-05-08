@@ -7,7 +7,7 @@ namespace Domstol
 		public static string Yes { get { return "Ja"; } }
 		public static string No { get { return "Nej"; } }
 		public static string MoreInfo { get { return "Mer information";} }
-		public static string PreviousQuestions { get { return "Förgående frågor";} }
+		public static string AllQuestions { get { return "Alla steg";} }
 		public static string CallSupport { get { return "Ring support";} }
 		public static string BackToMenu { get { return "Tillbaka till menyn";} }
 		public static string Back { get { return "Tillbaka";} }

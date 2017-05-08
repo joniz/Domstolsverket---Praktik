@@ -68,19 +68,16 @@
     <Compile Include="IDialer.cs" />
     <Compile Include="Enums\PictureNames.cs" />
     <Compile Include="Models\QuestionList.cs" />
-    <Compile Include="PreviousQuestionPage.xaml.cs">
-      <DependentUpon>PreviousQuestionPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MoreInfoPage.xaml.cs">
       <DependentUpon>MoreInfoPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Enums\LanguageStrings.cs" />
-    <Compile Include="PreviousQuestionSelectionPage.xaml.cs">
-      <DependentUpon>PreviousQuestionSelectionPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="CustomCell.cs" />
     <Compile Include="Models\CustomListView1.cs" />
     <Compile Include="Models\ExpandingRowList.cs" />
+    <Compile Include="AllQuestionsPage.xaml.cs">
+      <DependentUpon>AllQuestionsPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
@@ -99,13 +96,10 @@
     <EmbeddedResource Include="QuestionPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="PreviousQuestionPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Include="MoreInfoPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="PreviousQuestionSelectionPage.xaml">
+    <EmbeddedResource Include="AllQuestionsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

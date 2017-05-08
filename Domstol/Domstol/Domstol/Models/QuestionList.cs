@@ -7,7 +7,9 @@ namespace Domstol
 	{
 		public void Push(Question q)
 		{
-			Add(q);
+
+			if(!Contains(q))
+				Add(q);
 		
 		}
 		public void Pop() 
@@ -16,5 +18,6 @@ namespace Domstol
 				RemoveAt(Count - 1);
 		
 		}
+
 	}
 }

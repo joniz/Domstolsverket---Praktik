@@ -5,12 +5,16 @@ using Xamarin.Forms;
 
 namespace Domstol
 {
-	public partial class PreviousQuestionSelectionPage : ContentPage
+	public partial class AllQuestionsPage : ContentPage
 	{
-		public PreviousQuestionSelectionPage()
+		public AllQuestionsPage()
 		{
 			InitializeComponent();
-			QuestionListView.ItemsSource = App.previousQuestions;
+			QuestionListView.ItemsSource = App.AllQuestions;
+			NavigationPage.SetBackButtonTitle(this, LanguageStrings.Back);
+			//for (int i = 1; i < App.previousQuestions.Count; i++)
+
+				
 		}
 
 		void questionSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
@@ -26,7 +30,7 @@ namespace Domstol
 
 
 				if (q != null)
-					Navigation.PushModalAsync(new NavigationPage(new PreviousQuestionPage(q)));
+					Navigation.PushAsync(new QuestionPage(q));
 
 
 			}

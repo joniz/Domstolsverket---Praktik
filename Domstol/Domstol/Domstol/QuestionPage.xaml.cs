@@ -12,7 +12,6 @@ namespace Domstol
 		private Question currentQuestion { get; set; }
 		private Question yesQuestion { get; set; }
 		private Question noQuestion { get; set; }
-		private bool BackButtonWasPressed { get; set; }
 		private List<string> ListAlternatives { get; set; }
 
 		public QuestionPage()
@@ -24,13 +23,32 @@ namespace Domstol
 		{
 			InitializeComponent();
 			initializeQuestions(question);
+
+			App.AllQuestions.Push(question);
+			quests(question);
+
+		}
+
+		public void quests(Question q)
+		{
+
+			if (q.questionYesID != 0)
+				App.AllQuestions.Push(App.dataRepository.getQuestionByID(q.questionYesID));
+			if (q.questionNoID != 0)
+				App.AllQuestions.Push(App.dataRepository.getQuestionByID(q.questionNoID));
+
+			if (q.questionYesID != 0)
+				quests(App.dataRepository.getQuestionByID(q.questionYesID));
+
+			if (q.questionNoID != 0)
+				quests(App.dataRepository.getQuestionByID(q.questionNoID));
+
 		}
 
 		public QuestionPage(Question question, string previousAnswer)
 		{
 			InitializeComponent();
 			initializeQuestions(question);
-			initializePage(previousAnswer);
 		}
 
 
@@ -56,8 +74,12 @@ namespace Domstol
 			if (question.questionMoreInfo != null)
 				ListAlternatives.Add(LanguageStrings.MoreInfo);
 
-			if (App.previousQuestions.Count > 0)
-				ListAlternatives.Add(LanguageStrings.PreviousQuestions);
+
+			ListAlternatives.Add(LanguageStrings.AllQuestions);
+
+
+			if(question.questionSupportNumber != null)
+				ListAlternatives.Add(LanguageStrings.CallSupport);
 
 			if(yesQuestion == null)
 				ListAlternatives.Add(LanguageStrings.BackToMenu);
@@ -65,53 +87,26 @@ namespace Domstol
 
 			NavigationPage.SetBackButtonTitle(this, LanguageStrings.Back);
 			ButtonList.ItemsSource = ListAlternatives;
-			BackButtonWasPressed = true;
 
 		}
+
 
 	
 
 
-		public void initializePage(string previousAnswer)
-		{
 
-
-			//Check if it's the last question and if we came from a 'Yes' alternative
-			if (yesQuestion == null && noQuestion == null && previousAnswer == LanguageStrings.Yes)
-			{
-				ListAlternatives.Clear();
-				ListAlternatives.Add(LanguageStrings.PreviousQuestions);
-				ListAlternatives.Add(LanguageStrings.BackToMenu);
-
-			}
-
-
-			//Check if it's the last question and if we came from a 'No' alternative
-			if (yesQuestion == null && noQuestion == null && previousAnswer == LanguageStrings.No)
-			{
-				ListAlternatives.Clear();
-				ListAlternatives.Add(LanguageStrings.CallSupport);
-				ListAlternatives.Add(LanguageStrings.PreviousQuestions);
-				ListAlternatives.Add(LanguageStrings.BackToMenu);
-
-			}
-
-
-		}
 
 		protected override void OnDisappearing()
 		{
 			base.OnDisappearing();
-			if (BackButtonWasPressed)
-				App.previousQuestions.Pop();
 
-			BackButtonWasPressed = true;
+
+			//Reset list to unselect all rows
+		
+			initializeQuestions(currentQuestion);
+
 		}
 
-		void MoreInfoButtonClicked(object sender, System.EventArgs e)
-		{
-			Navigation.PushModalAsync(new NavigationPage(new MoreInfoPage(currentQuestion)));
-		}
 
 
 		void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
@@ -128,9 +123,8 @@ namespace Domstol
 
 					if (yesQuestion != null)
 					{
-						App.previousQuestions.Push(currentQuestion);
+						App.AllQuestions.Push(currentQuestion);
 						Navigation.PushAsync(new QuestionPage(yesQuestion, LanguageStrings.Yes));
-						BackButtonWasPressed = false;
 					}
 				
 
@@ -140,26 +134,24 @@ namespace Domstol
 				{
 					if (noQuestion != null)
 					{
-
-						App.previousQuestions.Push(currentQuestion);
 						Navigation.PushAsync(new QuestionPage(noQuestion, LanguageStrings.No));
-						BackButtonWasPressed = false;
+			
 					}
 
 				}
 
-				if (selectedChoice == LanguageStrings.PreviousQuestions)
+				if (selectedChoice == LanguageStrings.AllQuestions)
 				{
-					Navigation.PushAsync(new PreviousQuestionSelectionPage());
-					BackButtonWasPressed = false;
+					Navigation.PushAsync(new AllQuestionsPage());
 
 				}
 
 				if (selectedChoice == LanguageStrings.BackToMenu)
 				{
 
-					Navigation.PopToRootAsync();
-					App.previousQuestions.Clear();
+					 Navigation.PopToRootAsync();
+
+
 
 				}
 				if (selectedChoice == LanguageStrings.CallSupport)
@@ -167,7 +159,7 @@ namespace Domstol
 
 					var dialer = DependencyService.Get<IDialer>();
 					if (dialer != null)
-						dialer.DialAsync("0364422000");
+						dialer.DialAsync(currentQuestion.questionSupportNumber);
 
 				}
 				if (selectedChoice == LanguageStrings.MoreInfo) 

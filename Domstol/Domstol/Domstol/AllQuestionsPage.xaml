@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Domstol.PreviousQuestionSelectionPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Domstol.AllQuestionsPage">
 	<ContentPage.Content>
 		<Grid>
 			
@@ -15,7 +15,7 @@
 			
 			<ListView x:Name="QuestionListView" 
 			ItemSelected="questionSelected"
-			RowHeight="60"
+			RowHeight="50"
 			Grid.Row="0"
 			Grid.Column="1">
 				
@@ -23,7 +23,8 @@
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" Padding="15">
-                            <StackLayout Orientation ="Vertical">
+                            <StackLayout Orientation ="Horizontal">
+								<Label x:Name="questionNr"/>
                                 <Label LineBreakMode="TailTruncation" Text="{Binding questionText}" FontSize="Medium"/>
                             </StackLayout>
                         </StackLayout>
