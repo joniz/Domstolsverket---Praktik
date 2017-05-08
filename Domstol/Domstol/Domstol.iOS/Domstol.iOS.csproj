@@ -100,11 +100,12 @@
     <None Include="packages.config" />
     <Compile Include="FileAccessHelper.cs" />
     <Compile Include="PhoneDialer.iOS.cs" />
-    <Compile Include="CustomBackButton.cs" />
     <Compile Include="Renderers\CustomListView1Renderer.cs" />
     <Compile Include="Renderers\ExpandingRowListRenderer.cs" />
     <Compile Include="Renderers\ListViewCellRenderer.cs" />
     <Compile Include="Renderers\StandardListViewRenderer.cs" />
+    <Compile Include="Renderers\CustomBackButton.cs" />
+    <Compile Include="Renderers\CustomListView2Renderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />

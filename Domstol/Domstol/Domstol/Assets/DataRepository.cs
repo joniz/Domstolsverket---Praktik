@@ -49,6 +49,25 @@ namespace Domstol
 			return temps;
 		
 		
+
+
+
+		}
+
+		public List<Problem> getProblemsByRoom(string typeOfRoom)
+		{
+
+			List<Problem> temps = new List<Problem>();
+			foreach (Problem p in problems)
+				if (p.problemTypeOfRoom == typeOfRoom)
+					temps.Add(p);
+
+
+
+			return temps;
+
+
+
 		}
 
 	}

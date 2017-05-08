@@ -34,7 +34,7 @@ namespace Domstol.iOS
 
 			//Appearence of title text
 			UINavigationBar.Appearance.SetTitleTextAttributes(attrs);
-			NavigationItem.Title = "FromRenderer";
+
 
 		}
 
