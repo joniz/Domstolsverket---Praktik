@@ -4,7 +4,7 @@ using Xamarin.Forms;
 namespace Domstol
 {
 
-	public class CustomListView1 : ListView
+	public class GroupedListView : ListView
 	{
 		
 	}

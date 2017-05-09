@@ -50,7 +50,7 @@
 				x:Name="Stacklay"
 				
 			>
-			<local:CustomListView1
+			<local:GroupedListView
                 x:Name="ButtonList"
                 ItemSelected="Handle_ItemSelected"
                 >
@@ -59,16 +59,12 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <StackLayout Orientation="Horizontal" Padding="15,5,0,0">
-                                    <StackLayout Orientation ="Vertical">
-                                        <Label Text="{Binding}" FontAttributes="Bold" FontSize="Large"/>
-                                    </StackLayout>
-                                </StackLayout>
+                            	<Label Text="{Binding}" Margin="15,10,0,0" FontAttributes="Bold" FontSize="Large"/>   
                             </ViewCell>
 
                         </DataTemplate>
                     </ListView.ItemTemplate>
-                </local:CustomListView1>
+                </local:GroupedListView>
 
 
 			</StackLayout>

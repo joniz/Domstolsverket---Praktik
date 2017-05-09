@@ -4,11 +4,11 @@ using Xamarin.Forms.Platform.iOS;
 using Xamarin.Forms;
 using Domstol;
 
-[assembly: ExportRenderer(typeof(CustomListView1), typeof(CustomListView1Renderer))]
+[assembly: ExportRenderer(typeof(GroupedListView), typeof(GroupedListViewRenderer))]
 
 namespace Domstol
 {
-	public class CustomListView1Renderer : ListViewRenderer
+	public class GroupedListViewRenderer : ListViewRenderer
 	{
 		protected UITableView tbl;
 		protected override void OnElementChanged(ElementChangedEventArgs<ListView> e)

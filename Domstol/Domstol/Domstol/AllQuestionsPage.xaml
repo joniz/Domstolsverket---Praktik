@@ -15,20 +15,21 @@
 			
 			<ListView x:Name="QuestionListView" 
 			ItemSelected="questionSelected"
-			RowHeight="50"
 			Grid.Row="0"
-			Grid.Column="1">
-				
+			Grid.Column="1"
+			SeparatorColor="Black"
+				>
+
           <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Orientation="Horizontal" Padding="15">
-                            <StackLayout Orientation ="Horizontal">
-								<Label x:Name="questionNr"/>
-                                <Label LineBreakMode="TailTruncation" Text="{Binding questionText}" FontSize="Medium"/>
-                            </StackLayout>
-                        </StackLayout>
+						<Label LineBreakMode="TailTruncation" 
+							Text="{Binding questionText}"
+							Margin="15,10,0,0"
+							/>
+                         
                     </ViewCell>
+						
 
                 </DataTemplate>
             </ListView.ItemTemplate>

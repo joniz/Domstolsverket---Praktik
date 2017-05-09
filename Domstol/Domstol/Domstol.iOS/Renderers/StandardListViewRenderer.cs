@@ -17,14 +17,7 @@ namespace MyNamespace
 			if (this.Control != null)
 			{
 
-
-
-
 				this.Control.TableFooterView = new UIView();
-
-
-
-
 
 			}
 		}

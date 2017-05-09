@@ -35,7 +35,7 @@
 
 
 			
-				<local:CustomListView1 x:Name="Lista" 
+				<local:GroupedListView x:Name="Lista" 
 					ItemSelected="roomSelected"
 	
 					Grid.Row="1"
@@ -55,18 +55,11 @@
             		<ListView.ItemTemplate>
                 		<DataTemplate>
                     		<ViewCell>
-                        		<StackLayout Orientation="Horizontal" Padding="15">
-                      
-                            		<StackLayout Orientation ="Vertical">
-                
-										<Label Text="{Binding}" FontSize="Large"/>
-                            		</StackLayout>
-                        		</StackLayout>
-                    		</ViewCell>
-
+                    			<Label Margin="15,10,0,0" Text="{Binding}" FontSize="Large"/>	
+							</ViewCell>
                 		</DataTemplate>
             		</ListView.ItemTemplate>
-        		</local:CustomListView1>
+        		</local:GroupedListView>
 
 			
 

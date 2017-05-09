@@ -67,12 +67,11 @@
     </Compile>
     <Compile Include="Enums\LanguageStrings.cs" />
     <Compile Include="CustomCell.cs" />
-    <Compile Include="Models\CustomListView1.cs" />
+    <Compile Include="Models\GroupedListView.cs" />
     <Compile Include="Models\ExpandingRowList.cs" />
     <Compile Include="AllQuestionsPage.xaml.cs">
       <DependentUpon>AllQuestionsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\CustomListView2.cs" />
     <Compile Include="Assets\LabelledSectionXaml.xaml.cs" />
     <Compile Include="Models\ProblemList.cs" />
     <Compile Include="Assets\ListItemCollection.cs" />
