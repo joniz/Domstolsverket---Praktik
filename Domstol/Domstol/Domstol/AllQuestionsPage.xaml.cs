@@ -7,15 +7,20 @@ namespace Domstol
 {
 	public partial class AllQuestionsPage : ContentPage
 	{
-		public AllQuestionsPage()
+		
+		public AllQuestionsPage(Question q)
 		{
 			InitializeComponent();
+
+
+
 			QuestionListView.ItemsSource = App.AllQuestions;
 			NavigationPage.SetBackButtonTitle(this, LanguageStrings.Back);
-			//for (int i = 1; i < App.previousQuestions.Count; i++)
 
-				
 		}
+
+
+
 
 		void questionSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
 		{

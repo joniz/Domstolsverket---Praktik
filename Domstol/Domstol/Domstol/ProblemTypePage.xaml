@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Domstol"
-             x:Class="Domstol.ProblemTypePage" 
+             x:Class="Domstol.ProblemPage" 
             >
 	<ContentPage.Content>
 		
@@ -37,6 +37,7 @@
           			IsGroupingEnabled="true" 
   		  		  	GroupDisplayBinding="{Binding Category}"
   		  			Header="Vad behöver du hjälp med?"
+					ItemSelected="problemSelected"
   		  			Grid.Row="1"
 					Grid.Column="1"
 					Grid.ColumnSpan="8"
@@ -48,37 +49,6 @@
     					</DataTemplate>
   					</ListView.ItemTemplate>
 				</ListView>
-			
-<!--				<local:ExpandingRowList x:Name="Lista" 
-					ItemSelected="problemTypeSelected"
-					IsGroupingEnabled="true"
-					Grid.Row="1"
-					Grid.Column="1"
-					Grid.ColumnSpan="8"
-					>	
-					<ListView.Header>
-						<StackLayout Padding="80,5,0,0">
-							<Label 
-							TextColor="#6699CC"
-							FontSize="Large"
-							FontAttributes="Bold"
-							Text="Bild"/>
-							</StackLayout>
-					</ListView.Header>
-            		<ListView.ItemTemplate>
-                		<DataTemplate>
-                    		<ViewCell>
-                        		<StackLayout Orientation="Horizontal" Padding="15">
-                      
-                            		<StackLayout Orientation ="Vertical">
-                                		<Label Text="{Binding problemDescription}" FontSize="Large"/>
-                            		</StackLayout>
-                        		</StackLayout>
-                    		</ViewCell>
-
-                		</DataTemplate>
-            		</ListView.ItemTemplate>
-        		</local:ExpandingRowList>-->
 
 			
 

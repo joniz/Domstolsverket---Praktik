@@ -24,26 +24,13 @@ namespace Domstol
 			InitializeComponent();
 			initializeQuestions(question);
 
-			App.AllQuestions.Push(question);
-			quests(question);
+
+			App.AllQuestions.Clear();
+			populateQuestionList(question);
 
 		}
 
-		public void quests(Question q)
-		{
 
-			if (q.questionYesID != 0)
-				App.AllQuestions.Push(App.dataRepository.getQuestionByID(q.questionYesID));
-			if (q.questionNoID != 0)
-				App.AllQuestions.Push(App.dataRepository.getQuestionByID(q.questionNoID));
-
-			if (q.questionYesID != 0)
-				quests(App.dataRepository.getQuestionByID(q.questionYesID));
-
-			if (q.questionNoID != 0)
-				quests(App.dataRepository.getQuestionByID(q.questionNoID));
-
-		}
 
 		public QuestionPage(Question question, string previousAnswer)
 		{
@@ -90,7 +77,30 @@ namespace Domstol
 
 		}
 
+		//Add all questions that are related to the starting question
+		public void populateQuestionList(Question q)
+		{
 
+			if (q == null)
+				return;
+
+			if (q.questionYesID == 0 && q.questionNoID == 0)
+				return;
+
+			Question nQuestion = App.dataRepository.getQuestionByID(q.questionNoID);
+			Question yQuestion = App.dataRepository.getQuestionByID(q.questionYesID);
+
+
+			if (q.questionNoID != 0)
+				App.AllQuestions.Push(nQuestion);
+
+			if (q.questionYesID != 0)
+				App.AllQuestions.Push(yQuestion);
+
+
+			populateQuestionList(nQuestion);
+			populateQuestionList(yQuestion);
+		}
 	
 
 
@@ -142,7 +152,7 @@ namespace Domstol
 
 				if (selectedChoice == LanguageStrings.AllQuestions)
 				{
-					Navigation.PushAsync(new AllQuestionsPage());
+					Navigation.PushAsync(new AllQuestionsPage(currentQuestion));
 
 				}
 

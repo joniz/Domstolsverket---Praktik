@@ -76,7 +76,7 @@ namespace Domstol
 				((ListView)sender).SelectedItem = null;
 			
 
-				Navigation.PushAsync(new ProblemTypePage(nItem));
+				Navigation.PushAsync(new ProblemPage(nItem));
 
 
 

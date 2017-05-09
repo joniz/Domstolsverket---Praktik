@@ -51,12 +51,6 @@
     <Compile Include="InformationPage.xaml.cs">
       <DependentUpon>InformationPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ProblemTypePage.cs">
-      <DependentUpon>ProblemTypePage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ProblemPage.cs">
-      <DependentUpon>ProblemPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Models\Problem.cs" />
     <Compile Include="Models\Question.cs" />
     <Compile Include="QuestionPage.xaml.cs">
@@ -82,6 +76,9 @@
     <Compile Include="Assets\LabelledSectionXaml.xaml.cs" />
     <Compile Include="Models\ProblemList.cs" />
     <Compile Include="Assets\ListItemCollection.cs" />
+    <Compile Include="ProblemPage.xaml.cs">
+      <DependentUpon>ProblemPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
@@ -91,12 +88,6 @@
     <EmbeddedResource Include="InformationPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProblemTypePage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ProblemPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Include="QuestionPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -104,6 +95,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="AllQuestionsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProblemPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

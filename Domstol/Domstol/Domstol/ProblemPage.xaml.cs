@@ -5,14 +5,14 @@ using Xamarin.Forms;
 using System.Linq;
 namespace Domstol
 {
-	public partial class ProblemTypePage : ContentPage
+	public partial class ProblemPage : ContentPage
 	{
 
 		private MyNavigationItem nItem { get; set; }
 
-		public ProblemTypePage() { InitializeComponent();}
+		public ProblemPage() { InitializeComponent(); }
 
-		public ProblemTypePage(MyNavigationItem n)
+		public ProblemPage(MyNavigationItem n)
 		{
 			InitializeComponent();
 
@@ -22,7 +22,6 @@ namespace Domstol
 			NavigationPage.SetBackButtonTitle(this, "Tillbaka");
 
 
-			var exde = SetupList();
 			//Lista.ItemsSource = App.dataRepository.getProblemsByRoom(nItem.typeOfRoom);
 			itemListView.ItemsSource = SetupList();
 
@@ -53,38 +52,25 @@ namespace Domstol
 		}
 
 
-		void problemTypeSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
+		void problemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
 		{
 
 
-			string listText = e.SelectedItem as string;
+			Problem p = e.SelectedItem as Problem;
 
-
-
-			if (listText != null)
+			if (p != null)
 			{
-
-				if (listText == LanguageStrings.Video)
-				{
-					nItem.category = LanguageStrings.Video;
-					Navigation.PushAsync(new ProblemPage(nItem));
-				}
-				if (listText == LanguageStrings.Audio)
-				{
-					nItem.category = LanguageStrings.Audio;
-					Navigation.PushAsync(new ProblemPage(nItem));
-				}
+				Question q = App.dataRepository.getQuestionByID(p.firstQuestionID);
 
 				((ListView)sender).SelectedItem = null;
 
-
-
+				if (q != null)
+					Navigation.PushAsync(new QuestionPage(q));
 
 			}
-	
 		}
 
-	
+
 	}
 }
 
