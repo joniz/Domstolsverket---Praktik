@@ -27,7 +27,6 @@
 							Text="{Binding questionText}"
 							Margin="15,10,0,0"
 							/>
-                         
                     </ViewCell>
 						
 

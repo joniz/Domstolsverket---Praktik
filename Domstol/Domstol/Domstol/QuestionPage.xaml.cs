@@ -9,6 +9,7 @@ namespace Domstol
 	{
 
 
+		private Problem currentProblem { get; set; }
 		private Question currentQuestion { get; set; }
 		private Question yesQuestion { get; set; }
 		private Question noQuestion { get; set; }
@@ -19,21 +20,28 @@ namespace Domstol
 			InitializeComponent();
 			NavigationPage.SetBackButtonTitle(this, LanguageStrings.Back);
 		}
-		public QuestionPage(Question question)
+
+
+		public QuestionPage(Problem p, Question question)
 		{
+			currentProblem = p;
 			InitializeComponent();
 			initializeQuestions(question);
 
 
+
 			App.AllQuestions.Clear();
-			populateQuestionList(question);
+			Question firstQuestion = App.dataRepository.getQuestionByID(p.firstQuestionID);
+			populateQuestionList(firstQuestion);
+
 
 		}
 
 
 
-		public QuestionPage(Question question, string previousAnswer)
+		public QuestionPage(Problem p, Question question, string previousAnswer)
 		{
+			currentProblem = p;
 			InitializeComponent();
 			initializeQuestions(question);
 		}
@@ -134,7 +142,7 @@ namespace Domstol
 					if (yesQuestion != null)
 					{
 						App.AllQuestions.Push(currentQuestion);
-						Navigation.PushAsync(new QuestionPage(yesQuestion, LanguageStrings.Yes));
+						Navigation.PushAsync(new QuestionPage(currentProblem, yesQuestion, LanguageStrings.Yes));
 					}
 				
 
@@ -144,7 +152,7 @@ namespace Domstol
 				{
 					if (noQuestion != null)
 					{
-						Navigation.PushAsync(new QuestionPage(noQuestion, LanguageStrings.No));
+						Navigation.PushAsync(new QuestionPage(currentProblem, noQuestion, LanguageStrings.No));
 			
 					}
 
@@ -152,7 +160,7 @@ namespace Domstol
 
 				if (selectedChoice == LanguageStrings.AllQuestions)
 				{
-					Navigation.PushAsync(new AllQuestionsPage(currentQuestion));
+					Navigation.PushAsync(new AllQuestionsPage(currentProblem, currentQuestion));
 
 				}
 

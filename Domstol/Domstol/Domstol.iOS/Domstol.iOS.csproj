@@ -124,6 +124,9 @@
     <BundleResource Include="Resources\Logotyp.png" />
     <BundleResource Include="Resources\DOMLogotyp copy.png" />
     <BundleResource Include="Resources\MoreInfoPic125.png" />
+    <BundleResource Include="Resources\info.png" />
+    <BundleResource Include="Resources\Icons\info%403x.png" />
+    <BundleResource Include="Resources\Icons\list%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -247,7 +250,6 @@
     </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\App-icon\" />
     <Folder Include="Renderers\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

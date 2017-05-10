@@ -7,12 +7,11 @@ namespace Domstol
 {
 	public partial class AllQuestionsPage : ContentPage
 	{
-		
-		public AllQuestionsPage(Question q)
+		private Problem currentProblem{ get; set; }
+		public AllQuestionsPage(Problem p, Question q)
 		{
+			currentProblem = p;
 			InitializeComponent();
-
-
 
 			QuestionListView.ItemsSource = App.AllQuestions;
 			NavigationPage.SetBackButtonTitle(this, LanguageStrings.Back);
@@ -35,7 +34,7 @@ namespace Domstol
 
 
 				if (q != null)
-					Navigation.PushAsync(new QuestionPage(q));
+					Navigation.PushAsync(new QuestionPage(currentProblem, q));
 
 
 			}

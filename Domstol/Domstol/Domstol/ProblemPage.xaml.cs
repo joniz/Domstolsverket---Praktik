@@ -65,7 +65,7 @@ namespace Domstol
 				((ListView)sender).SelectedItem = null;
 
 				if (q != null)
-					Navigation.PushAsync(new QuestionPage(q));
+					Navigation.PushAsync(new QuestionPage(p,q));
 
 			}
 		}
