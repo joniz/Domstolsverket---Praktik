@@ -10,7 +10,7 @@
 	<NavigationPage 
 		BarBackgroundColor="{StaticResource NavigationBarColor}"
 		x:Name="homenav"
-		Icon="home"
+		Icon="Icons/home"
 		>
 
 		
@@ -23,7 +23,7 @@
 
  	<NavigationPage BarBackgroundColor="{StaticResource NavigationBarColor}" 
 		x:Name="manualnav"
-		Icon="Manual2"
+		Icon="Icons/explore"
 		>
 
 		

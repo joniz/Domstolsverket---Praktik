@@ -9,37 +9,34 @@
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="auto"/>
 				<ColumnDefinition Width="auto"/>
-				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="auto"/>
 				<ColumnDefinition Width="*"/>
 				<ColumnDefinition Width="auto"/>
 			</Grid.ColumnDefinitions>
 			<Grid.RowDefinitions>
 				<RowDefinition Height="auto"/>
 				<RowDefinition Height="auto"/>
-				<RowDefinition Height="*"/>	
-				<RowDefinition Height="auto"/>
+				<RowDefinition Height="auto"/>	
+				<RowDefinition Height="*"/>
 				<RowDefinition Height="auto"/>
 				<RowDefinition Height="auto"/>
 				<RowDefinition Height="auto"/>
 			</Grid.RowDefinitions>
 
-			<Button
-				Grid.Row="1"
-				Grid.Column="4"
-				Image="Icons/info.png"
-				Margin="0,0,10,0"
-			/>
-			<Button
-				Grid.Row="1"
+
+
+			<Image
+				Grid.Row="0"
 				Grid.Column="1"
-				Image="Icons/list.png"
-				Margin="10,0,0,0"
+				Grid.ColumnSpan="4"
+				Source="Logotyp.png"
+				Margin="0,10,0,10"
+
 			/>
 			<Frame
 				Padding="5"
-				Margin="0,60,0,0"
 				OutlineColor="Black"
-				Grid.Row="0"
+				Grid.Row="1"
 				Grid.Column = "1"
 				Grid.ColumnSpan="4"
 				>
@@ -50,11 +47,33 @@
 					FontSize="Medium"
 
 				/>
-				</ScrollView>
-				
-					
+				</ScrollView>	
 			</Frame>
 
+
+			<Button
+				Grid.Row="2"
+				Grid.Column="1"
+				Image="Icons/list.png"
+				Margin="10,10,0,0"
+				BackgroundColor="White"
+				Clicked="AllQuestionsClicked"
+			/>
+			<Button
+				Grid.Row="2"
+				Grid.Column="4"
+				Image="Icons/info.png"
+				Margin="0,10,10,0"
+				BackgroundColor="White"
+				Clicked="MoreInfoClicked"
+				x:Name="MoreInfoButton"
+				IsVisible="false"
+			/>
+
+
+
+
+			
 			<StackLayout
 				Grid.Row="6"
 				Grid.Column="1"
