@@ -58,27 +58,19 @@ namespace Domstol
 
 			ListAlternatives = new List<string>();
 
-
-			if (yesQuestion != null)
-				ListAlternatives.Add(LanguageStrings.Yes);
+			ListAlternatives.Add(LanguageStrings.Yes);
 					
-
 			if (noQuestion != null)
 				ListAlternatives.Add(LanguageStrings.No);
-			
+
 			if (question.questionMoreInfo != null)
-				ListAlternatives.Add(LanguageStrings.MoreInfo);
-
-
-			ListAlternatives.Add(LanguageStrings.AllQuestions);
-
-
+				MoreInfoButton.IsVisible = true;
+			
 			if(question.questionSupportNumber != null)
 				ListAlternatives.Add(LanguageStrings.CallSupport);
 
 			if(yesQuestion == null)
 				ListAlternatives.Add(LanguageStrings.BackToMenu);
-
 
 			NavigationPage.SetBackButtonTitle(this, LanguageStrings.Back);
 			ButtonList.ItemsSource = ListAlternatives;
@@ -110,10 +102,6 @@ namespace Domstol
 			populateQuestionList(yQuestion);
 		}
 	
-
-
-
-
 		protected override void OnDisappearing()
 		{
 			base.OnDisappearing();
@@ -158,12 +146,6 @@ namespace Domstol
 
 				}
 
-				if (selectedChoice == LanguageStrings.AllQuestions)
-				{
-					Navigation.PushAsync(new AllQuestionsPage(currentProblem, currentQuestion));
-
-				}
-
 				if (selectedChoice == LanguageStrings.BackToMenu)
 				{
 
@@ -180,15 +162,19 @@ namespace Domstol
 						dialer.DialAsync(currentQuestion.questionSupportNumber);
 
 				}
-				if (selectedChoice == LanguageStrings.MoreInfo) 
-				{
-					Navigation.PushModalAsync(new NavigationPage(new MoreInfoPage(currentQuestion)));
-				
-				
-				
-				}
+
 			}
 
+		}
+
+		void AllQuestionsClicked(object sender, System.EventArgs e)
+		{
+			Navigation.PushAsync(new AllQuestionsPage(currentProblem, currentQuestion));
+		}
+
+		void MoreInfoClicked(object sender, System.EventArgs e)
+		{
+			Navigation.PushModalAsync(new NavigationPage(new MoreInfoPage(currentQuestion)));
 		}
 	}
 }
