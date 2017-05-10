@@ -36,6 +36,7 @@
 				<ListView x:Name="itemListView"
           			IsGroupingEnabled="true" 
   		  		  	GroupDisplayBinding="{Binding Category}"
+                    Header="Vad behöver du hjälp med?"
 					ItemSelected="problemSelected"
   		  			Grid.Row="1"
 					Grid.Column="1"
