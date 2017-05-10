@@ -21,8 +21,6 @@ namespace Domstol
 			Roompic.Source = nItem.imageName;
 			NavigationPage.SetBackButtonTitle(this, "Tillbaka");
 
-
-			//Lista.ItemsSource = App.dataRepository.getProblemsByRoom(nItem.typeOfRoom);
 			itemListView.ItemsSource = SetupList();
 
 
@@ -31,24 +29,25 @@ namespace Domstol
 		public List<ProblemList> SetupList()
 		{
 			var allListItemGroups = new List<ProblemList>();
-			var l1 = App.dataRepository.getProblemsByCategoryAndRoom(LanguageStrings.Audio, nItem.typeOfRoom);
-			var l2 = App.dataRepository.getProblemsByCategoryAndRoom(LanguageStrings.Video, nItem.typeOfRoom);
 
-			var problemlist1 = new ProblemList();
-			var problemlist2 = new ProblemList();
+			var audioProblemList = new ProblemList();
+			var videoProblemList = new ProblemList();
+			var videoconferenceProblemList = new ProblemList();
 
-			problemlist1.Category = LanguageStrings.Audio;
-			problemlist2.Category = LanguageStrings.Video;
+			audioProblemList.Category = LanguageStrings.Audio;
+			videoProblemList.Category = LanguageStrings.Video;
+			videoconferenceProblemList.Category = LanguageStrings.VideoConference;
 
-			foreach (Problem p in l1)
-				problemlist1.Add(p);
+			audioProblemList.AddRange(App.dataRepository.getProblemsByCategoryAndRoom(LanguageStrings.Audio, nItem.typeOfRoom));
+			videoProblemList.AddRange(App.dataRepository.getProblemsByCategoryAndRoom(LanguageStrings.Video, nItem.typeOfRoom));
+			videoconferenceProblemList.AddRange(App.dataRepository.getProblemsByCategoryAndRoom(LanguageStrings.VideoConference, nItem.typeOfRoom));
 
-			foreach (Problem p in l2)
-				problemlist2.Add(p);
-
-			allListItemGroups.Add(problemlist1);
-			allListItemGroups.Add(problemlist2);
+			allListItemGroups.Add(audioProblemList);
+			allListItemGroups.Add(videoProblemList);
+			allListItemGroups.Add(videoconferenceProblemList);
 			return allListItemGroups;
+
+
 		}
 
 

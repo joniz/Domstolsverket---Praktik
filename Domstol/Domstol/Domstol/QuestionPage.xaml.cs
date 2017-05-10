@@ -30,9 +30,12 @@ namespace Domstol
 
 
 
+
 			App.AllQuestions.Clear();
 			Question firstQuestion = App.dataRepository.getQuestionByID(p.firstQuestionID);
 			populateQuestionList(firstQuestion);
+
+			Title = getQuestionIndex(currentQuestion).ToString() + " av " + App.AllQuestions.Count.ToString();
 
 
 		}
@@ -44,8 +47,23 @@ namespace Domstol
 			currentProblem = p;
 			InitializeComponent();
 			initializeQuestions(question);
+
+
+			Title = getQuestionIndex(currentQuestion).ToString() + " av " + App.AllQuestions.Count.ToString();
+
+
 		}
 
+		public int getQuestionIndex(Question q) 
+		{
+			for (int i = 0; i < App.AllQuestions.Count; i++) 
+				if (App.AllQuestions[i] == q)
+					return i;
+
+			return 0;
+			
+		
+		}
 
 
 
@@ -65,12 +83,27 @@ namespace Domstol
 
 			if (question.questionMoreInfo != null)
 				MoreInfoButton.IsVisible = true;
-			
-			if(question.questionSupportNumber != null)
-				ListAlternatives.Add(LanguageStrings.CallSupport);
 
-			if(yesQuestion == null)
-				ListAlternatives.Add(LanguageStrings.BackToMenu);
+			if (question.questionSupportNumber != null)
+			{
+				SupportLabel.IsVisible = true;
+				SupportLabel.Text = currentQuestion.questionSupportNumber;
+				SupportLabel.TextColor = Color.Blue;
+		
+
+				var tgr = new TapGestureRecognizer();
+				tgr.Tapped +=(s,e)=>SupportLabelClicked();
+				SupportLabel.GestureRecognizers.Add(tgr);
+			}
+
+			ListAlternatives.Add(LanguageStrings.BackToMenu);
+
+			if (yesQuestion == null && noQuestion == null)
+			{
+				ListAlternatives.Remove(LanguageStrings.Yes);
+				ListAlternatives.Remove(LanguageStrings.No);
+
+			}
 
 			NavigationPage.SetBackButtonTitle(this, LanguageStrings.Back);
 			ButtonList.ItemsSource = ListAlternatives;
@@ -151,16 +184,6 @@ namespace Domstol
 
 					 Navigation.PopToRootAsync();
 
-
-
-				}
-				if (selectedChoice == LanguageStrings.CallSupport)
-				{
-
-					var dialer = DependencyService.Get<IDialer>();
-					if (dialer != null)
-						dialer.DialAsync(currentQuestion.questionSupportNumber);
-
 				}
 
 			}
@@ -176,5 +199,14 @@ namespace Domstol
 		{
 			Navigation.PushModalAsync(new NavigationPage(new MoreInfoPage(currentQuestion)));
 		}
+
+		void SupportLabelClicked()
+		{
+			var dialer = DependencyService.Get<IDialer>();
+			if (dialer != null)
+				dialer.DialAsync(currentQuestion.questionSupportNumber);
+		}
+
+
 	}
 }

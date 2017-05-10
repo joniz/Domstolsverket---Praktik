@@ -15,6 +15,8 @@ namespace Domstol
 
 		public static string Video { get { return "Bild"; } }
 		public static string Audio { get { return "Ljud"; } }
+		public static string VideoConference { get { return "Videokonferens"; } }
+
 
 		public static string Courtroom { get { return "Sal"; } }
 		public static string Conferenceroom { get { return "Konferensrum"; } }
