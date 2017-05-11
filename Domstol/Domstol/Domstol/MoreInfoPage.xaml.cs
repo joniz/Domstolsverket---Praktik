@@ -16,7 +16,7 @@ namespace Domstol
 		{
 			InitializeComponent();
 			moreinfoLabel.Text = q.questionMoreInfo;
-			infoImage.Source = q.questionMoreInfoImageName;
+			infoImage.Source = "QuestionImages/MoreInfoImages/"+ q.questionMoreInfoImageName;
 		}
 
 		void DoneClicked(object sender, System.EventArgs e)
