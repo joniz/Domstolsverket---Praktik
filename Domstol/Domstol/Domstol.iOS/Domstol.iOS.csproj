@@ -123,6 +123,9 @@
     <BundleResource Include="Resources\RemoteControllers\kontroll3.png" />
     <BundleResource Include="Resources\RemoteControllers\kontroll2.png" />
     <BundleResource Include="Resources\RemoteControllers\kontroll1.png" />
+    <BundleResource Include="Resources\Start.jpg" />
+    <BundleResource Include="Resources\QuestionImages\Strömkabel.jpg" />
+    <BundleResource Include="Resources\QuestionImages\Hdmikabel.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

@@ -31,6 +31,7 @@ namespace Domstol
 
 
 
+
 			App.AllQuestions.Clear();
 			Question firstQuestion = App.dataRepository.getQuestionByID(p.firstQuestionID);
 			AllQuestionsPage.populateQuestionList(firstQuestion);
@@ -114,6 +115,9 @@ namespace Domstol
 
 			NavigationPage.SetBackButtonTitle(this, LanguageStrings.Back);
 			ButtonList.ItemsSource = ListAlternatives;
+
+			if(currentQuestion.questionImageName != null)
+				QuestionImage.Source = "QuestionImages/" + currentQuestion.questionImageName;
 
 		}
 

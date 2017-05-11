@@ -18,7 +18,7 @@ namespace Domstol
 			NavigationPage.SetBackButtonTitle(this, "Tillbaka");
 
 
-			Startbild.Source = PictureNames.CourtRoom;
+			Startbild.Source = PictureNames.Home;
 
 			Lista.ItemsSource = getRooms();
 
