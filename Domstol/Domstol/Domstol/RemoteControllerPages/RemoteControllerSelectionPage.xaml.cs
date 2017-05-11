@@ -31,14 +31,14 @@ namespace Domstol
 		void ImageClicked(object s, EventArgs e)
 		{
 			
-			Image x = s as Image;
+			Image image = s as Image;
+			FileImageSource imageSource = (FileImageSource)image.Source;
 
-			FileImageSource objFileImageSource = (FileImageSource)x.Source;
-			string strFileName = objFileImageSource.File;
+			string strFileName = imageSource.File;
 
 
 			foreach(RemoteController rc in RemoteControllerCollection.RemoteControllers)
-				if((FileImageSource)rc.ControllerImage.Source == objFileImageSource)
+				if ((FileImageSource)rc.ControllerImage.Source == imageSource)
 					Navigation.PushAsync(new RemoteControllerSelectedPage(rc));
 
 			
