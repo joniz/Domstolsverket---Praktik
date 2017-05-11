@@ -109,29 +109,20 @@
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
-    <BundleResource Include="Resources\dom.png" />
-    <BundleResource Include="Resources\videoSmall.png" />
-    <BundleResource Include="Resources\audioSmall.png" />
-    <BundleResource Include="Resources\Sal.jpg" />
-    <BundleResource Include="Resources\Samtalsrum.jpg" />
-    <BundleResource Include="Resources\Start.jpg" />
-    <BundleResource Include="Resources\Domstol2.db" />
     <BundleResource Include="Resources\Konferensrum.jpg" />
-    <BundleResource Include="Resources\Home2.png" />
-    <BundleResource Include="Resources\Manual2.png" />
-    <BundleResource Include="Resources\Home3.png" />
-    <BundleResource Include="Resources\symbol.png" />
     <BundleResource Include="Resources\Logotyp.png" />
-    <BundleResource Include="Resources\DOMLogotyp copy.png" />
-    <BundleResource Include="Resources\MoreInfoPic125.png" />
-    <BundleResource Include="Resources\info.png" />
     <BundleResource Include="Resources\Icons\info%403x.png" />
     <BundleResource Include="Resources\Icons\list%403x.png" />
     <BundleResource Include="Resources\Icons\home%402x.png" />
     <BundleResource Include="Resources\Icons\explore%402x.png" />
-    <BundleResource Include="Resources\RemoteControllers\kontroll.png" />
-    <BundleResource Include="Resources\RemoteControllers\kontroll2.png" />
+    <BundleResource Include="Resources\Domstol2.db" />
+    <BundleResource Include="Resources\LocationImages\Sal.jpg" />
+    <BundleResource Include="Resources\LocationImages\Samtalsrum.jpg" />
+    <BundleResource Include="Resources\LocationImages\Start.jpg" />
+    <BundleResource Include="Resources\QuestionImages\MoreInfoImages\MoreInfoPic125.png" />
     <BundleResource Include="Resources\RemoteControllers\kontroll3.png" />
+    <BundleResource Include="Resources\RemoteControllers\kontroll2.png" />
+    <BundleResource Include="Resources\RemoteControllers\kontroll1.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -173,24 +164,6 @@
       <Project>{FA735DEE-40FA-4A53-B2E9-C5BF18C0F070}</Project>
       <Name>Domstol</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\home%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ic_home_2x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\manual.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\audioMedium.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\videoMedium.png" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json">
@@ -257,6 +230,9 @@
   <ItemGroup>
     <Folder Include="Renderers\" />
     <Folder Include="Resources\RemoteControllers\" />
+    <Folder Include="Resources\LocationImages\" />
+    <Folder Include="Resources\QuestionImages\" />
+    <Folder Include="Resources\QuestionImages\MoreInfoImages\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

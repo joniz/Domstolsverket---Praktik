@@ -33,7 +33,7 @@ namespace Domstol
 
 			App.AllQuestions.Clear();
 			Question firstQuestion = App.dataRepository.getQuestionByID(p.firstQuestionID);
-			populateQuestionList(firstQuestion);
+			AllQuestionsPage.populateQuestionList(firstQuestion);
 
 			Title = getQuestionIndex(currentQuestion).ToString() + " av " + App.AllQuestions.Count.ToString();
 
@@ -81,7 +81,8 @@ namespace Domstol
 			if (noQuestion != null)
 				ListAlternatives.Add(LanguageStrings.No);
 
-			if (question.questionMoreInfo != null)
+
+			if (question.questionMoreInfo != null || question.questionMoreInfoImageName != null)
 				MoreInfoButton.IsVisible = true;
 
 			if (question.questionSupportNumber != null)
@@ -116,30 +117,30 @@ namespace Domstol
 
 		}
 
-		//Add all questions that are related to the starting question
-		public void populateQuestionList(Question q)
-		{
+		////Add all questions that are related to the starting question
+		//public void populateQuestionList(Question q)
+		//{
 
-			if (q == null)
-				return;
+		//	if (q == null)
+		//		return;
 
-			if (q.questionYesID == 0 && q.questionNoID == 0)
-				return;
+		//	if (q.questionYesID == 0 && q.questionNoID == 0)
+		//		return;
 
-			Question nQuestion = App.dataRepository.getQuestionByID(q.questionNoID);
-			Question yQuestion = App.dataRepository.getQuestionByID(q.questionYesID);
-
-
-			if (q.questionNoID != 0)
-				App.AllQuestions.Push(nQuestion);
-
-			if (q.questionYesID != 0)
-				App.AllQuestions.Push(yQuestion);
+		//	Question nQuestion = App.dataRepository.getQuestionByID(q.questionNoID);
+		//	Question yQuestion = App.dataRepository.getQuestionByID(q.questionYesID);
 
 
-			populateQuestionList(nQuestion);
-			populateQuestionList(yQuestion);
-		}
+		//	if (q.questionNoID != 0)
+		//		App.AllQuestions.Push(nQuestion);
+
+		//	if (q.questionYesID != 0)
+		//		App.AllQuestions.Push(yQuestion);
+
+
+		//	populateQuestionList(nQuestion);
+		//	populateQuestionList(yQuestion);
+		//}
 	
 		protected override void OnDisappearing()
 		{

@@ -62,7 +62,6 @@
       <DependentUpon>MoreInfoPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Enums\LanguageStrings.cs" />
-    <Compile Include="CustomCell.cs" />
     <Compile Include="Models\MyGroupedListView.cs" />
     <Compile Include="Models\ExpandingRowList.cs" />
     <Compile Include="AllQuestionsPage.xaml.cs">

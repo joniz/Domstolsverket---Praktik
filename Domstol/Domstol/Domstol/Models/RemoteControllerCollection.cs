@@ -12,7 +12,7 @@ namespace Domstol
 			new RemoteController()
 			{
 				ControllerName = "Första kontrollen",
-				ControllerImage = new Image() { Source = "RemoteControllers/kontroll.png" },
+				ControllerImage = new Image() { Source = "RemoteControllers/kontroll1.png" },
 				ControllerButtons = new List<Button>()
 				{
 					new Button(){Text="Första kontrollen Knapp1"},
