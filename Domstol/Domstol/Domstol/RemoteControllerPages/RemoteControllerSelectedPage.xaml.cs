@@ -16,10 +16,10 @@ namespace Domstol
         	InitializeComponent();
 
 			FileImageSource objFileImageSource = (FileImageSource)rc.ControllerImage.Source;
-			string strFileName = objFileImageSource.File;
 
 
-			ControllerImage.Source = strFileName;
+
+			ControllerImage.Source = objFileImageSource.File;
 
 
 			foreach (Button b in rc.ControllerButtons) 

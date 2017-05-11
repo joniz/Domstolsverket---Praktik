@@ -34,8 +34,6 @@ namespace Domstol
 			Image image = s as Image;
 			FileImageSource imageSource = (FileImageSource)image.Source;
 
-			string strFileName = imageSource.File;
-
 
 			foreach(RemoteController rc in RemoteControllerCollection.RemoteControllers)
 				if ((FileImageSource)rc.ControllerImage.Source == imageSource)
