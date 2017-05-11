@@ -96,7 +96,13 @@ namespace Domstol
 				SupportLabel.GestureRecognizers.Add(tgr);
 			}
 
-			ListAlternatives.Add(LanguageStrings.BackToMenu);
+
+			if (Device.RuntimePlatform == TargetPlatform.Android.ToString())
+			{
+				//Android related code 
+				ListAlternatives.Add(LanguageStrings.BackToMenu);
+			}
+
 
 			if (yesQuestion == null && noQuestion == null)
 			{

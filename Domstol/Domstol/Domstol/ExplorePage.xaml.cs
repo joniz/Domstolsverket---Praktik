@@ -22,7 +22,7 @@ namespace Domstol
             if (e.SelectedItem != null)
             {
 				var selected = e.SelectedItem as ExploreListItem;
-                Navigation.PushAsync(new RemoteControllerPage(selected));
+                Navigation.PushAsync(new RemoteControllerSelectionPage());
 
             }
         }
