@@ -28,7 +28,7 @@
 
 		
 		<x:Arguments>
-			<local:ManualPage Title="Manual" />
+			<local:ExplorePage Title="Manual" />
 		</x:Arguments>
 
 		

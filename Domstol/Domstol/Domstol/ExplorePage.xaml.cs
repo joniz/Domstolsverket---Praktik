@@ -7,12 +7,12 @@ using Xamarin.Forms;
 
 namespace Domstol
 {
-    public partial class ManualPage : ContentPage
+    public partial class ExplorePage : ContentPage
     {
-        public ManualPage()
+        public ExplorePage()
         {
             InitializeComponent();
-			itemlist.ItemsSource = ManualListItem.items;
+			itemlist.ItemsSource = ExploreListItem.items;
         }
 
 
@@ -21,8 +21,8 @@ namespace Domstol
         {
             if (e.SelectedItem != null)
             {
-				var selected = e.SelectedItem as ManualListItem;
-                Navigation.PushAsync(new InformationPage(selected));
+				var selected = e.SelectedItem as ExploreListItem;
+                Navigation.PushAsync(new RemoteControllerPage(selected));
 
             }
         }

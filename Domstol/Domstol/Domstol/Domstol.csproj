@@ -41,25 +41,24 @@
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ManualPage.xaml.cs">
-      <DependentUpon>ManualPage.xaml</DependentUpon>
+    <Compile Include="ExplorePage.xaml.cs">
+      <DependentUpon>ExplorePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RootPage.xaml.cs">
       <DependentUpon>RootPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="InformationPage.xaml.cs">
-      <DependentUpon>InformationPage.xaml</DependentUpon>
+    <Compile Include="RemoteControllerPage.xaml.cs">
+      <DependentUpon>RemoteControllerPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Problem.cs" />
     <Compile Include="Models\Question.cs" />
     <Compile Include="QuestionPage.xaml.cs">
       <DependentUpon>QuestionPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\ManualListItem.cs" />
+    <Compile Include="Models\ExploreListItem.cs" />
     <Compile Include="Models\MyNavigationItem.cs" />
     <Compile Include="Assets\DataRepository.cs" />
-    <Compile Include="IDialer.cs" />
     <Compile Include="Enums\PictureNames.cs" />
     <Compile Include="Models\QuestionList.cs" />
     <Compile Include="MoreInfoPage.xaml.cs">
@@ -67,7 +66,7 @@
     </Compile>
     <Compile Include="Enums\LanguageStrings.cs" />
     <Compile Include="CustomCell.cs" />
-    <Compile Include="Models\GroupedListView.cs" />
+    <Compile Include="Models\MyGroupedListView.cs" />
     <Compile Include="Models\ExpandingRowList.cs" />
     <Compile Include="AllQuestionsPage.xaml.cs">
       <DependentUpon>AllQuestionsPage.xaml</DependentUpon>
@@ -78,13 +77,14 @@
     <Compile Include="ProblemPage.xaml.cs">
       <DependentUpon>ProblemPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\IDialer.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="InformationPage.xaml">
+    <EmbeddedResource Include="RemoteControllerPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="QuestionPage.xaml">
@@ -140,7 +140,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ManualPage.xaml">
+    <EmbeddedResource Include="ExplorePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

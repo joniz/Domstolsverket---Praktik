@@ -1,13 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 using Xamarin.Forms;
 
 namespace Domstol
 {
-	public partial class InformationPage : ContentPage
+	public partial class RemoteControllerPage : ContentPage
 	{
-		public InformationPage(ManualListItem selected)
+		public RemoteControllerPage(ExploreListItem selected)
 		{
 			InitializeComponent();
 			Title = selected.name;

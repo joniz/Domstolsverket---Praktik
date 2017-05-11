@@ -35,7 +35,7 @@
 
 
 			
-				<local:GroupedListView x:Name="Lista" 
+				<local:MyGroupedListView x:Name="Lista" 
 					ItemSelected="roomSelected"
 	
 					Grid.Row="1"
@@ -59,7 +59,7 @@
 							</ViewCell>
                 		</DataTemplate>
             		</ListView.ItemTemplate>
-        		</local:GroupedListView>
+        		</local:MyGroupedListView>
 
 			
 

@@ -88,7 +88,7 @@
 				x:Name="Stacklay"
 				
 			>
-			<local:GroupedListView
+			<local:MyGroupedListView
                 x:Name="ButtonList"
                 ItemSelected="Handle_ItemSelected"
                 >
@@ -102,7 +102,7 @@
 
                         </DataTemplate>
                     </ListView.ItemTemplate>
-                </local:GroupedListView>
+                </local:MyGroupedListView>
 
 
 			</StackLayout>

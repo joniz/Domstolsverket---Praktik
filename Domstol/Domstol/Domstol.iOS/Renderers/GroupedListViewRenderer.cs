@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using UIKit;
 using Xamarin.Forms.Platform.iOS;
 using Xamarin.Forms;
 using Domstol;
 
-[assembly: ExportRenderer(typeof(GroupedListView), typeof(GroupedListViewRenderer))]
+[assembly: ExportRenderer(typeof(MyGroupedListView), typeof(GroupedListViewRenderer))]
 
 namespace Domstol
 {
