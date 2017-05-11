@@ -129,6 +129,9 @@
     <BundleResource Include="Resources\Icons\list%403x.png" />
     <BundleResource Include="Resources\Icons\home%402x.png" />
     <BundleResource Include="Resources\Icons\explore%402x.png" />
+    <BundleResource Include="Resources\RemoteControllers\kontroll.png" />
+    <BundleResource Include="Resources\RemoteControllers\kontroll2.png" />
+    <BundleResource Include="Resources\RemoteControllers\kontroll3.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -253,6 +256,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />
+    <Folder Include="Resources\RemoteControllers\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

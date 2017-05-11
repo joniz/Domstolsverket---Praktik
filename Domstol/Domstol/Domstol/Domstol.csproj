@@ -48,9 +48,6 @@
     <Compile Include="RootPage.xaml.cs">
       <DependentUpon>RootPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="RemoteControllerSelectionPage.xaml.cs">
-      <DependentUpon>RemoteControllerSelectedPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Models\Problem.cs" />
     <Compile Include="Models\Question.cs" />
     <Compile Include="QuestionPage.xaml.cs">
@@ -78,13 +75,18 @@
       <DependentUpon>ProblemPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\IDialer.cs" />
+    <Compile Include="RemoteControllerPages\RemoteControllerSelectedPage.xaml.cs">
+      <DependentUpon>RemoteControllerSelectedPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RemoteControllerPages\RemoteControllerSelectionPage.xaml.cs">
+      <DependentUpon>RemoteControllerSelectionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RemoteController.cs" />
+    <Compile Include="Models\RemoteControllerCollection.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
       <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RemoteControllerSelectedPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="QuestionPage.xaml">
@@ -97,6 +99,12 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="ProblemPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoteControllerPages\RemoteControllerSelectedPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoteControllerPages\RemoteControllerSelectionPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
@@ -149,6 +157,7 @@
     <Folder Include="Assets\" />
     <Folder Include="Models\" />
     <Folder Include="Enums\" />
+    <Folder Include="RemoteControllerPages\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
