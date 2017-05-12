@@ -82,6 +82,9 @@
     </Compile>
     <Compile Include="Models\RemoteController.cs" />
     <Compile Include="Models\RemoteControllerCollection.cs" />
+    <Compile Include="ProblemSolvedPage.xaml.cs">
+      <DependentUpon>ProblemSolvedPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
@@ -104,6 +107,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="RemoteControllerPages\RemoteControllerSelectionPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProblemSolvedPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

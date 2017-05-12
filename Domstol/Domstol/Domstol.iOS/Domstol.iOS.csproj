@@ -120,12 +120,39 @@
     <BundleResource Include="Resources\LocationImages\Samtalsrum.jpg" />
     <BundleResource Include="Resources\LocationImages\Start.jpg" />
     <BundleResource Include="Resources\QuestionImages\MoreInfoImages\MoreInfoPic125.png" />
-    <BundleResource Include="Resources\RemoteControllers\kontroll3.png" />
-    <BundleResource Include="Resources\RemoteControllers\kontroll2.png" />
-    <BundleResource Include="Resources\RemoteControllers\kontroll1.png" />
     <BundleResource Include="Resources\Start.jpg" />
     <BundleResource Include="Resources\QuestionImages\Strömkabel.jpg" />
     <BundleResource Include="Resources\QuestionImages\Hdmikabel.jpg" />
+    <BundleResource Include="Resources\RemoteControllers\TRC4\TRC4.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC4\Endcall.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC4\Presentation.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC4\Layout.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC4\Zoom.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC4\Micoff.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC4\Call.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC4\Phonebook.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC5\TRC5.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC5\Arrows.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC5\Numbers.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC5\Volume.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC5\Zoom.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC5\Functions.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC5\Clear.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC5\Endcall.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC5\Call.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC5\Layout.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC5\Home.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC5\Phonebook.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC5\Presentation.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC5\Micoff.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC6\Micoff.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC6\Numbers.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC6\TRC6.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC6\Volume.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC6\Arrows.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC6\Back.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC6\Call.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC6\Endcall.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -236,6 +263,9 @@
     <Folder Include="Resources\LocationImages\" />
     <Folder Include="Resources\QuestionImages\" />
     <Folder Include="Resources\QuestionImages\MoreInfoImages\" />
+    <Folder Include="Resources\RemoteControllers\TRC4\" />
+    <Folder Include="Resources\RemoteControllers\TRC5\" />
+    <Folder Include="Resources\RemoteControllers\TRC6\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

@@ -28,16 +28,9 @@ namespace Domstol
 			InitializeComponent();
 			initializeQuestions(question);
 
-
-
-
-
 			App.AllQuestions.Clear();
 			Question firstQuestion = App.dataRepository.getQuestionByID(p.firstQuestionID);
 			AllQuestionsPage.populateQuestionList(firstQuestion);
-
-			Title = getQuestionIndex(currentQuestion).ToString() + " av " + App.AllQuestions.Count.ToString();
-
 
 		}
 
@@ -49,21 +42,17 @@ namespace Domstol
 			InitializeComponent();
 			initializeQuestions(question);
 
-
-			Title = getQuestionIndex(currentQuestion).ToString() + " av " + App.AllQuestions.Count.ToString();
-
-
 		}
 
 		public int getQuestionIndex(Question q) 
 		{
+			
 			for (int i = 0; i < App.AllQuestions.Count; i++) 
 				if (App.AllQuestions[i] == q)
 					return i;
 
 			return 0;
-			
-		
+
 		}
 
 
@@ -121,30 +110,7 @@ namespace Domstol
 
 		}
 
-		////Add all questions that are related to the starting question
-		//public void populateQuestionList(Question q)
-		//{
-
-		//	if (q == null)
-		//		return;
-
-		//	if (q.questionYesID == 0 && q.questionNoID == 0)
-		//		return;
-
-		//	Question nQuestion = App.dataRepository.getQuestionByID(q.questionNoID);
-		//	Question yQuestion = App.dataRepository.getQuestionByID(q.questionYesID);
-
-
-		//	if (q.questionNoID != 0)
-		//		App.AllQuestions.Push(nQuestion);
-
-		//	if (q.questionYesID != 0)
-		//		App.AllQuestions.Push(yQuestion);
-
-
-		//	populateQuestionList(nQuestion);
-		//	populateQuestionList(yQuestion);
-		//}
+	
 	
 		protected override void OnDisappearing()
 		{
@@ -175,6 +141,11 @@ namespace Domstol
 					{
 						App.AllQuestions.Push(currentQuestion);
 						Navigation.PushAsync(new QuestionPage(currentProblem, yesQuestion, LanguageStrings.Yes));
+					}
+					else 
+					{
+						Navigation.PushAsync(new ProblemSolvedPage());
+					
 					}
 				
 
