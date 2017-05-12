@@ -6,8 +6,9 @@ namespace Domstol
 {
 	public class RemoteController
 	{
-		public string ControllerName { get; set; }
-		public Image ControllerImage { get; set; }
-		public List<Button> ControllerButtons { get; set; }
+		public string Name { get; set; }
+		public string ImageName { get; set; }
+		public string ID { get; set; }
+		public List<RemoteControllerButton> ControllerButtons { get; set; }
 	}
 }

@@ -7,7 +7,7 @@ namespace Domstol
 {
 	public partial class RemoteControllerSelectionPage : ContentPage
 	{
-
+		
 		public RemoteControllerSelectionPage()
 		{
 			InitializeComponent();
@@ -17,11 +17,12 @@ namespace Domstol
 			tgr.Tapped +=(s,e)=>ImageClicked(s,e);
 
 
-			foreach (RemoteController rc in RemoteControllerCollection.RemoteControllers)
+			foreach (RemoteController rc in App.dataRepository.remoteControllers)
 			{
-				rc.ControllerImage.WidthRequest = 100;
-				rc.ControllerImage.GestureRecognizers.Add(tgr);
-				ControllerStack.Children.Add(rc.ControllerImage);
+				Image i = new Image() { Source = "RemoteControllers/" + rc.ImageName +"/" + rc.ImageName };
+				i.WidthRequest = 100;
+				i.GestureRecognizers.Add(tgr);
+				ControllerStack.Children.Add(i);
 			}
 				
 
@@ -35,8 +36,8 @@ namespace Domstol
 			FileImageSource imageSource = (FileImageSource)image.Source;
 
 
-			foreach(RemoteController rc in RemoteControllerCollection.RemoteControllers)
-				if ((FileImageSource)rc.ControllerImage.Source == imageSource)
+			foreach(RemoteController rc in App.dataRepository.remoteControllers)
+				if ((FileImageSource)"RemoteControllers/" + rc.ImageName + "/" + rc.ImageName == imageSource)
 					Navigation.PushAsync(new RemoteControllerSelectedPage(rc));
 
 			

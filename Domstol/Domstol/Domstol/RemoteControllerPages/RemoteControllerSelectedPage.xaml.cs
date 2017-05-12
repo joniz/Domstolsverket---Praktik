@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 using Xamarin.Forms;
@@ -15,27 +15,43 @@ namespace Domstol
 		{
         	InitializeComponent();
 
-			FileImageSource objFileImageSource = (FileImageSource)rc.ControllerImage.Source;
+	
 
 
 
-			ControllerImage.Source = objFileImageSource.File;
+			ControllerImage.Source = "RemoteControllers/" + rc.ImageName + "/" + rc.ImageName;
 
-
-			foreach (Button b in rc.ControllerButtons) 
+			bool e = true;
+			foreach (RemoteControllerButton b in rc.ControllerButtons) 
 			{
+				
+
+
+				Button btn = new Button() { Image = "RemoteControllers/" + rc.ImageName + "/" + b.ImageName };
+				btn.WidthRequest = 75;
+				btn.HeightRequest = 50;
+
+
 				if (rc.ControllerButtons.Count > 9)
 				{
-					b.WidthRequest = 35;
-					b.HeightRequest = 35;
+
+					if (e)
+					{
+						ButtonStack.Children.Add(btn);
+						e = false;
+					}
+					else
+					{
+						ButtonStack2.Children.Add(btn);
+						e = true;
+					}
 				}
-				else
+				else 
 				{
-					b.WidthRequest = 50;
-					b.HeightRequest = 50;
+					ButtonStack.Children.Add(btn);
+				
+				
 				}
-				ButtonStack.Children.Add(b);
-			
 			
 			}
 		}

@@ -81,7 +81,7 @@
       <DependentUpon>RemoteControllerSelectionPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\RemoteController.cs" />
-    <Compile Include="Models\RemoteControllerCollection.cs" />
+    <Compile Include="Models\RemoteControllerButton.cs" />
     <Compile Include="ProblemSolvedPage.xaml.cs">
       <DependentUpon>ProblemSolvedPage.xaml</DependentUpon>
     </Compile>

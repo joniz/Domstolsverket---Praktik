@@ -7,17 +7,27 @@ namespace Domstol
 	{
 		public List<Problem> problems { get; set; }
 		public List<Question> questions { get; set; }
-
+		public List<RemoteController> remoteControllers { get; set; }
 		public DataRepository(string dbPath)
 		{
 		
 			problems = new List<Problem>();
 			questions = new List<Question>();
+			remoteControllers = new List<RemoteController>();
 
 
 			SQLiteConnection db = new SQLiteConnection(dbPath);
 			problems  = db.Query<Problem>("SELECT * FROM Problems");
 			questions = db.Query<Question>("SELECT * FROM Questions");
+
+
+
+			remoteControllers = db.Query<RemoteController>("SELECT * FROM RemoteControllers");
+			List<RemoteControllerButton> AllButtons = db.Query<RemoteControllerButton>("SELECT * FROM RemoteControllerButtons");
+			initializeRemoteControllerLists(AllButtons);
+
+
+
 			db.Close();
 
 
@@ -68,6 +78,30 @@ namespace Domstol
 
 
 
+		}
+
+
+
+		private void initializeRemoteControllerLists(List<RemoteControllerButton> AllButtons) 
+		{
+
+			foreach (RemoteController rc in remoteControllers)
+				rc.ControllerButtons = new List<RemoteControllerButton>();
+
+
+
+
+			foreach (RemoteControllerButton rcb in AllButtons)
+			{
+
+				foreach (RemoteController rc in remoteControllers)
+					if (rcb.ControllerID == rc.ID)
+						rc.ControllerButtons.Add(rcb);
+				
+			
+			}
+		
+		
 		}
 
 	}
