@@ -21,11 +21,14 @@ namespace Domstol
         {
             if (e.SelectedItem != null)
             {
-				var selected = e.SelectedItem as ExploreListItem;
+				((ListView)sender).SelectedItem = null;
                 Navigation.PushAsync(new RemoteControllerSelectionPage());
 
             }
         }
+
+
+
 
     }
 }
