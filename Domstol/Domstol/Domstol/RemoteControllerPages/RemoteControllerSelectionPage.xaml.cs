@@ -11,18 +11,29 @@ namespace Domstol
 		public RemoteControllerSelectionPage()
 		{
 			InitializeComponent();
-			Title = "fjärrkontroller";
+			Title = "Fjärrkontroller";
 
 			var tgr = new TapGestureRecognizer();
 			tgr.Tapped +=(s,e)=>ImageClicked(s,e);
 
 
-			foreach (RemoteController rc in App.dataRepository.remoteControllers)
+			List<RemoteController> controllers = App.dataRepository.remoteControllers;
+
+			for (int i = 0; i < controllers.Count; i++)
 			{
-				Image i = new Image() { Source = "RemoteControllers/" + rc.ImageName +"/" + rc.ImageName };
-				i.WidthRequest = 100;
-				i.GestureRecognizers.Add(tgr);
-				ControllerStack.Children.Add(i);
+				Image image = new Image() { 
+					Source = "RemoteControllers/" + controllers[i].ImageName +"/" + controllers[i].ImageName };
+
+
+				image.WidthRequest = 100;
+				image.GestureRecognizers.Add(tgr);
+
+
+				ColumnDefinition c = new ColumnDefinition();
+				TheGrid.ColumnDefinitions.Add(c);
+				TheGrid.Children.Add(image,i,1);
+
+
 			}
 				
 

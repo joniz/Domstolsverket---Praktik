@@ -24,36 +24,46 @@ namespace Domstol
 			bool e = true;
 			foreach (RemoteControllerButton b in rc.ControllerButtons) 
 			{
-				
 
 
-				Button btn = new Button() { Image = "RemoteControllers/" + rc.ImageName + "/" + b.ImageName };
-				btn.WidthRequest = 75;
-				btn.HeightRequest = 50;
 
+
+				b.Image = "RemoteControllers/" + rc.ImageName + "/" + b.ImageName;
+				b.WidthRequest = 75;
+				b.HeightRequest = 50;
+				b.Clicked += ButtonClicked;
 
 				if (rc.ControllerButtons.Count > 9)
 				{
 
 					if (e)
 					{
-						ButtonStack.Children.Add(btn);
+						ButtonStack.Children.Add(b);
 						e = false;
 					}
 					else
 					{
-						ButtonStack2.Children.Add(btn);
+						ButtonStack2.Children.Add(b);
 						e = true;
 					}
 				}
 				else 
 				{
-					ButtonStack.Children.Add(btn);
+					ButtonStack.Children.Add(b);
 				
 				
 				}
 			
 			}
+		}
+		public void ButtonClicked(object s, EventArgs e)
+		{
+
+			RemoteControllerButton btn = s as RemoteControllerButton;
+
+
+			DisplayAlert(btn.Name, btn.Description, "Ok");
+		
 		}
 	}
 }

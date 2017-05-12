@@ -15,7 +15,6 @@
 		
 			<Frame
 				Grid.Row="0"
-
 				>
 				<ScrollView>
 					<StackLayout Orientation="Vertical">

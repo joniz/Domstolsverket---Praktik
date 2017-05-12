@@ -43,12 +43,15 @@
 					Grid.ColumnSpan="8"
 				>
 				<ListView.Header>
-					<StackLayout Padding="50,5,0,0">
+					<StackLayout>
 							<Label 
 							TextColor="#6699CC"
 							FontSize="Large"
 							FontAttributes="Bold"
-							Text="Vad behöver du hjälp med?"/>
+							Text="Vad behöver du hjälp med?"
+							HorizontalOptions="CenterAndExpand"
+							Margin="0,0,0,15"
+						/>
 							</StackLayout>
 				</ListView.Header>
   					<ListView.ItemTemplate>
