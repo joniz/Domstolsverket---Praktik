@@ -14,8 +14,13 @@
 			</Frame>
 			<Button
 				Text="Ta mig till menyn"
-				x:Name="BackToMenuButton"
-			
+				Style="{StaticResource ButtonStyle}"
+				Clicked="BackToMenu"
+			/>
+			<Button
+				Text="Ring support"
+				Style="{StaticResource ButtonStyle}"
+				Clicked="CallSupport"
 			/>
 		</StackLayout>
 	</ContentPage.Content>

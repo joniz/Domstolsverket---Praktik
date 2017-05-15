@@ -15,11 +15,16 @@ namespace Domstol
 		{
         	InitializeComponent();
 
-	
+
 
 
 
 			ControllerImage.Source = "RemoteControllers/" + rc.ImageName + "/" + rc.ImageName;
+
+
+
+
+
 
 			bool e = true;
 			foreach (RemoteControllerButton b in rc.ControllerButtons) 
@@ -32,8 +37,29 @@ namespace Domstol
 				b.WidthRequest = 75;
 				b.HeightRequest = 50;
 				b.Clicked += ButtonClicked;
+				b.Margin = 0;
 
-				if (rc.ControllerButtons.Count > 9)
+				if (rc.Name == "TRC4")
+				{
+					b.WidthRequest = 120;
+					b.HeightRequest = 40;
+				
+				}
+
+
+
+
+
+
+
+
+				if (b.Name == "Funktioner" && rc.Name == "TRC5")
+				{
+					TheGrid.Children.Add(b, 1, 0);
+					
+				}
+
+				else if (rc.Name == "TRC5")
 				{
 
 					if (e)
@@ -47,12 +73,11 @@ namespace Domstol
 						e = true;
 					}
 				}
-				else 
-				{
+				else	                 
 					ButtonStack.Children.Add(b);
 				
 				
-				}
+				
 			
 			}
 		}
@@ -62,7 +87,7 @@ namespace Domstol
 			RemoteControllerButton btn = s as RemoteControllerButton;
 
 
-			DisplayAlert(btn.Name, btn.Description, "Ok");
+			Navigation.PushModalAsync(new NavigationPage(new ButtonInfoPage(btn)));
 		
 		}
 	}

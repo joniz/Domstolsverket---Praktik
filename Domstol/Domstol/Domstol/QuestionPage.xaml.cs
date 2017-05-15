@@ -88,7 +88,7 @@ namespace Domstol
 			}
 
 
-			if (Device.RuntimePlatform == TargetPlatform.Android.ToString())
+			if (Device.RuntimePlatform == Device.Android)
 			{
 				//Android related code 
 				ListAlternatives.Add(LanguageStrings.BackToMenu);
@@ -135,38 +135,23 @@ namespace Domstol
 				((ListView)sender).SelectedItem = null;
 
 				if (selectedChoice == LanguageStrings.Yes)
-				{
-
 					if (yesQuestion != null)
 					{
 						App.AllQuestions.Push(currentQuestion);
 						Navigation.PushAsync(new QuestionPage(currentProblem, yesQuestion, LanguageStrings.Yes));
 					}
 					else 
-					{
 						Navigation.PushAsync(new ProblemSolvedPage());
-					
-					}
-				
 
-				}
 
 				if (selectedChoice == LanguageStrings.No)
-				{
 					if (noQuestion != null)
-					{
 						Navigation.PushAsync(new QuestionPage(currentProblem, noQuestion, LanguageStrings.No));
 			
-					}
-
-				}
-
 				if (selectedChoice == LanguageStrings.BackToMenu)
-				{
-
 					 Navigation.PopToRootAsync();
 
-				}
+				
 
 			}
 

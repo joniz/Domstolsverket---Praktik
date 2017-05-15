@@ -11,5 +11,17 @@ namespace Domstol
 		{
 			InitializeComponent();
 		}
+
+		void BackToMenu(object sender, System.EventArgs e)
+		{
+			Navigation.PopToRootAsync();
+		}
+
+		void CallSupport(object sender, System.EventArgs e)
+		{
+			var dialer = DependencyService.Get<IDialer>();
+			if (dialer != null)
+				dialer.DialAsync("0364422000,3");
+		}
 	}
 }

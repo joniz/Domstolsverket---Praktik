@@ -2,31 +2,47 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Domstol.RemoteControllerSelectedPage">
 	<ContentPage.Content>
 
-		<Grid x:Name="TheGrid">
+		<Grid x:Name="TheGrid" RowSpacing="0">
 			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="auto"/>
 				<ColumnDefinition Width="*"/>
 				<ColumnDefinition Width="auto"/>
-				<ColumnDefinition Width="auto"/>
 			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="auto"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
 
 
-		
-			<Image 
-			x:Name="ControllerImage"
-			WidthRequest="100"
-			Grid.Column="0"
-			/>
-		
-			<StackLayout Orientation="Vertical"
-				x:Name="ButtonStack"
-				Grid.Column="1"
 
-			/>
 			<StackLayout Orientation="Vertical"
 				x:Name="ButtonStack2"
-				Grid.Column="2"
+				Grid.Column="0"
+				Grid.Row="1"
 
 			/>
+
+
+
+			
+			<Image
+				Grid.Row="1"
+				Grid.Column="1"
+				x:Name="ControllerImage"
+
+			/>
+
+		
+
+
+			
+			<StackLayout Orientation="Vertical"
+				x:Name="ButtonStack"
+				Grid.Column="2"
+				Grid.Row="1"
+
+			/>
+
 
 			</Grid>
 		
