@@ -154,6 +154,7 @@
     <BundleResource Include="Resources\RemoteControllers\TRC6\BackTRC6.png" />
     <BundleResource Include="Resources\RemoteControllers\TRC6\CallTRC6.png" />
     <BundleResource Include="Resources\RemoteControllers\TRC6\EndcallTRC6.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC4\SelfviewTRC4.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

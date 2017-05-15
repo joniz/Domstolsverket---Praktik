@@ -12,6 +12,9 @@ namespace Domstol.iOS
 		{
 			base.OnElementChanged(e);
 
+
+
+			//Color of 
 			TabBar.TintColor = UIColor.FromRGB(102, 153, 204);
 				
 		}
