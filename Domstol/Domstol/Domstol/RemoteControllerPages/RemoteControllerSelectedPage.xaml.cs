@@ -38,7 +38,7 @@ namespace Domstol
 				b.HeightRequest = 50;
 				b.Clicked += ButtonClicked;
 				b.Margin = 0;
-
+                b.BackgroundColor = Color.White;
 				if (rc.Name == "TRC4")
 				{
 					b.WidthRequest = 120;
