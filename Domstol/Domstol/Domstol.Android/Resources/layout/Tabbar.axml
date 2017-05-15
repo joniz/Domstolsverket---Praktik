@@ -8,5 +8,5 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
     app:tabIndicatorColor="@android:color/black"
     app:tabGravity="fill"
-    app:tabMode="fixed" 
-    android:elevation="5dp"                                    />
+    app:tabMode="fixed"
+    android:elevation="5dp" />
