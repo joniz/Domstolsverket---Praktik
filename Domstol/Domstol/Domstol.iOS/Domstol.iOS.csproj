@@ -106,6 +106,7 @@
     <Compile Include="Renderers\StandardListViewRenderer.cs" />
     <Compile Include="Renderers\CustomBackButton.cs" />
     <Compile Include="Renderers\ListViewTextCellRenderer.cs" />
+    <Compile Include="Renderers\TabbedBarRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />

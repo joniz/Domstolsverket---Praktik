@@ -26,7 +26,7 @@ namespace Domstol
 
 
 
-			bool e = true;
+			bool columnSwitch = true;
 			foreach (RemoteControllerButton b in rc.ControllerButtons) 
 			{
 
@@ -52,7 +52,7 @@ namespace Domstol
 
 
 
-
+				//Special case for the TRC5 Remote controller
 				if (b.Name == "Funktioner" && rc.Name == "TRC5")
 				{
 					TheGrid.Children.Add(b, 1, 0);
@@ -62,15 +62,15 @@ namespace Domstol
 				else if (rc.Name == "TRC5")
 				{
 
-					if (e)
+					if (columnSwitch)
 					{
 						ButtonStack.Children.Add(b);
-						e = false;
+						columnSwitch = false;
 					}
 					else
 					{
 						ButtonStack2.Children.Add(b);
-						e = true;
+						columnSwitch = true;
 					}
 				}
 				else	                 
@@ -81,6 +81,7 @@ namespace Domstol
 			
 			}
 		}
+
 		public void ButtonClicked(object s, EventArgs e)
 		{
 

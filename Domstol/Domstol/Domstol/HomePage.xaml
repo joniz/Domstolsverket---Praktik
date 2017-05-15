@@ -49,7 +49,7 @@
 							TextColor="#6699CC"
 							FontSize="Large"
 							FontAttributes="Bold"
-							Text="I vilket typ av rum befinner du dig i?"
+							Text="I vilket rum befinner du dig i?"
 							HorizontalOptions="CenterAndExpand"
 							Margin="0,0,0,20"	
 						/>
