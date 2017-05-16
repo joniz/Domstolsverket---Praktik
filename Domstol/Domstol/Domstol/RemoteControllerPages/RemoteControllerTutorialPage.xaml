@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Domstol.RemoteControllerTutorialPage">
+	<ContentPage.Content>
+		<StackLayout Orientation="Vertical">
+		<Frame>
+			<ScrollView>
+				<Label x:Name ="TutorialLabel" FontSize="Large"/>
+			</ScrollView>
+
+
+
+		</Frame>
+			<Button
+				Text="Klar"
+				Clicked="DoneButtonClicked"
+				Style="{StaticResource ButtonStyle}"
+			/>
+			</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

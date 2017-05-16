@@ -20,7 +20,16 @@ namespace Domstol
 		}
 		void TutorialSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
 		{
-			
+
+
+			RemoteControllerTutorial rct = e.SelectedItem as RemoteControllerTutorial;
+			if (rct != null)
+			{
+
+
+				Navigation.PushModalAsync(new NavigationPage(new RemoteControllerTutorialPage(rct)));
+				((ListView)sender).SelectedItem = null;
+			}
 		}
 	}
 }

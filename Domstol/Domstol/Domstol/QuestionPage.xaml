@@ -27,9 +27,8 @@
 	
 			<Frame
 				Padding="5"
-
 				Grid.Row="1"
-				Grid.Column = "1"
+				Grid.Column="1"
 				Grid.ColumnSpan="4"
 				>
 				<ScrollView>
@@ -75,7 +74,6 @@
 			/>
 
 
-
 			
 			<StackLayout
 				Grid.Row="6"
@@ -105,8 +103,6 @@
 				/>
 				
 				</StackLayout>
-
-			
 
 
 

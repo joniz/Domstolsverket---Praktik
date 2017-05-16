@@ -13,7 +13,6 @@ namespace Domstol
 		private Question currentQuestion { get; set; }
 		private Question yesQuestion { get; set; }
 		private Question noQuestion { get; set; }
-		private List<string> ListAlternatives { get; set; }
 
 		public QuestionPage()
 		{
@@ -64,9 +63,10 @@ namespace Domstol
 			yesQuestion = App.dataRepository.getQuestionByID(currentQuestion.questionYesID);
 			noQuestion = App.dataRepository.getQuestionByID(currentQuestion.questionNoID);
 
-			ListAlternatives = new List<string>();
 
-			ListAlternatives.Add(LanguageStrings.Yes);
+			Title = currentProblem.problemTypeOfRoom;
+
+
 
 			if (noQuestion != null)
 				NoButton.IsVisible = true;
@@ -91,7 +91,7 @@ namespace Domstol
 			if (Device.RuntimePlatform == Device.Android)
 			{
 				//Android related code 
-				ListAlternatives.Add(LanguageStrings.BackToMenu);
+
 			}
 
 
