@@ -40,10 +40,15 @@ namespace Domstol
 				b.HeightRequest = 50;
 				b.Clicked += ButtonClicked;
 				b.Margin = 0;
+<<<<<<< HEAD
 				b.BackgroundColor = Color.White;
 
 
 				if (rc.Name == "TRC4" && b.Name != "VideoKällor")
+=======
+                b.BackgroundColor = Color.White;
+				if (rc.Name == "TRC4")
+>>>>>>> origin/master
 				{
 					b.WidthRequest = 100;
 					b.HeightRequest = 40;
