@@ -146,7 +146,6 @@
     <BundleResource Include="Resources\RemoteControllers\TRC5\MicoffTRC5.png" />
     <BundleResource Include="Resources\RemoteControllers\TRC6\MicoffTRC6.png" />
     <BundleResource Include="Resources\RemoteControllers\TRC6\NumbersTRC6.png" />
-    <BundleResource Include="Resources\RemoteControllers\TRC6\TRC6.png" />
     <BundleResource Include="Resources\RemoteControllers\TRC6\VolumeTRC6.png" />
     <BundleResource Include="Resources\RemoteControllers\TRC6\ArrowsTRC6.png" />
     <BundleResource Include="Resources\RemoteControllers\TRC6\BackTRC6.png" />
@@ -167,8 +166,9 @@
     <BundleResource Include="Resources\RemoteControllers\TRC3\PresentationTRC4.png" />
     <BundleResource Include="Resources\RemoteControllers\TRC3\SelfviewTRC4.png" />
     <BundleResource Include="Resources\RemoteControllers\TRC3\ZoomTRC4.png" />
-    <BundleResource Include="Resources\RemoteControllers\TRC5\TRC5.png" />
     <BundleResource Include="Resources\RemoteControllers\TRC3\TRC3.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC5\TRC5.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC6\TRC6.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
