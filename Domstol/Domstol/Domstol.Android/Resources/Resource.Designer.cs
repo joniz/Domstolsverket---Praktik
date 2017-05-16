@@ -2284,8 +2284,8 @@ namespace Domstol.Droid
 			// aapt resource value: 0x7f0200bc
 			public const int mr_ic_play_light = 2130837692;
 			
-			// aapt resource value: 0x7f0200ce
-			public const int notification_template_icon_bg = 2130837710;
+			// aapt resource value: 0x7f0200d0
+			public const int notification_template_icon_bg = 2130837712;
 			
 			// aapt resource value: 0x7f0200bd
 			public const int NumbersTRC5 = 2130837693;
@@ -2312,31 +2312,37 @@ namespace Domstol.Droid
 			public const int Samtalsrum = 2130837700;
 			
 			// aapt resource value: 0x7f0200c5
-			public const int Start = 2130837701;
+			public const int SelfviewTRC4 = 2130837701;
 			
 			// aapt resource value: 0x7f0200c6
-			public const int TRC4 = 2130837702;
+			public const int Start = 2130837702;
 			
 			// aapt resource value: 0x7f0200c7
-			public const int TRC5 = 2130837703;
+			public const int TRC3 = 2130837703;
 			
 			// aapt resource value: 0x7f0200c8
-			public const int TRC6 = 2130837704;
+			public const int TRC4 = 2130837704;
 			
 			// aapt resource value: 0x7f0200c9
-			public const int videoPic2 = 2130837705;
+			public const int TRC5 = 2130837705;
 			
 			// aapt resource value: 0x7f0200ca
-			public const int VolumeTRC5 = 2130837706;
+			public const int TRC6 = 2130837706;
 			
 			// aapt resource value: 0x7f0200cb
-			public const int VolumeTRC6 = 2130837707;
+			public const int videoPic2 = 2130837707;
 			
 			// aapt resource value: 0x7f0200cc
-			public const int ZoomTRC4 = 2130837708;
+			public const int VolumeTRC5 = 2130837708;
 			
 			// aapt resource value: 0x7f0200cd
-			public const int ZoomTRC5 = 2130837709;
+			public const int VolumeTRC6 = 2130837709;
+			
+			// aapt resource value: 0x7f0200ce
+			public const int ZoomTRC4 = 2130837710;
+			
+			// aapt resource value: 0x7f0200cf
+			public const int ZoomTRC5 = 2130837711;
 			
 			static Drawable()
 			{
