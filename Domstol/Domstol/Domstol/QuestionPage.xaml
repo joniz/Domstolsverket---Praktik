@@ -9,7 +9,7 @@
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="auto"/>
 				<ColumnDefinition Width="auto"/>
-				<ColumnDefinition Width="auto"/>
+				<ColumnDefinition Width="*"/>
 				<ColumnDefinition Width="*"/>
 				<ColumnDefinition Width="auto"/>
 			</Grid.ColumnDefinitions>
@@ -81,29 +81,32 @@
 				Grid.Row="6"
 				Grid.Column="1"
 				Grid.ColumnSpan="4"
-				VerticalOptions="FillAndExpand"
-				Orientation="Vertical"
+				HorizontalOptions="FillAndExpand"
+				Orientation="Horizontal"
 				x:Name="Stacklay"
 				
 			>
-			<local:MyGroupedListView
-                x:Name="ButtonList"
-                ItemSelected="Handle_ItemSelected"
-                >
-					<ListView.RowHeight>43</ListView.RowHeight>
+			<Button 
+				HorizontalOptions="FillAndExpand"
+				Style="{StaticResource ButtonStyle}"
+				HeightRequest="70"
+				Text="Ja"
+				Clicked="YesButtonClicked"
+				x:Name="YesButton"
+				/>
+			<Button 
+				HorizontalOptions="FillAndExpand"
+				Style="{StaticResource ButtonStyle}"
+				HeightRequest="70"	
+				Text="Nej"
+				Clicked="NoButtonClicked"
+				x:Name="NoButton"
+				IsVisible = "false"
+				/>
 				
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                            	<Label Text="{Binding}" Margin="15,10,0,0" FontAttributes="Bold" FontSize="Large"/>   
-                            </ViewCell>
+				</StackLayout>
 
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </local:MyGroupedListView>
-
-
-			</StackLayout>
+			
 
 
 

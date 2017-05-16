@@ -24,8 +24,8 @@ namespace Domstol
 
 			remoteControllers = db.Query<RemoteController>("SELECT * FROM RemoteControllers");
 			List<RemoteControllerButton> AllButtons = db.Query<RemoteControllerButton>("SELECT * FROM RemoteControllerButtons");
-			initializeRemoteControllerLists(AllButtons);
-
+			List<RemoteControllerTutorial> AllTutorials = db.Query<RemoteControllerTutorial>("SELECT * FROM RemoteControllerTutorials");
+			initializeRemoteControllerLists(AllButtons, AllTutorials);
 
 
 			db.Close();
@@ -82,13 +82,25 @@ namespace Domstol
 
 
 
-		private void initializeRemoteControllerLists(List<RemoteControllerButton> AllButtons) 
+		private void initializeRemoteControllerLists(List<RemoteControllerButton> AllButtons,
+		                                             List<RemoteControllerTutorial> AllTutorials) 
 		{
 
 			foreach (RemoteController rc in remoteControllers)
+			{
 				rc.ControllerButtons = new List<RemoteControllerButton>();
+				rc.ControllerTutorials = new List<RemoteControllerTutorial>();
+			}
 
 
+
+			foreach (RemoteControllerTutorial rct in AllTutorials)
+			{
+				foreach (RemoteController rc in remoteControllers)
+					if (rct.ControllerID == rc.ID)
+						rc.ControllerTutorials.Add(rct);
+			
+			}
 
 
 			foreach (RemoteControllerButton rcb in AllButtons)
@@ -97,7 +109,6 @@ namespace Domstol
 				foreach (RemoteController rc in remoteControllers)
 					if (rcb.ControllerID == rc.ID)
 						rc.ControllerButtons.Add(rcb);
-				
 			
 			}
 		

@@ -7,6 +7,8 @@ namespace Domstol
 {
 	public partial class RemoteControllerSelectedPage : ContentPage
 	{
+
+		public RemoteController remoteController { get; set; }
 		public RemoteControllerSelectedPage()
 		{
 			InitializeComponent();
@@ -21,7 +23,7 @@ namespace Domstol
 
 			ControllerImage.Source = "RemoteControllers/" + rc.ImageName + "/" + rc.ImageName;
 
-
+			remoteController = rc;
 
 
 
@@ -41,10 +43,11 @@ namespace Domstol
 				b.BackgroundColor = Color.White;
 
 
-				if (rc.Name == "TRC4")
+				if (rc.Name == "TRC4" && b.Name != "VideoKällor")
 				{
-					b.WidthRequest = 120;
+					b.WidthRequest = 100;
 					b.HeightRequest = 40;
+
 				
 				}
 
@@ -52,16 +55,17 @@ namespace Domstol
 
 
 
-
-
-				//Special case for the TRC5 Remote controller
-				if (b.Name == "Funktioner" && rc.Name == "TRC5")
+				//Add buttons on each side of remote controller and one button on top of it. 
+				//TRC4 and TRC5
+				if (b.Name == "Funktioner" && rc.Name == "TRC5"
+				    || b.Name == "VideoKällor" && rc.Name =="TRC4"
+				   )
 				{
 					TheGrid.Children.Add(b, 1, 0);
 					
 				}
 
-				else if (rc.Name == "TRC5")
+				else if (rc.Name == "TRC5" || rc.Name == "TRC4")
 				{
 
 					if (columnSwitch)
@@ -77,11 +81,18 @@ namespace Domstol
 				}
 				else	                 
 					ButtonStack.Children.Add(b);
-				
-				
-				
-			
+
+
+
+
+
 			}
+
+			Button tutorialButton = new Button() { Text ="Vanliga frågor"};
+			tutorialButton.Clicked += TutorialButtonClicked;
+
+			if (rc.ControllerTutorials.Count != 0)
+				ButtonStack.Children.Add(tutorialButton);
 		}
 
 		public void ButtonClicked(object s, EventArgs e)
@@ -91,6 +102,14 @@ namespace Domstol
 
 
 			Navigation.PushModalAsync(new NavigationPage(new ButtonInfoPage(btn)));
+		
+		}
+
+
+		public void TutorialButtonClicked(object s, EventArgs e)
+		{
+			Navigation.PushAsync(new RemoteControllerTutorialSelectionPage(remoteController));
+		
 		
 		}
 	}

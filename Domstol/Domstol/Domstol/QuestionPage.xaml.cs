@@ -67,9 +67,9 @@ namespace Domstol
 			ListAlternatives = new List<string>();
 
 			ListAlternatives.Add(LanguageStrings.Yes);
-					
+
 			if (noQuestion != null)
-				ListAlternatives.Add(LanguageStrings.No);
+				NoButton.IsVisible = true;
 
 
 			if (question.questionMoreInfo != null || question.questionMoreInfoImageName != null)
@@ -97,13 +97,13 @@ namespace Domstol
 
 			if (yesQuestion == null && noQuestion == null)
 			{
-				ListAlternatives.Remove(LanguageStrings.Yes);
-				ListAlternatives.Remove(LanguageStrings.No);
+				YesButton.IsVisible = false;
+				NoButton.IsVisible = false;
 
 			}
 
 			NavigationPage.SetBackButtonTitle(this, LanguageStrings.Back);
-			ButtonList.ItemsSource = ListAlternatives;
+
 
 			if(currentQuestion.questionImageName != null)
 				QuestionImage.Source = "QuestionImages/" + currentQuestion.questionImageName;
@@ -124,39 +124,6 @@ namespace Domstol
 		}
 
 
-
-		void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
-		{
-
-			if (((ListView)sender).SelectedItem != null)
-			{
-				string selectedChoice = e.SelectedItem as string;
-
-				((ListView)sender).SelectedItem = null;
-
-				if (selectedChoice == LanguageStrings.Yes)
-					if (yesQuestion != null)
-					{
-						App.AllQuestions.Push(currentQuestion);
-						Navigation.PushAsync(new QuestionPage(currentProblem, yesQuestion, LanguageStrings.Yes));
-					}
-					else 
-						Navigation.PushAsync(new ProblemSolvedPage());
-
-
-				if (selectedChoice == LanguageStrings.No)
-					if (noQuestion != null)
-						Navigation.PushAsync(new QuestionPage(currentProblem, noQuestion, LanguageStrings.No));
-			
-				if (selectedChoice == LanguageStrings.BackToMenu)
-					 Navigation.PopToRootAsync();
-
-				
-
-			}
-
-		}
-
 		void AllQuestionsClicked(object sender, System.EventArgs e)
 		{
 			Navigation.PushAsync(new AllQuestionsPage(currentProblem, currentQuestion));
@@ -175,5 +142,22 @@ namespace Domstol
 		}
 
 
+		void YesButtonClicked(object sender, System.EventArgs e)
+		{
+			if (yesQuestion != null)
+			{
+				App.AllQuestions.Push(currentQuestion);
+				Navigation.PushAsync(new QuestionPage(currentProblem, yesQuestion, LanguageStrings.Yes));
+			}
+			else 
+				Navigation.PushAsync(new ProblemSolvedPage());
+		}
+
+
+		void NoButtonClicked(object sender, System.EventArgs e)
+		{
+			if (noQuestion != null)
+				Navigation.PushAsync(new QuestionPage(currentProblem, noQuestion, LanguageStrings.No));
+		}
 	}
 }
