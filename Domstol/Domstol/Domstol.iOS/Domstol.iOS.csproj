@@ -151,24 +151,24 @@
     <BundleResource Include="Resources\RemoteControllers\TRC6\BackTRC6.png" />
     <BundleResource Include="Resources\RemoteControllers\TRC6\CallTRC6.png" />
     <BundleResource Include="Resources\RemoteControllers\TRC6\EndcallTRC6.png" />
-    <BundleResource Include="Resources\RemoteControllers\TRC4\SelfViewTRC4.png" />
     <BundleResource Include="Resources\RemoteControllers\TRC4\TRC4.png" />
     <BundleResource Include="Resources\RemoteControllers\TRC4\VideoSourcesTRC4.png" />
     <BundleResource Include="Resources\RemoteControllers\TRC4\HelpTRC4.png" />
     <BundleResource Include="Resources\RemoteControllers\TRC4\ServicesTRC4.png" />
     <BundleResource Include="Resources\RemoteControllers\TRC4\FarEndTRC4.png" />
     <BundleResource Include="Resources\RemoteControllers\TRC4\PresetsTRC4.png" />
-    <BundleResource Include="Resources\RemoteControllers\TRC3\CallTRC4.png" />
-    <BundleResource Include="Resources\RemoteControllers\TRC3\EndcallTRC4.png" />
-    <BundleResource Include="Resources\RemoteControllers\TRC3\LayoutTRC4.png" />
-    <BundleResource Include="Resources\RemoteControllers\TRC3\MicoffTRC4.png" />
-    <BundleResource Include="Resources\RemoteControllers\TRC3\PhonebookTRC4.png" />
-    <BundleResource Include="Resources\RemoteControllers\TRC3\PresentationTRC4.png" />
-    <BundleResource Include="Resources\RemoteControllers\TRC3\SelfViewTRC4.png" />
-    <BundleResource Include="Resources\RemoteControllers\TRC3\ZoomTRC4.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC3\CallTRC3.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC3\EndcallTRC3.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC3\LayoutTRC3.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC3\MicoffTRC3.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC3\PhonebookTRC3.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC3\PresentationTRC3.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC3\SelfViewTRC3.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC3\ZoomTRC3.png" />
     <BundleResource Include="Resources\RemoteControllers\TRC3\TRC3.png" />
     <BundleResource Include="Resources\RemoteControllers\TRC5\TRC5.png" />
     <BundleResource Include="Resources\RemoteControllers\TRC6\TRC6.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC4\SelfviewTRC4.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

@@ -43,6 +43,7 @@ namespace Domstol
 				b.Margin = 0;
 				b.BackgroundColor = Color.White;
 
+	
 
 				if (rc.Name == "TRC4" && b.Name != "VideoKällor")
 				{
@@ -50,9 +51,6 @@ namespace Domstol
 					b.HeightRequest = 40;
 				}
 
-				Button x;
-				if (b.Name == "Självbild")
-					x = b;
 
 			
 
@@ -85,9 +83,6 @@ namespace Domstol
 					ButtonStack.Children.Add(b);
 
 
-
-
-
 			}
 
 			Button tutorialButton = new Button() { Text ="Vanliga frågor"};
@@ -95,6 +90,8 @@ namespace Domstol
 
 			if (rc.ControllerTutorials.Count != 0)
 				ButtonStack.Children.Add(tutorialButton);
+
+	
 		}
 
 		public void ButtonClicked(object s, EventArgs e)
