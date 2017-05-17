@@ -18,6 +18,7 @@ namespace Domstol
         	InitializeComponent();
 
 
+			Title = rc.Name;
 
 
 
@@ -49,8 +50,11 @@ namespace Domstol
 					b.HeightRequest = 40;
 				}
 
+				Button x;
+				if (b.Name == "Självbild")
+					x = b;
 
-
+			
 
 
 				//Add buttons on each side of remote controller and one button on top of it. 
