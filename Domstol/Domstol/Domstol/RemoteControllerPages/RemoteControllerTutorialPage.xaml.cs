@@ -22,8 +22,6 @@ namespace Domstol
 
 
 
-
-
 			TutorialStack.Children.Add(new Label() { Text = rct.Answer });
 
 			foreach (RemoteController r in App.dataRepository.remoteControllers)
