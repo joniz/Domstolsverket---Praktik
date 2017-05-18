@@ -67,7 +67,6 @@ namespace Domstol
 			Title = currentProblem.problemTypeOfRoom;
 
 
-
 			if (noQuestion != null)
 				NoButton.IsVisible = true;
 
@@ -78,8 +77,9 @@ namespace Domstol
 			if (question.questionSupportNumber != null)
 			{
 				SupportLabel.IsVisible = true;
-				SupportLabel.Text = currentQuestion.questionSupportNumber;
-				SupportLabel.TextColor = Color.Blue;
+				char[] tonval = { ',', '3' };
+				SupportLabel.Text = currentQuestion.questionSupportNumber.TrimEnd(tonval);
+				SupportLabel.TextColor = Color.FromHex("0000EE");
 		
 
 				var tgr = new TapGestureRecognizer();
@@ -107,6 +107,7 @@ namespace Domstol
 
 			if(currentQuestion.questionImageName != null)
 				QuestionImage.Source = "QuestionImages/" + currentQuestion.questionImageName;
+			
 
 		}
 

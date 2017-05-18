@@ -4,7 +4,9 @@
 		<StackLayout Orientation="Vertical">
 		<Frame>
 			<ScrollView>
-				<Label x:Name ="TutorialLabel" FontSize="Large"/>
+					<StackLayout x:Name="TutorialStack" Orientation="Vertical"/>
+		
+			
 			</ScrollView>
 
 

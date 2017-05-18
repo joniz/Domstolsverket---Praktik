@@ -11,6 +11,7 @@ namespace Domstol
 		{
 			InitializeComponent();
 			ButtonInfoLabel.Text = b.Description;
+			Title = b.Name;
 		}
 
 		void BackButton(object sender, System.EventArgs e)

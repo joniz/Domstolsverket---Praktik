@@ -65,6 +65,7 @@
 				x:Name="MoreInfoButton"
 				IsVisible="false"
 			/>
+			
 			<Image
 				Grid.Row="2"
 				Grid.Column="1"

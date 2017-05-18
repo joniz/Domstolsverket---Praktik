@@ -10,10 +10,6 @@ namespace Domstol
 		public List<RemoteController> remoteControllers { get; set; }
 		public DataRepository(string dbPath)
 		{
-		
-			problems = new List<Problem>();
-			questions = new List<Question>();
-			remoteControllers = new List<RemoteController>();
 
 
 			SQLiteConnection db = new SQLiteConnection(dbPath);

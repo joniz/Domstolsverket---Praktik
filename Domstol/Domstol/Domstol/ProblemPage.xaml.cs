@@ -42,9 +42,14 @@ namespace Domstol
 			videoProblemList.AddRange(App.dataRepository.getProblemsByCategoryAndRoom(LanguageStrings.Video, nItem.typeOfRoom));
 			videoconferenceProblemList.AddRange(App.dataRepository.getProblemsByCategoryAndRoom(LanguageStrings.VideoConference, nItem.typeOfRoom));
 
-			allListItemGroups.Add(audioProblemList);
-			allListItemGroups.Add(videoProblemList);
-			allListItemGroups.Add(videoconferenceProblemList);
+			if(audioProblemList.Count != 0)
+				allListItemGroups.Add(audioProblemList);
+			
+			if(videoProblemList.Count != 0)
+				allListItemGroups.Add(videoProblemList);
+			
+			if(videoconferenceProblemList.Count != 0)
+				allListItemGroups.Add(videoconferenceProblemList);
 			return allListItemGroups;
 
 

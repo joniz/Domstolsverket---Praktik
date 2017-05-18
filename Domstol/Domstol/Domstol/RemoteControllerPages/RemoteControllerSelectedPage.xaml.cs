@@ -45,7 +45,8 @@ namespace Domstol
 
 	
 
-				if (rc.Name == "TRC4" && b.Name != "VideoKällor")
+				if (rc.Name == "TRC4" && b.Name != "VideoKällor" ||
+				    rc.Name == "TRC3")
 				{
 					b.WidthRequest = 100;
 					b.HeightRequest = 40;

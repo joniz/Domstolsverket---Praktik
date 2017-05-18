@@ -110,13 +110,11 @@
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
-    <BundleResource Include="Resources\Konferensrum.jpg" />
     <BundleResource Include="Resources\Logotyp.png" />
     <BundleResource Include="Resources\Icons\info%403x.png" />
     <BundleResource Include="Resources\Icons\list%403x.png" />
     <BundleResource Include="Resources\Icons\home%402x.png" />
     <BundleResource Include="Resources\Icons\explore%402x.png" />
-    <BundleResource Include="Resources\Domstol2.db" />
     <BundleResource Include="Resources\LocationImages\Sal.jpg" />
     <BundleResource Include="Resources\LocationImages\Samtalsrum.jpg" />
     <BundleResource Include="Resources\LocationImages\Start.jpg" />
@@ -169,6 +167,14 @@
     <BundleResource Include="Resources\RemoteControllers\TRC5\TRC5.png" />
     <BundleResource Include="Resources\RemoteControllers\TRC6\TRC6.png" />
     <BundleResource Include="Resources\RemoteControllers\TRC4\SelfviewTRC4.png" />
+    <BundleResource Include="Resources\LocationImages\Konferensrum.jpg" />
+    <BundleResource Include="Resources\Domstol2.db" />
+    <BundleResource Include="Resources\QuestionImages\HU4 HDMI.jpg" />
+    <BundleResource Include="Resources\QuestionImages\UID uttag.jpg" />
+    <BundleResource Include="Resources\QuestionImages\Skärmdump avsluta samtal.jpg" />
+    <BundleResource Include="Resources\QuestionImages\Skärmdump avsluta förhandling.jpg" />
+    <BundleResource Include="Resources\QuestionImages\Skärmdump volymknapp.jpg" />
+    <BundleResource Include="Resources\QuestionImages\MoreInfoImages\Uppspelningsenheter.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

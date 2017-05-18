@@ -784,6 +784,72 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\VideoSourcesTRC4.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\drawable-xxhdpi\CallTRC3.png" />
+    <BundleResource Include="Resources\drawable-xxhdpi\EndcallTRC3.png" />
+    <BundleResource Include="Resources\drawable-xxhdpi\LayoutTRC3.png" />
+    <BundleResource Include="Resources\drawable-xxhdpi\MicoffTRC3.png" />
+    <BundleResource Include="Resources\drawable-xxhdpi\PhonebookTRC3.png" />
+    <BundleResource Include="Resources\drawable-xxhdpi\PresentationTRC3.png" />
+    <BundleResource Include="Resources\drawable-xxhdpi\SelfViewTRC3.png" />
+    <BundleResource Include="Resources\drawable-xxhdpi\ZoomTRC3.png" />
+    <BundleResource Include="Resources\drawable-xhdpi\CallTRC3.png" />
+    <BundleResource Include="Resources\drawable-xhdpi\EndcallTRC3.png" />
+    <BundleResource Include="Resources\drawable-xhdpi\LayoutTRC3.png" />
+    <BundleResource Include="Resources\drawable-xhdpi\MicoffTRC3.png" />
+    <BundleResource Include="Resources\drawable-xhdpi\PhonebookTRC3.png" />
+    <BundleResource Include="Resources\drawable-xhdpi\PresentationTRC3.png" />
+    <BundleResource Include="Resources\drawable-xhdpi\SelfViewTRC3.png" />
+    <BundleResource Include="Resources\drawable-xhdpi\ZoomTRC3.png" />
+    <BundleResource Include="Resources\drawable-hdpi\CallTRC3.png" />
+    <BundleResource Include="Resources\drawable-hdpi\EndcallTRC3.png" />
+    <BundleResource Include="Resources\drawable-hdpi\LayoutTRC3.png" />
+    <BundleResource Include="Resources\drawable-hdpi\MicoffTRC3.png" />
+    <BundleResource Include="Resources\drawable-hdpi\PhonebookTRC3.png" />
+    <BundleResource Include="Resources\drawable-hdpi\PresentationTRC3.png" />
+    <BundleResource Include="Resources\drawable-hdpi\SelfViewTRC3.png" />
+    <BundleResource Include="Resources\drawable-hdpi\ZoomTRC3.png" />
+    <BundleResource Include="Resources\drawable\CallTRC3.png" />
+    <BundleResource Include="Resources\drawable\EndcallTRC3.png" />
+    <BundleResource Include="Resources\drawable\LayoutTRC3.png" />
+    <BundleResource Include="Resources\drawable\MicoffTRC3.png" />
+    <BundleResource Include="Resources\drawable\PhonebookTRC3.png" />
+    <BundleResource Include="Resources\drawable\PresentationTRC3.png" />
+    <BundleResource Include="Resources\drawable\SelfViewTRC3.png" />
+    <BundleResource Include="Resources\drawable\ZoomTRC3.png" />
+    <BundleResource Include="Resources\drawable-xxhdpi\Uppspelningsenheter.png" />
+    <BundleResource Include="Resources\drawable-xxhdpi\Hdmikabel.jpg" />
+    <BundleResource Include="Resources\drawable-xxhdpi\HU4 HDMI.jpg" />
+    <BundleResource Include="Resources\drawable-xxhdpi\Skärmdump avsluta förhandling.jpg" />
+    <BundleResource Include="Resources\drawable-xxhdpi\Skärmdump avsluta samtal.jpg" />
+    <BundleResource Include="Resources\drawable-xxhdpi\Skärmdump volymknapp.jpg" />
+    <BundleResource Include="Resources\drawable-xxhdpi\Strömkabel.jpg" />
+    <BundleResource Include="Resources\drawable-xxhdpi\UID uttag.jpg" />
+    <BundleResource Include="Resources\drawable-xhdpi\Uppspelningsenheter.png" />
+    <BundleResource Include="Resources\drawable-xhdpi\Hdmikabel.jpg" />
+    <BundleResource Include="Resources\drawable-xhdpi\HU4 HDMI.jpg" />
+    <BundleResource Include="Resources\drawable-xhdpi\Skärmdump avsluta förhandling.jpg" />
+    <BundleResource Include="Resources\drawable-xhdpi\Skärmdump avsluta samtal.jpg" />
+    <BundleResource Include="Resources\drawable-xhdpi\Skärmdump volymknapp.jpg" />
+    <BundleResource Include="Resources\drawable-xhdpi\Strömkabel.jpg" />
+    <BundleResource Include="Resources\drawable-xhdpi\UID uttag.jpg" />
+    <BundleResource Include="Resources\drawable-hdpi\Uppspelningsenheter.png" />
+    <BundleResource Include="Resources\drawable-hdpi\Hdmikabel.jpg" />
+    <BundleResource Include="Resources\drawable-hdpi\HU4 HDMI.jpg" />
+    <BundleResource Include="Resources\drawable-hdpi\Skärmdump avsluta förhandling.jpg" />
+    <BundleResource Include="Resources\drawable-hdpi\Skärmdump avsluta samtal.jpg" />
+    <BundleResource Include="Resources\drawable-hdpi\Skärmdump volymknapp.jpg" />
+    <BundleResource Include="Resources\drawable-hdpi\Strömkabel.jpg" />
+    <BundleResource Include="Resources\drawable-hdpi\UID uttag.jpg" />
+    <BundleResource Include="Resources\drawable\Uppspelningsenheter.png" />
+    <BundleResource Include="Resources\drawable\Hdmikabel.jpg" />
+    <BundleResource Include="Resources\drawable\HU4 HDMI.jpg" />
+    <BundleResource Include="Resources\drawable\Skärmdump avsluta förhandling.jpg" />
+    <BundleResource Include="Resources\drawable\Skärmdump avsluta samtal.jpg" />
+    <BundleResource Include="Resources\drawable\Skärmdump volymknapp.jpg" />
+    <BundleResource Include="Resources\drawable\Strömkabel.jpg" />
+    <BundleResource Include="Resources\drawable\UID uttag.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
