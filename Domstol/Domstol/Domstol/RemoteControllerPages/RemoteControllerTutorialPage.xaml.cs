@@ -24,6 +24,9 @@ namespace Domstol
 
 
 			TutorialStack.Children.Add(new Label() { Text = rct.Answer, FontSize = largeSize });
+			TutorialStack.Children.Add(new Image() { 
+				Source = "RemoteControllers/TutorialImages/" + rct.RemoteTutorialImageName });
+
 
 			foreach (RemoteController r in App.dataRepository.remoteControllers)
 				if (r.ID == rct.ControllerID)

@@ -746,6 +746,14 @@
     <BundleResource Include="Resources\drawable-hdpi\UIDuttag.jpg" />
     <BundleResource Include="Resources\drawable-hdpi\Uppspelningsenheter.png" />
     <BundleResource Include="Resources\drawable-hdpi\ZoomTRC3.png" />
+    <BundleResource Include="Resources\drawable\SX10_Flyttaegenbild.jpg" />
+    <BundleResource Include="Resources\drawable\SX10_Visaegenbild.jpg" />
+    <BundleResource Include="Resources\drawable-hdpi\SX10_Flyttaegenbild.jpg" />
+    <BundleResource Include="Resources\drawable-hdpi\SX10_Visaegenbild.jpg" />
+    <BundleResource Include="Resources\drawable-xhdpi\SX10_Flyttaegenbild.jpg" />
+    <BundleResource Include="Resources\drawable-xhdpi\SX10_Visaegenbild.jpg" />
+    <BundleResource Include="Resources\drawable-xxhdpi\SX10_Flyttaegenbild.jpg" />
+    <BundleResource Include="Resources\drawable-xxhdpi\SX10_Visaegenbild.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />

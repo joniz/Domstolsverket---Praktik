@@ -176,6 +176,8 @@
     <BundleResource Include="Resources\QuestionImages\Skarmdumpvolymknapp.jpg" />
     <BundleResource Include="Resources\QuestionImages\MoreInfoImages\Uppspelningsenheter.png" />
     <BundleResource Include="Resources\Videokonferens.jpg" />
+    <BundleResource Include="Resources\RemoteControllers\TutorialImages\SX10_Visaegenbild.jpg" />
+    <BundleResource Include="Resources\RemoteControllers\TutorialImages\SX10_Flyttaegenbild.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -290,6 +292,7 @@
     <Folder Include="Resources\RemoteControllers\TRC5\" />
     <Folder Include="Resources\RemoteControllers\TRC6\" />
     <Folder Include="Resources\RemoteControllers\TRC3\" />
+    <Folder Include="Resources\RemoteControllers\TutorialImages\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

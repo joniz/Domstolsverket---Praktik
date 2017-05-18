@@ -36,18 +36,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Samtalsrum.jpg" width="1620" height="1080"/>
         <image name="Start.jpg" width="1620" height="1080"/>
-        <image name="Konferensrum.jpg" width="1620" height="1080"/>
-        <image name="Home2.png" width="30" height="30"/>
-        <image name="Manual2.png" width="30" height="30"/>
-        <image name="Home3.png" width="24" height="24"/>
-        <image name="symbol.png" width="284" height="159"/>
         <image name="Logotyp.png" width="2362" height="618"/>
-        <image name="icon.png" width="72" height="72"/>
-        <image name="home.png" width="48" height="48"/>
-        <image name="ic_home_2x.png" width="48" height="48"/>
-        <image name="manual.png" width="48" height="48"/>
         <image name="audioMedium.png" width="48" height="48"/>
         <image name="videoMedium.png" width="48" height="48"/>
         <image name="DOMLogotyp copy.png" width="354" height="93"/>
@@ -113,6 +103,14 @@
         <image name="QuestionImages/Skärmdump avsluta förhandling.jpg" width="212" height="300"/>
         <image name="QuestionImages/Skärmdump volymknapp.jpg" width="330" height="181"/>
         <image name="QuestionImages/MoreInfoImages/Uppspelningsenheter.png" width="747" height="463"/>
+        <image name="QuestionImages/Stromkabel.jpg" width="1600" height="1066"/>
+        <image name="QuestionImages/UIDuttag.jpg" width="2466" height="1644"/>
+        <image name="QuestionImages/Skarmdumpavslutasamtall.jpg" width="936" height="402"/>
+        <image name="QuestionImages/Skarmdumpavslutaforhandling.jpg" width="212" height="300"/>
+        <image name="QuestionImages/Skarmdumpvolymknapp.jpg" width="330" height="181"/>
+        <image name="Videokonferens.jpg" width="1920" height="1280"/>
+        <image name="RemoteControllers/TutorialImages/SX10_Visaegenbild.jpg" width="1000" height="1385"/>
+        <image name="RemoteControllers/TutorialImages/SX10_Flyttaegenbild.jpg" width="1000" height="1358"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedScreenMetrics key="destination" type="retina47"/>

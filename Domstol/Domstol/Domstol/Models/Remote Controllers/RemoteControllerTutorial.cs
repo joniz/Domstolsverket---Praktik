@@ -7,6 +7,6 @@ namespace Domstol
 		public string Question { get; set; }
 		public string ControllerID { get; set; }
 		public string Answer { get; set; }
-
+		public string RemoteTutorialImageName { get; set; }
 	}
 }
