@@ -10,19 +10,16 @@ namespace Domstol
     public partial class HomePage : ContentPage
     {
 
-		public MyNavigationItem nItem { get; set; }
+
         public HomePage()
         {
             InitializeComponent();
-			nItem = new MyNavigationItem();
 			NavigationPage.SetBackButtonTitle(this, "Tillbaka");
 
 
 			Startbild.Source = PictureNames.Home;
 
 			Lista.ItemsSource = getRooms();
-
-
 
 
         }
@@ -37,10 +34,12 @@ namespace Domstol
 
 		public List<string> getRooms() 
 		{
-			List<string> rooms = new List<string>();
-			rooms.Add(LanguageStrings.Conferenceroom);
-			rooms.Add(LanguageStrings.Courtroom);
-			rooms.Add(LanguageStrings.Meetingroom);
+		List<string> rooms = new List<string>();
+			foreach (Room r in App.dataRepository.rooms)
+			{
+				rooms.Add(r.Name);
+			
+			}
 			return rooms;
 		
 		}
@@ -55,28 +54,20 @@ namespace Domstol
 			if (listText != null)
 			{
 
-				if (listText == LanguageStrings.Conferenceroom)
-				{
-					nItem.imageName = PictureNames.ConferenceRoom;
-					nItem.typeOfRoom = LanguageStrings.Conferenceroom;
-				}
-
-				if (listText == LanguageStrings.Courtroom)
-				{
-					nItem.imageName = PictureNames.CourtRoom;
-					nItem.typeOfRoom = LanguageStrings.Courtroom;
-				}
-				if (listText == LanguageStrings.Meetingroom) 
-				{
-					nItem.imageName = PictureNames.MeetingRoom;
-					nItem.typeOfRoom = LanguageStrings.Meetingroom;
-			
-				}
+				Room room = new Room();
+				foreach (Room r in App.dataRepository.rooms)
+					if (listText == r.Name)
+					{
+						room = r;
+						break;
+					}
+					
+					
 
 				((ListView)sender).SelectedItem = null;
 			
 
-				Navigation.PushAsync(new ProblemPage(nItem));
+				Navigation.PushAsync(new ProblemPage(room));
 
 
 

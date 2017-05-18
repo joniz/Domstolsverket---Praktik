@@ -8,7 +8,5 @@ namespace Domstol
 	public class ProblemList : List<Problem>
 	{
 		public string Category { get; set; }
-	
-
 	}
 }

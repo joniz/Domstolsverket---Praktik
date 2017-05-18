@@ -120,7 +120,7 @@
     <BundleResource Include="Resources\LocationImages\Start.jpg" />
     <BundleResource Include="Resources\QuestionImages\MoreInfoImages\MoreInfoPic125.png" />
     <BundleResource Include="Resources\Start.jpg" />
-    <BundleResource Include="Resources\QuestionImages\Strömkabel.jpg" />
+    <BundleResource Include="Resources\QuestionImages\Stromkabel.jpg" />
     <BundleResource Include="Resources\QuestionImages\Hdmikabel.jpg" />
     <BundleResource Include="Resources\RemoteControllers\TRC4\EndcallTRC4.png" />
     <BundleResource Include="Resources\RemoteControllers\TRC4\PresentationTRC4.png" />
@@ -170,11 +170,12 @@
     <BundleResource Include="Resources\LocationImages\Konferensrum.jpg" />
     <BundleResource Include="Resources\Domstol2.db" />
     <BundleResource Include="Resources\QuestionImages\HU4 HDMI.jpg" />
-    <BundleResource Include="Resources\QuestionImages\UID uttag.jpg" />
-    <BundleResource Include="Resources\QuestionImages\Skärmdump avsluta samtal.jpg" />
-    <BundleResource Include="Resources\QuestionImages\Skärmdump avsluta förhandling.jpg" />
-    <BundleResource Include="Resources\QuestionImages\Skärmdump volymknapp.jpg" />
+    <BundleResource Include="Resources\QuestionImages\UIDuttag.jpg" />
+    <BundleResource Include="Resources\QuestionImages\Skarmdumpavslutasamtall.jpg" />
+    <BundleResource Include="Resources\QuestionImages\Skarmdumpavslutaforhandling.jpg" />
+    <BundleResource Include="Resources\QuestionImages\Skarmdumpvolymknapp.jpg" />
     <BundleResource Include="Resources\QuestionImages\MoreInfoImages\Uppspelningsenheter.png" />
+    <BundleResource Include="Resources\Videokonferens.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

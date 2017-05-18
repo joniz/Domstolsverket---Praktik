@@ -54,14 +54,12 @@
       <DependentUpon>QuestionPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\ExploreListItem.cs" />
-    <Compile Include="Models\MyNavigationItem.cs" />
     <Compile Include="Assets\DataRepository.cs" />
     <Compile Include="Enums\PictureNames.cs" />
     <Compile Include="Models\QuestionList.cs" />
     <Compile Include="MoreInfoPage.xaml.cs">
       <DependentUpon>MoreInfoPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Enums\LanguageStrings.cs" />
     <Compile Include="Models\MyGroupedListView.cs" />
     <Compile Include="Models\ExpandingRowList.cs" />
     <Compile Include="AllQuestionsPage.xaml.cs">
@@ -93,6 +91,8 @@
     <Compile Include="RemoteControllerPages\RemoteControllerTutorialPage.xaml.cs">
       <DependentUpon>RemoteControllerTutorialPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Room.cs" />
+    <Compile Include="Enums\LanguageStrings.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">

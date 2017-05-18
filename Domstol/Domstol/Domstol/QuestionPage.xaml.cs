@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Domstol;
 using Xamarin.Forms;
@@ -64,7 +64,7 @@ namespace Domstol
 			noQuestion = App.dataRepository.getQuestionByID(currentQuestion.questionNoID);
 
 
-			Title = currentProblem.problemTypeOfRoom;
+			Title = currentProblem.room.Name;
 
 
 			if (noQuestion != null)

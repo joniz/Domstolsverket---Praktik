@@ -17,12 +17,13 @@ namespace Domstol
 
 			var largeSize = Device.GetNamedSize(NamedSize.Large, typeof(Label));
 
+
 			TutorialStack.Children.Add(new Label() { Text = rct.Question, TextColor = Color.FromHex("6699CC"),
 				FontAttributes= FontAttributes.Italic, FontSize = largeSize });
 
 
 
-			TutorialStack.Children.Add(new Label() { Text = rct.Answer });
+			TutorialStack.Children.Add(new Label() { Text = rct.Answer, FontSize = largeSize });
 
 			foreach (RemoteController r in App.dataRepository.remoteControllers)
 				if (r.ID == rct.ControllerID)

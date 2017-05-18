@@ -20,9 +20,11 @@ namespace Domstol
 		}
 		public App(string dbPath)
 		{
+			dataRepository = new DataRepository(dbPath);
+
 			InitializeComponent();
 			MainPage = new RootPage();
-			dataRepository = new DataRepository(dbPath);
+
 			AllQuestions = new QuestionList<Question>();
 
 

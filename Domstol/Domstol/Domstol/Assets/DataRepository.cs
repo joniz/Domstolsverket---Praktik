@@ -8,6 +8,7 @@ namespace Domstol
 		public List<Problem> problems { get; set; }
 		public List<Question> questions { get; set; }
 		public List<RemoteController> remoteControllers { get; set; }
+		public List<Room> rooms { get; set; }
 		public DataRepository(string dbPath)
 		{
 
@@ -15,13 +16,19 @@ namespace Domstol
 			SQLiteConnection db = new SQLiteConnection(dbPath);
 			problems  = db.Query<Problem>("SELECT * FROM Problems");
 			questions = db.Query<Question>("SELECT * FROM Questions");
+			rooms = db.Query<Room>("SELECT * FROM Room");
 
+
+			initializeProblemList();
 
 
 			remoteControllers = db.Query<RemoteController>("SELECT * FROM RemoteControllers");
 			List<RemoteControllerButton> AllButtons = db.Query<RemoteControllerButton>("SELECT * FROM RemoteControllerButtons");
 			List<RemoteControllerTutorial> AllTutorials = db.Query<RemoteControllerTutorial>("SELECT * FROM RemoteControllerTutorials");
 			initializeRemoteControllerLists(AllButtons, AllTutorials);
+
+
+
 
 
 			db.Close();
@@ -46,8 +53,14 @@ namespace Domstol
 		{
 
 			List<Problem> temps = new List<Problem>();
+			string roomID = "";
+			foreach (Room r in rooms)
+				if (r.Name == typeOfRoom)
+					roomID = r.ID;
+
+
 			foreach (Problem p in problems)
-				if (p.problemCategory == category && p.problemTypeOfRoom == typeOfRoom)
+				if (p.problemCategory == category && p.RoomID == roomID)
 					temps.Add(p);
 				
 
@@ -65,7 +78,7 @@ namespace Domstol
 
 			List<Problem> temps = new List<Problem>();
 			foreach (Problem p in problems)
-				if (p.problemTypeOfRoom == typeOfRoom)
+				if (p.RoomID == typeOfRoom)
 					temps.Add(p);
 
 
@@ -110,6 +123,21 @@ namespace Domstol
 		
 		
 		}
+
+
+		public void initializeProblemList()
+		{
+			foreach (Problem p in problems)
+				foreach (Room r in rooms) 
+					if (p.RoomID == r.ID)
+						p.room = r;
+				
+				
+		
+		}
+
+
+
 
 	}
 }

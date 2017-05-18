@@ -36,10 +36,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="dom.png" width="646" height="220"/>
-        <image name="videoSmall.png" width="24" height="24"/>
-        <image name="audioSmall.png" width="24" height="24"/>
-        <image name="Sal.jpg" width="1620" height="1080"/>
         <image name="Samtalsrum.jpg" width="1620" height="1080"/>
         <image name="Start.jpg" width="1620" height="1080"/>
         <image name="Konferensrum.jpg" width="1620" height="1080"/>
@@ -55,6 +51,68 @@
         <image name="audioMedium.png" width="48" height="48"/>
         <image name="videoMedium.png" width="48" height="48"/>
         <image name="DOMLogotyp copy.png" width="354" height="93"/>
+        <image name="Icons/info.png" width="33.3333321" height="33.3333321"/>
+        <image name="Icons/list.png" width="33.3333321" height="33.3333321"/>
+        <image name="Icons/home.png" width="30" height="30"/>
+        <image name="Icons/explore.png" width="30" height="30"/>
+        <image name="LocationImages/Sal.jpg" width="1620" height="1080"/>
+        <image name="LocationImages/Samtalsrum.jpg" width="1920" height="1280"/>
+        <image name="LocationImages/Start.jpg" width="1620" height="1080"/>
+        <image name="QuestionImages/MoreInfoImages/MoreInfoPic125.png" width="420" height="274"/>
+        <image name="QuestionImages/Strömkabel.jpg" width="1600" height="1066"/>
+        <image name="QuestionImages/Hdmikabel.jpg" width="1600" height="1066"/>
+        <image name="RemoteControllers/TRC4/EndcallTRC4.png" width="164" height="62"/>
+        <image name="RemoteControllers/TRC4/PresentationTRC4.png" width="162" height="63"/>
+        <image name="RemoteControllers/TRC4/LayoutTRC4.png" width="159" height="60"/>
+        <image name="RemoteControllers/TRC4/ZoomTRC4.png" width="159" height="60"/>
+        <image name="RemoteControllers/TRC4/MicoffTRC4.png" width="162" height="63"/>
+        <image name="RemoteControllers/TRC4/CallTRC4.png" width="163" height="63"/>
+        <image name="RemoteControllers/TRC4/PhonebookTRC4.png" width="163" height="63"/>
+        <image name="RemoteControllers/TRC5/ArrowsTRC5.png" width="281" height="281"/>
+        <image name="RemoteControllers/TRC5/NumbersTRC5.png" width="369" height="369"/>
+        <image name="RemoteControllers/TRC5/VolumeTRC5.png" width="105" height="258"/>
+        <image name="RemoteControllers/TRC5/ZoomTRC5.png" width="97" height="258"/>
+        <image name="RemoteControllers/TRC5/FunctionsTRC5.png" width="361" height="105"/>
+        <image name="RemoteControllers/TRC5/ClearTRC5.png" width="127" height="73"/>
+        <image name="RemoteControllers/TRC5/EndcallTRC5.png" width="129" height="73"/>
+        <image name="RemoteControllers/TRC5/CallTRC5.png" width="129" height="73"/>
+        <image name="RemoteControllers/TRC5/LayoutTRC5.png" width="124" height="145"/>
+        <image name="RemoteControllers/TRC5/HomeTRC5.png" width="139" height="97"/>
+        <image name="RemoteControllers/TRC5/PhonebookTRC5.png" width="153" height="145"/>
+        <image name="RemoteControllers/TRC5/PresentationTRC5.png" width="177" height="129"/>
+        <image name="RemoteControllers/TRC5/MicoffTRC5.png" width="177" height="129"/>
+        <image name="RemoteControllers/TRC6/MicoffTRC6.png" width="122" height="107"/>
+        <image name="RemoteControllers/TRC6/NumbersTRC6.png" width="313" height="397"/>
+        <image name="RemoteControllers/TRC6/VolumeTRC6.png" width="193" height="33"/>
+        <image name="RemoteControllers/TRC6/ArrowsTRC6.png" width="297" height="305"/>
+        <image name="RemoteControllers/TRC6/BackTRC6.png" width="113" height="105"/>
+        <image name="RemoteControllers/TRC6/CallTRC6.png" width="113" height="49"/>
+        <image name="RemoteControllers/TRC6/EndcallTRC6.png" width="115" height="49"/>
+        <image name="RemoteControllers/TRC4/TRC4.png" width="694" height="2269"/>
+        <image name="RemoteControllers/TRC4/VideoSourcesTRC4.png" width="610" height="166"/>
+        <image name="RemoteControllers/TRC4/HelpTRC4.png" width="212" height="146"/>
+        <image name="RemoteControllers/TRC4/ServicesTRC4.png" width="226" height="146"/>
+        <image name="RemoteControllers/TRC4/FarEndTRC4.png" width="226" height="145"/>
+        <image name="RemoteControllers/TRC4/PresetsTRC4.png" width="226" height="145"/>
+        <image name="RemoteControllers/TRC3/CallTRC3.png" width="163" height="63"/>
+        <image name="RemoteControllers/TRC3/EndcallTRC3.png" width="164" height="62"/>
+        <image name="RemoteControllers/TRC3/LayoutTRC3.png" width="159" height="60"/>
+        <image name="RemoteControllers/TRC3/MicoffTRC3.png" width="162" height="63"/>
+        <image name="RemoteControllers/TRC3/PhonebookTRC3.png" width="163" height="63"/>
+        <image name="RemoteControllers/TRC3/PresentationTRC3.png" width="162" height="63"/>
+        <image name="RemoteControllers/TRC3/SelfViewTRC3.png" width="159" height="60"/>
+        <image name="RemoteControllers/TRC3/ZoomTRC3.png" width="159" height="60"/>
+        <image name="RemoteControllers/TRC3/TRC3.png" width="647" height="2045"/>
+        <image name="RemoteControllers/TRC5/TRC5.png" width="668" height="2077"/>
+        <image name="RemoteControllers/TRC6/TRC6.png" width="488" height="1864"/>
+        <image name="RemoteControllers/TRC4/SelfviewTRC4.png" width="159" height="60"/>
+        <image name="LocationImages/Konferensrum.jpg" width="1620" height="1080"/>
+        <image name="QuestionImages/HU4 HDMI.jpg" width="2088" height="1392"/>
+        <image name="QuestionImages/UID uttag.jpg" width="2466" height="1644"/>
+        <image name="QuestionImages/Skärmdump avsluta samtal.jpg" width="936" height="402"/>
+        <image name="QuestionImages/Skärmdump avsluta förhandling.jpg" width="212" height="300"/>
+        <image name="QuestionImages/Skärmdump volymknapp.jpg" width="330" height="181"/>
+        <image name="QuestionImages/MoreInfoImages/Uppspelningsenheter.png" width="747" height="463"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedScreenMetrics key="destination" type="retina47"/>

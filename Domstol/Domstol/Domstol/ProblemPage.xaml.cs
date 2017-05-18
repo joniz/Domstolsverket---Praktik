@@ -8,17 +8,18 @@ namespace Domstol
 	public partial class ProblemPage : ContentPage
 	{
 
-		private MyNavigationItem nItem { get; set; }
-
+		public Room currentRoom;
+	
 		public ProblemPage() { InitializeComponent(); }
 
-		public ProblemPage(MyNavigationItem n)
+		public ProblemPage(Room r)
 		{
 			InitializeComponent();
 
-			nItem = n;
-			Title = nItem.typeOfRoom.ToString();
-			Roompic.Source = nItem.imageName;
+			currentRoom = r;
+
+			Title = r.Name;
+			Roompic.Source = "LocationImages/" + r.ImageName;
 			NavigationPage.SetBackButtonTitle(this, "Tillbaka");
 
 			itemListView.ItemsSource = SetupList();
@@ -29,28 +30,32 @@ namespace Domstol
 		public List<ProblemList> SetupList()
 		{
 			var allListItemGroups = new List<ProblemList>();
+			var typesOfProblemList = new List<string>();
 
-			var audioProblemList = new ProblemList();
-			var videoProblemList = new ProblemList();
-			var videoconferenceProblemList = new ProblemList();
+			foreach (Problem p in App.dataRepository.problems)
+				if (!typesOfProblemList.Contains(p.problemCategory))
+					typesOfProblemList.Add(p.problemCategory);
 
-			audioProblemList.Category = LanguageStrings.Audio;
-			videoProblemList.Category = LanguageStrings.Video;
-			videoconferenceProblemList.Category = LanguageStrings.VideoConference;
 
-			audioProblemList.AddRange(App.dataRepository.getProblemsByCategoryAndRoom(LanguageStrings.Audio, nItem.typeOfRoom));
-			videoProblemList.AddRange(App.dataRepository.getProblemsByCategoryAndRoom(LanguageStrings.Video, nItem.typeOfRoom));
-			videoconferenceProblemList.AddRange(App.dataRepository.getProblemsByCategoryAndRoom(LanguageStrings.VideoConference, nItem.typeOfRoom));
+			foreach (string problemtype in typesOfProblemList)
+				allListItemGroups.Add(new ProblemList() { Category = problemtype });
 
-			if(audioProblemList.Count != 0)
-				allListItemGroups.Add(audioProblemList);
+
+			foreach (ProblemList p in allListItemGroups)
+			{
+				List<Problem> xd = App.dataRepository.getProblemsByCategoryAndRoom(p.Category, currentRoom.Name);
+				p.AddRange(xd);
+			}
+
+
 			
-			if(videoProblemList.Count != 0)
-				allListItemGroups.Add(videoProblemList);
-			
-			if(videoconferenceProblemList.Count != 0)
-				allListItemGroups.Add(videoconferenceProblemList);
-			return allListItemGroups;
+			var temp = new List<ProblemList>();
+
+			foreach (ProblemList p in allListItemGroups)
+				if (p.Count != 0)
+					temp.Add(p);
+
+			return temp;
 
 
 		}

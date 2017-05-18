@@ -14,10 +14,14 @@ namespace Domstol
 		public string problemCategory { get; set; }
 
 		//[NotNull]
-		public string problemTypeOfRoom { get; set; }
+		public Room room { get; set; }
+
+		public string RoomID { get; set; }
 
 		//[NotNull]
 		public string problemDescription { get; set; }
+
+	
 	
 	}
 }
