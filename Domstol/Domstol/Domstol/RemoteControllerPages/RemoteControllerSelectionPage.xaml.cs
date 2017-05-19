@@ -19,6 +19,18 @@ namespace Domstol
 
 			List<RemoteController> controllers = App.dataRepository.remoteControllers;
 
+			if (Device.RuntimePlatform == Device.Android)
+			{
+				foreach (RemoteController r in controllers)
+					if (r.Name == "TRC3")
+					{
+						controllers.Remove(r);
+						break;
+					}
+			}
+				
+
+
 			for (int i = 0; i < controllers.Count; i++)
 			{
 				Image image = new Image() { 
@@ -47,9 +59,12 @@ namespace Domstol
 			FileImageSource imageSource = (FileImageSource)image.Source;
 
 
-			foreach(RemoteController rc in App.dataRepository.remoteControllers)
-				if ((FileImageSource)"RemoteControllers/" + rc.ImageName + "/" + rc.ImageName == imageSource)
+			foreach (RemoteController rc in App.dataRepository.remoteControllers)
+				if ((FileImageSource)"RemoteControllers/" + rc.ImageName + "/" + rc.ImageName == imageSource) 
 					Navigation.PushAsync(new RemoteControllerSelectedPage(rc));
+			
+				
+					
 
 			
 

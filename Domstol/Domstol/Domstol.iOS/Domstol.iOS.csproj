@@ -176,8 +176,8 @@
     <BundleResource Include="Resources\QuestionImages\Skarmdumpvolymknapp.jpg" />
     <BundleResource Include="Resources\QuestionImages\MoreInfoImages\Uppspelningsenheter.png" />
     <BundleResource Include="Resources\Videokonferens.jpg" />
-    <BundleResource Include="Resources\RemoteControllers\TutorialImages\SX10_Visaegenbild.jpg" />
-    <BundleResource Include="Resources\RemoteControllers\TutorialImages\SX10_Flyttaegenbild.jpg" />
+    <BundleResource Include="Resources\RemoteControllers\TutorialImages\SX10Visaegenbild.jpg" />
+    <BundleResource Include="Resources\RemoteControllers\TutorialImages\SX10Flyttaegenbild.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
