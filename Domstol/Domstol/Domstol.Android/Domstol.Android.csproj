@@ -688,7 +688,7 @@
     <BundleResource Include="Resources\drawable-xxhdpi\MicoffTRC3.png" />
     <BundleResource Include="Resources\drawable-xxhdpi\PhonebookTRC3.png" />
     <BundleResource Include="Resources\drawable-xxhdpi\PresentationTRC3.png" />
-    <BundleResource Include="Resources\drawable-xxhdpi\SelfViewTRC3.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\SelfviewTRC3.png" />
     <BundleResource Include="Resources\drawable-xxhdpi\ZoomTRC3.png" />
     <BundleResource Include="Resources\drawable-xhdpi\CallTRC3.png" />
     <BundleResource Include="Resources\drawable-xhdpi\EndcallTRC3.png" />
@@ -696,7 +696,7 @@
     <BundleResource Include="Resources\drawable-xhdpi\MicoffTRC3.png" />
     <BundleResource Include="Resources\drawable-xhdpi\PhonebookTRC3.png" />
     <BundleResource Include="Resources\drawable-xhdpi\PresentationTRC3.png" />
-    <BundleResource Include="Resources\drawable-xhdpi\SelfViewTRC3.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\SelfviewTRC3.png" />
     <BundleResource Include="Resources\drawable-xhdpi\ZoomTRC3.png" />
     <BundleResource Include="Resources\drawable\CallTRC3.png" />
     <BundleResource Include="Resources\drawable\EndcallTRC3.png" />
@@ -704,60 +704,58 @@
     <BundleResource Include="Resources\drawable\MicoffTRC3.png" />
     <BundleResource Include="Resources\drawable\PhonebookTRC3.png" />
     <BundleResource Include="Resources\drawable\PresentationTRC3.png" />
-    <BundleResource Include="Resources\drawable\SelfViewTRC3.png" />
+    <AndroidResource Include="Resources\drawable\SelfviewTRC3.png" />
     <BundleResource Include="Resources\drawable\ZoomTRC3.png" />
     <BundleResource Include="Resources\drawable-xxhdpi\Uppspelningsenheter.png" />
     <BundleResource Include="Resources\drawable-xxhdpi\Hdmikabel.jpg" />
-    <BundleResource Include="Resources\drawable-xxhdpi\HU4 HDMI.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\HU4HDMI.jpg" />
     <BundleResource Include="Resources\drawable-xhdpi\Uppspelningsenheter.png" />
     <BundleResource Include="Resources\drawable-xhdpi\Hdmikabel.jpg" />
-    <BundleResource Include="Resources\drawable-xhdpi\HU4 HDMI.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\HU4HDMI.jpg" />
     <BundleResource Include="Resources\drawable\Uppspelningsenheter.png" />
     <BundleResource Include="Resources\drawable\Hdmikabel.jpg" />
     <BundleResource Include="Resources\drawable\HU4 HDMI.jpg" />
     <BundleResource Include="Resources\drawable\Skarmdumpavslutaforhandling.jpg" />
-    <BundleResource Include="Resources\drawable\Skarmdumpavslutasamtall.jpg" />
+    <AndroidResource Include="Resources\drawable\Skarmdumpavslutasamtal.jpg" />
     <BundleResource Include="Resources\drawable\Skarmdumpvolymknapp.jpg" />
     <BundleResource Include="Resources\drawable\Stromkabel.jpg" />
     <BundleResource Include="Resources\drawable\UIDuttag.jpg" />
     <BundleResource Include="Resources\drawable-xhdpi\Skarmdumpavslutaforhandling.jpg" />
-    <BundleResource Include="Resources\drawable-xhdpi\Skarmdumpavslutasamtall.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Skarmdumpavslutasamtal.jpg" />
     <BundleResource Include="Resources\drawable-xhdpi\Skarmdumpvolymknapp.jpg" />
     <BundleResource Include="Resources\drawable-xhdpi\Stromkabel.jpg" />
     <BundleResource Include="Resources\drawable-xhdpi\UIDuttag.jpg" />
     <BundleResource Include="Resources\drawable-xxhdpi\Skarmdumpavslutaforhandling.jpg" />
-    <BundleResource Include="Resources\drawable-xxhdpi\Skarmdumpavslutasamtall.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Skarmdumpavslutasamtal.jpg" />
     <BundleResource Include="Resources\drawable-xxhdpi\Skarmdumpvolymknapp.jpg" />
     <BundleResource Include="Resources\drawable-xxhdpi\Stromkabel.jpg" />
     <BundleResource Include="Resources\drawable-xxhdpi\UIDuttag.jpg" />
     <BundleResource Include="Resources\drawable-hdpi\CallTRC3.png" />
     <BundleResource Include="Resources\drawable-hdpi\EndcallTRC3.png" />
     <BundleResource Include="Resources\drawable-hdpi\Hdmikabel.jpg" />
-    <BundleResource Include="Resources\drawable-hdpi\HU4 HDMI.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\HU4HDMI.jpg" />
     <BundleResource Include="Resources\drawable-hdpi\LayoutTRC3.png" />
     <BundleResource Include="Resources\drawable-hdpi\MicoffTRC3.png" />
     <BundleResource Include="Resources\drawable-hdpi\PhonebookTRC3.png" />
     <BundleResource Include="Resources\drawable-hdpi\PresentationTRC3.png" />
-    <BundleResource Include="Resources\drawable-hdpi\SelfViewTRC3.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\SelfviewTRC3.png" />
     <BundleResource Include="Resources\drawable-hdpi\Skarmdumpavslutaforhandling.jpg" />
-    <BundleResource Include="Resources\drawable-hdpi\Skarmdumpavslutasamtall.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\Skarmdumpavslutasamtal.jpg" />
     <BundleResource Include="Resources\drawable-hdpi\Skarmdumpvolymknapp.jpg" />
     <BundleResource Include="Resources\drawable-hdpi\Stromkabel.jpg" />
     <BundleResource Include="Resources\drawable-hdpi\UIDuttag.jpg" />
     <BundleResource Include="Resources\drawable-hdpi\Uppspelningsenheter.png" />
     <BundleResource Include="Resources\drawable-hdpi\ZoomTRC3.png" />
-    <BundleResource Include="Resources\drawable\SX10_Flyttaegenbild.jpg" />
-    <BundleResource Include="Resources\drawable\SX10_Visaegenbild.jpg" />
-    <BundleResource Include="Resources\drawable-hdpi\SX10_Flyttaegenbild.jpg" />
-    <BundleResource Include="Resources\drawable-hdpi\SX10_Visaegenbild.jpg" />
-    <BundleResource Include="Resources\drawable-xhdpi\SX10_Flyttaegenbild.jpg" />
-    <BundleResource Include="Resources\drawable-xhdpi\SX10_Visaegenbild.jpg" />
-    <BundleResource Include="Resources\drawable-xxhdpi\SX10_Flyttaegenbild.jpg" />
-    <BundleResource Include="Resources\drawable-xxhdpi\SX10_Visaegenbild.jpg" />
+    <AndroidResource Include="Resources\drawable\SX10Flyttaegenbild.jpg" />
+    <AndroidResource Include="Resources\drawable\SX10Visaegenbild.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\SX10Flyttaegenbild.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\SX10Visaegenbild.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\SX10Flyttaegenbild.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\SX10Visaegenbild.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\SX10Flyttaegenbild.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\SX10Visaegenbild.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\drawable-hdpi\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
