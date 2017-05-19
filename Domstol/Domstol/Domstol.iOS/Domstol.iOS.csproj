@@ -161,7 +161,7 @@
     <BundleResource Include="Resources\RemoteControllers\TRC3\MicoffTRC3.png" />
     <BundleResource Include="Resources\RemoteControllers\TRC3\PhonebookTRC3.png" />
     <BundleResource Include="Resources\RemoteControllers\TRC3\PresentationTRC3.png" />
-    <BundleResource Include="Resources\RemoteControllers\TRC3\SelfViewTRC3.png" />
+    <BundleResource Include="Resources\RemoteControllers\TRC3\SelfviewTRC3.png" />
     <BundleResource Include="Resources\RemoteControllers\TRC3\ZoomTRC3.png" />
     <BundleResource Include="Resources\RemoteControllers\TRC3\TRC3.png" />
     <BundleResource Include="Resources\RemoteControllers\TRC5\TRC5.png" />
