@@ -171,7 +171,7 @@
     <BundleResource Include="Resources\Domstol2.db" />
     <BundleResource Include="Resources\QuestionImages\HU4 HDMI.jpg" />
     <BundleResource Include="Resources\QuestionImages\UIDuttag.jpg" />
-    <BundleResource Include="Resources\QuestionImages\Skarmdumpavslutasamtall.jpg" />
+    <BundleResource Include="Resources\QuestionImages\Skarmdumpavslutasamtal.jpg" />
     <BundleResource Include="Resources\QuestionImages\Skarmdumpavslutaforhandling.jpg" />
     <BundleResource Include="Resources\QuestionImages\Skarmdumpvolymknapp.jpg" />
     <BundleResource Include="Resources\QuestionImages\MoreInfoImages\Uppspelningsenheter.png" />
