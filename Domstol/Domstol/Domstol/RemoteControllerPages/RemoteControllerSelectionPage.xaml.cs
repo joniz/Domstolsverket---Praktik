@@ -19,6 +19,8 @@ namespace Domstol
 
 			List<RemoteController> controllers = App.dataRepository.remoteControllers;
 
+
+			//Hiding the TRC3 controller, it doesn't work on android for some reason.
 			if (Device.RuntimePlatform == Device.Android)
 			{
 				foreach (RemoteController r in controllers)
