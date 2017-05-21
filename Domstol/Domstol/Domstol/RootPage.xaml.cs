@@ -12,14 +12,14 @@ namespace Domstol
         public RootPage()
         {
 		InitializeComponent();
-		if (Device.RuntimePlatform == TargetPlatform.iOS.ToString())
+		if (Device.RuntimePlatform == Device.iOS)
 		{
 				homenav.Title = "Hem";
 				manualnav.Title = "Utforska";
 
 		}
 
-		if (Device.RuntimePlatform == TargetPlatform.Android.ToString())
+		if (Device.RuntimePlatform == Device.Android)
 		{
 				//Android related code 
 		}
