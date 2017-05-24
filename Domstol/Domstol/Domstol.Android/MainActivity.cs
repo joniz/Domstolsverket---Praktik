@@ -11,7 +11,7 @@ using Domstol.Android;
 namespace Domstol.Droid
 {
     
-    [Activity(Label = "Domstol", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation, ScreenOrientation = ScreenOrientation.Portrait)]
+    [Activity(Label = "Domstol", Icon = "@drawable/iconapp", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation, ScreenOrientation = ScreenOrientation.Portrait)]
     [assembly: ExportRenderer(typeof(NavigationPage), typeof(MyApp.iOS.Renderers.CustomNavigationRenderer))]
     
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
